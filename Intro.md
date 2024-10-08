@@ -1,0 +1,9 @@
+- zimski (1.10-20.1.), izpiti (21.1.-14.2.)
+- poletni (17.2.-6.6.), izpiti (9.6.-4.7.)
+- jesenski izpiti (18.8.-12.9)
+- https://ucilnica.fmf.uni-lj.si
+- izpit vpis vsaj 3 dni prej, odjava 1 dan
+- 3x ponavljaš lahk test, 4. Komisija
+- lab vaje obvezne
+- Pavel Saksida mentor
+- skrbnik prog. Pino Koc

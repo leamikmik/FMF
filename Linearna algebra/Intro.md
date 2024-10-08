@@ -1,0 +1,13 @@
+- Teorija: David Dolžan 
+- Vaje: Blaž Jelenc
+- Izpit, računski pa teoretični (ustni)
+- 4 Kolokviji (računski)
+- Snov:
+  - Vektorji v R^n
+  - Matrike
+  - Determinante
+  - Sistem linearnih enačb 
+  - Vektorski prostori 
+  - Linearne preslikave
+  - Lastne vrednosti in lastni vektorji
+  - Skalarni produkti
