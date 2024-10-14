@@ -6,6 +6,7 @@ $\mathbb{R}^n={(x1, x2,..., xn);x1, x2,... xn \in \mathbb R; n\in \mathbb N}$
 - Torej lahko vsak vektor podamo le z njegovo končno točko
 - Oznaka: $\vec v, \vec x, \vec{AB}$
 - Če je napisana samo 1 točka, se začne vektor v 0 ($\vec v=\left[  \begin{array} {c}a_1 \\a_2 \\\vdots \\a_n\end{array}\right]$)
+---
 # Operacije na vektrojih
 - Seštevanje/Odštevanje -> $\vec v+\vec w=\left[\begin{array} {}v_{1}+w_{1} \\ v_{2}+w_{2} \\ \vdots \\ v_{n}+w_{n} \end{array}\right]$
 - Množenje s skalarjem(konstanta) -> $\alpha*\vec v=\left[\begin{array} {}\alpha*v_{1} \\ \alpha*v_{2} \\ \vdots \\ \alpha*v_{n} \end{array}\right]$
@@ -22,6 +23,7 @@ $$\vec a, \vec b, \vec c \in \mathbb R^{n};\ \alpha, \beta \in \mathbb R$$
 6. $(\alpha+\beta)*\vec a=\alpha*\vec a+\beta*\vec a$
 7. $(\alpha*\beta)*\vec a=\alpha*(\beta*\vec a)$
 8. $1*\vec a=\vec a$
+---
 # Skalarni produkt 
 $$<\vec v, \vec u>=v_{1}*u_{1}+v_{2}*u_{2}+\dots+v_{n}*u_{n}$$
 - $\cos\gamma=\frac{<\vec v, \vec u>}{\|\vec u\|*\|\vec v\|}$
@@ -37,12 +39,14 @@ $$<\vec v, \vec u>=v_{1}*u_{1}+v_{2}*u_{2}+\dots+v_{n}*u_{n}$$
 3. $\|\vec u+\vec v\|\le\|\vec u\|+\|\vec v\|$ -> trikotniška neenakost
 $\vec u$ je **enotski** vektor, če je $\|\vec u\|=1$
 
+---
 # Pravokotna projekcija
 ![[Vektorji v R 2024-10-10 11.52.13.excalidraw]]
 $$proj_{\vec u}(\vec v)=\frac{<\vec u,\vec v>}{<\vec u,\vec u>}*\vec u$$
 - $\cos \gamma=\frac{\|proj_{\vec u}(\vec v)\|}{\vec v}$
 - Pravokotna projekcija vektorja $\vec v$ na vektor $\vec u$
 
+---
 # Vektorski produkt vektorjev
 $$\vec v \times\vec w= \left[\begin{array} {}v_{2}w_{3}-v_{3}w_{2} \\ v_{3}w_{1}-v_{1}w_{3}  \\ v_{1}w_{2}-v_{2}w_{1} \end{array}\right]\in\Bbb R^3$$
 - Delamo samo v $\Bbb R^{3}$
