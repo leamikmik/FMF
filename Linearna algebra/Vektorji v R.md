@@ -1,3 +1,8 @@
+```table-of-contents
+title: # Kazalo
+style: nestedOrderedList
+```
+---
 $\mathbb{R}^n={(x1, x2,..., xn);x1, x2,... xn \in \mathbb R; n\in \mathbb N}$
 - Točka v $\mathbb R^n$ ima $n$ koordinat
 - Vektor je usmerjena daljica ki je neodvisna od vzporednih premikov (tj. natanko določena s svojo smerjo in dolžino)
@@ -13,7 +18,7 @@ $\mathbb{R}^n={(x1, x2,..., xn);x1, x2,... xn \in \mathbb R; n\in \mathbb N}$
 - Norma (dolžina) vektorja -> $\|\vec v\|=\sqrt{v_{1}^{2}+v_{2}^{2}+\dots+v_{n}^{2}}$   
 - Skalarni produkt vektorjev -> $<\vec v, \vec w>=v_1*w_1+...+v_n*w_n$
     - $<\vec v, \vec v>=\|\vec v\|^2$
-### Lastnosti operacij 
+## Lastnosti operacij 
 $$\vec a, \vec b, \vec c \in \mathbb R^{n};\ \alpha, \beta \in \mathbb R$$
 1. $(\vec a+\vec b)+\vec c=\vec a +(\vec b+\vec c)$ -> Asociativnost sešt. 
 2. $\vec a+\vec 0=\vec a$ -> $\vec 0$ je enota za sešt. 

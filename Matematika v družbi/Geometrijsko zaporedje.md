@@ -1,7 +1,7 @@
-# Kazalo
-1. [[#Definicija]]
-2. [[#Geometrijska sredina]]
-3. [[#Končna vrsta]]
+```table-of-contents
+title: # Kazalo
+style: nestedOrderedList
+```
 ---
 # Definicija
 $$a_{n}=a_{1}*k^{n-1}$$
