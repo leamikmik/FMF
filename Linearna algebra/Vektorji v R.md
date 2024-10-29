@@ -24,8 +24,9 @@ $\mathbb{R}^{n}=\left\{(x_{1}, x_{2},..., x_{n});\ x_{1}, x_{2},... x_{n} \in \m
 - **Seštevanje/Odštevanje** -> $\vec v+\vec w=\left[\begin{array} {}v_{1}+w_{1} \\ v_{2}+w_{2} \\ \vdots \\ v_{n}+w_{n} \end{array}\right]$
 - **Množenje s skalarjem** (konstanta) -> $\alpha*\vec v=\left[\begin{array} {}\alpha*v_{1} \\ \alpha*v_{2} \\ \vdots \\ \alpha*v_{n} \end{array}\right]$
 - [[#Norma]] (dolžina) vektorja -> $\|\vec v\|=\sqrt{v_{1}^{2}+v_{2}^{2}+\dots+v_{n}^{2}}$   
-- [[#Skalarni produkt]] vektorjev -> $<\vec v, \vec w>=v_1*w_1+...+v_n*w_n$
+- [[#Skalarni produkt]] vektorjev -> $\left<\vec v, \vec w\right>=v_1*w_1+...+v_n*w_n$
 - [[#Vektorski produkt]] vektorjev -> $\vec v \times\vec w= \left[\begin{array} {}v_{2}w_{3}-v_{3}w_{2} \\ v_{3}w_{1}-v_{1}w_{3}  \\ v_{1}w_{2}-v_{2}w_{1} \end{array}\right]$
+- [[#Mešani produkt]] ->$\left[\vec x,\vec y,\vec z\right]=\left<\vec x\times\vec y,\vec z\right>$
 ## Lastnosti operacij 
 $$\vec a, \vec b, \vec c \in \mathbb R^{n};\ \alpha, \beta \in \mathbb R$$
 1. $(\vec a+\vec b)+\vec c=\vec a +(\vec b+\vec c)$ -> Asociativnost sešt. 
@@ -97,3 +98,21 @@ $$ax+by+cz=d$$
 	- $\vec n=\vec a\times\vec b;\ \vec a,\vec b\subset\Bbb R^3$
 - Točka v ravnini -> $T(x,y,z)$
 ---
+# Razdalje med objekti v $\Bbb R^3$ 
+## Med dvema točkama
+$$d=\|\vec{AB}\|=\sqrt{\left<\vec{AB},\vec{AB}\right>}$$
+## Med točko in premico
+$$d=\frac{\|\vec s\times\vec{AT}\|}{\|\vec s\|}$$
+## Med dvema premicama
+$$d=\frac{|[\vec s_{1},\vec s_{2},\vec{T_{1}T_{2}}]|}{\|\vec s_{1}\times\vec s_{2}\|}$$
+- Če sta premici vzporedni je $\vec s_{1}\times\vec s_{2}=\vec 0$. Tako zračunamo razdaljo poljubne točke ene premice na drugo.
+## Med točko in ravnino
+$$d=\frac{\left|\left<\vec{AT}, \vec n\right>\right|}{\|\vec n\|}$$
+## Med premico in ravnino
+$$x=\left<\vec s, \vec n\right>$$
+1. $x\not=0$ -> Premica seka ravnino, razdalja je $0$
+2. $x=0$ -> Premica je vzporedna z ravnino, zračunamo z točko na premici
+## Med dvema ravninama
+$$x=\vec n_{1}\times\vec n_{2}$$
+1. $x\not=0$ -> Ravnini se sekata, razdalja je 0
+2. $x=0$ -> Razdalja med točko prve ravnine in druge ravnino
