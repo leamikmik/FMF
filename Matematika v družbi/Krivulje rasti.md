@@ -37,3 +37,14 @@ $$N=\frac{N_*}{1+(N_{*}/N_{0}-1)e^{-a_{0}t}}$$
 - Prevojna tocka (simetricno razpolovi):
 	- $N_{p}=\frac{N_{*}}{2}$ 
 - Klodoida
+## In onesnazenje
+$$a(N)=a_{0}-bN-c\int^t_0{Ndt}$$
+- $c$ -> koeficient onesnazenja
+- $P=\int^{t}_{0}N dt$ -> Onesnazenje se ne zmanjsuje, $\frac{dP}{dt}=N$
+- Predpostavimo $b=0$, torej ni ucinka goscenja oz. upocasnevanja rasti zaradi omejitve virov
+- $\frac{1}{N} \frac{dN}{dt}=a_{0}-cP$ -> $N=N_{0}+a_{0}P- \frac{cP^{2}}{2}$
+ %%ToDo
+![[Pasted image 20241104111948.png]]
+ %%
+
+---
