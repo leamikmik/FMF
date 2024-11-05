@@ -36,6 +36,8 @@ $$N=\frac{N_*}{1+(N_{*}/N_{0}-1)e^{-a_{0}t}}$$
 - $tanh(x)$ podobno
 - Prevojna tocka (simetricno razpolovi):
 	- $N_{p}=\frac{N_{*}}{2}$ 
+	- $t_{p}=\frac{1}{a_{0}}\ln\left( \frac{N_{*}}{N_{0}}-1 \right)$
+	- $\left( \frac{dN}{dt} \right)_{p}=\frac{a_{0}N_{*}}{4}$
 - Klodoida
 ## In onesnazenje
 $$a(N)=a_{0}-bN-c\int^t_0{Ndt}$$
@@ -43,8 +45,8 @@ $$a(N)=a_{0}-bN-c\int^t_0{Ndt}$$
 - $P=\int^{t}_{0}N dt$ -> Onesnazenje se ne zmanjsuje, $\frac{dP}{dt}=N$
 - Predpostavimo $b=0$, torej ni ucinka goscenja oz. upocasnevanja rasti zaradi omejitve virov
 - $\frac{1}{N} \frac{dN}{dt}=a_{0}-cP$ -> $N=N_{0}+a_{0}P- \frac{cP^{2}}{2}$
- %%ToDo
-![[Pasted image 20241104111948.png]]
- %%
-
+- V odvisnosti od časa: ($a_{*}=\sqrt{a^{2}_{0}+2cN_{0}}$; $\phi=\tanh^{-1} \frac{a_{0}}{a_{*}}$)
+	- $P=\frac{a_{0}}{c}\left(1+ \frac{a_{*}}{a_{0}}\tanh(\frac{a_{*}t}{2}-\phi)\right)$
+	- $N=\frac{a_{*}^{2}}{2c}\left(\cosh(\frac{a_{*}t}{2}-\phi)\right)^{-2}$
+- Ker ima $cosh^{-2}(x)$ maxsimum pri $x=0$, ima populacija maximum $N_{maks}=\frac{a_{*}^{2}}{2c}$ pri času $t_{maks}=\frac{2\phi}{a_{*}}$
 ---
