@@ -33,11 +33,13 @@ $$M_{i\times j}=\left[\begin{matrix} m_{11} & \dots & m_{1j}  \\ \vdots & & \vdo
 3. $A+(-A)=0$
 4. $A+B=B+A$ -> Komutativnost
 ### Množenje
-1. $(\alpha+\beta)A=\alpha A+\beta A$
-2. $\alpha(A+B)=\alpha A+\alpha B$
-3. $(\alpha \beta)A=\alpha(\beta A)$
-4. $1*A=A$
-5. $(A*B)C=A(B*C)$
+1. $A*B\ne B*A$
+2. $(\alpha+\beta)A=\alpha A+\beta A$
+3. $\alpha(A+B)=\alpha A+\alpha B$
+4. $(\alpha \beta)A=\alpha(\beta A)$
+5. $1*A=A$
+6. $(A*B)C=A(B*C)$
+7. $(AB)^{-1}=B^{-1}A^{-1}$
 ### Transponiranje
 1. $(A^{T})^{T}=A$
 2. $(A+B)^{T}=A^{T}+B^{T}$
@@ -50,6 +52,7 @@ $$A\in\Bbb R^{n\times n}$$
 2. **diagonalna matrika** => $\left[\begin{matrix} d_{1} & & \huge 0 \\ & \ddots &  \\ \huge 0 & & d_{n} \end{matrix}\right]$
 3. **zgornje**-trikotna mat. => $\left[\begin{matrix} a_{11} & \dots & a_{1n} \\ & \ddots & \vdots \\ \huge 0 & & a_{nn} \end{matrix}\right]$
 4. **spodnje**-trikotna mat. => $\left[\begin{matrix} a_{11} & & \huge 0 \\ \vdots & \ddots &  \\ a_{n1} & \dots & a_{nn} \end{matrix}\right]$
+5. **Identiteta** => $I=\left[\begin{matrix}1&&\huge 0 \\ &\ddots& \\ \huge 0&&1\end{matrix}\right]$
 - *Vsota in produkt zgornjih in spodnjih trikotnih mat. je tudi zgornja oz. spodnjo trikotna mat.*
 ---
 # Vrstična kanonična forma 
@@ -58,13 +61,19 @@ $$A\in\Bbb R^{n\times m}$$
 - **Pivot** -> prvi neničelni el. v vsaki vrstici
 - **Rang** -> št. pivotov v dani matrici
 ## Elementarne transformacije
-1. **Prištej skalarni večkratnik vrstice**:
+1. $E_{i,j}(\alpha)$ **Prištej skalarni večkratnik vrstice**:
 	- $v'_{1}=v_{1}+2*v_{2}=[v_{11}+2*v_{21}\ \dots \ v_{1n}+2*v_{2n}]$
-	- *Vsak člen posebaj*
-2. **Dano vrstico pomnoži z nenič. skalarjem**:
+	- *Vsak člen posebej*
+	- $\left[\begin{matrix} 1 & \alpha_{ji} & \huge 0 \\ & \ddots &  \\ \huge 0 & & 1 \end{matrix}\right]$
+	- $E_{i,j}(\alpha)^{-1}=E_{i,j}(-\alpha)$
+1. $F_i(\alpha)$ **Dano vrstico pomnoži z nenič. skalarjem**:
 	- $v'=\alpha*v=[v_{1}*\alpha\ \dots\ v_{n}*\alpha]$
-3. **Zamenjaj 2 vrstici**:
+	- $\left[\begin{matrix}1 & & \huge 0\\ & \alpha_{ii}& \\ \huge 0 & & 1 \end{matrix}\right]$
+	- $F_{i}(\alpha)^{-1}=F_{i}(\frac{1}{\alpha})$
+1. $P_{i,j}$ **Zamenjaj 2 vrstici**:
 	- $v_{x}\leftrightarrow v_{y}$
+	- $\left[\begin{matrix} 1 & 1_{ij} & \huge 0 \\ & \ddots & 1_{ji} \\ \huge 0 & & 1 \end{matrix}\right]$
+	- $P_{i,j}^{-1}=P_{i,j}$
 ## Pravila
 - *prvi neničelni el. v vsaki vrsti je $1$ (t.j. imenovan **pivot**)*
 - *prvi neničelni el. v naslednji vrstici je bolj "desno" od prejšnjega*
@@ -80,8 +89,20 @@ $$A\in\Bbb R^{n\times m}$$
 	- Nato povečaj $i$ in $j$ za $1$, dokler ne pade iz matrike ($i>n$ ali $j>m$)
 2. Vrstice pomnoži z skalarji, da bodo vsi pivoti $1$
 3. Pridelaj še $0$ nad pivoti s prištevanjem večkratnika pivotne vrstice
-# Primer
+## Primer
 $$A=\left[\begin{matrix}1&0&-2&1&0\\0&-1&-3&1&3\\-2&-1&1&-1&3\\0&3&9&0&-12\end{matrix}\right]$$
 $$VKF(A)=\left[\begin{matrix} 1&0&-2&0&-1\\0&1&3&0&-4\\0&0&0&1&-1\\0&0&0&0&0 \end{matrix}\right]$$
 $$rang(A)=3$$
 ---
+# Sistem enačb 
+- Imamo $m$ enačb za $n$ spremenljivk
+	- $\alpha_{m1}x_{1}+\dots+\alpha_{mn}x_{n}=\beta_{m}$
+- **Matrika koeficientov** -> $A=\left[\begin{matrix}\alpha_{11} & \dots & \alpha_{1n} \\ \vdots && \vdots \\ \alpha_{m1} & \dots & \alpha_{mn}\end{matrix}\right]$
+- **Vektor desnih strani** -> $B=\left[\begin{matrix}\beta_{1} \\ \vdots \\ \beta_{m}\end{matrix}\right]$
+- **Vektor neznank** -> $X=\left[\begin{matrix}x_{1} \\ \vdots \\ x_{n}\end{matrix}\right]$
+- Sistem lahko zapišemo potem kot $Q*AX=Q*B$
+	- Za vsako **obrljivo** matriko $Q$
+## Gaussova eliminacija
+1. Zapišemo *razširjeno matriko sistema* -> $\bar A=[A\ B]$
+2. Izračunamo $VKF(\bar A)$
+3. Preberemo rešitve (zadnji stolpec $VKF(\bar A)$)
