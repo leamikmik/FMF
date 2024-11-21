@@ -7,7 +7,7 @@ style: nestedOrderedList
 $$M_{i\times j}=\left[\begin{matrix} m_{11} & \dots & m_{1j}  \\ \vdots & & \vdots \\ m_{i1} & \dots & m_{ij} \end{matrix}\right] \in \Bbb R^{i\times j}$$
 - Matrika je **pravokotna tabela števil.**
 - *[[Vektorji v R|Vektorji]] so matrike z enim stolpcem*  ($\Bbb R^{m\times1}$)
-- Matrikam z $i=j$ rečemo *kvadratne matrike*
+- Matrikam z $i=j$ rečemo [[#kvadratne matrike|kvadratne matrike]]
 - Označimo jih z velikimi tiskanimi črkami.
 - Matriki polni ničel rečemo ničelna matrika
 ---
@@ -17,6 +17,7 @@ $$M_{i\times j}=\left[\begin{matrix} m_{11} & \dots & m_{1j}  \\ \vdots & & \vdo
 - **[[#Množenje matrik]]**
 - [[#Transponiranje]]
 ## Množenje matrik
+%%WIP Boljsa razlaga%%
 - $A\in\Bbb R^{m\times n};\ B\in\Bbb R^{n\times r};\ C=A*B \in\Bbb R^{m\times r}$
 	- Število stolpcev prve matrike je enako številu vrstic druge matrice
 - $c_{ij}=a_{i1}b_{1j}+\dots+a_{in}b_{nj}$ -> $1\le i\le m;\ 1\le j\le r$
@@ -98,11 +99,32 @@ $$rang(A)=3$$
 - Imamo $m$ enačb za $n$ spremenljivk
 	- $\alpha_{m1}x_{1}+\dots+\alpha_{mn}x_{n}=\beta_{m}$
 - **Matrika koeficientov** -> $A=\left[\begin{matrix}\alpha_{11} & \dots & \alpha_{1n} \\ \vdots && \vdots \\ \alpha_{m1} & \dots & \alpha_{mn}\end{matrix}\right]$
-- **Vektor desnih strani** -> $B=\left[\begin{matrix}\beta_{1} \\ \vdots \\ \beta_{m}\end{matrix}\right]$
-- **Vektor neznank** -> $X=\left[\begin{matrix}x_{1} \\ \vdots \\ x_{n}\end{matrix}\right]$
-- Sistem lahko zapišemo potem kot $Q*AX=Q*B$
+- **Vektor desnih strani** -> $b=\left[\begin{matrix}\beta_{1} \\ \vdots \\ \beta_{m}\end{matrix}\right]$
+- **Vektor neznank** -> $x=\left[\begin{matrix}x_{1} \\ \vdots \\ x_{n}\end{matrix}\right]$
+
+- Sistem lahko zapišemo potem kot $Q*Ax=Q*b$
 	- Za vsako **obrljivo** matriko $Q$
+- Če ima $\tilde A$ v zadnjem stolpcu pivot, sistem ni rešljiv.
+- Če v kakem stoplcu $VKF(A)$ **ni** pivota ima ustrezna spremenljivka poljubno vrednost -> *neskončno rešitev*
+- **Homogen sistem**:
+	- Kadar so na desni same $0$ -> $Ax=0$
+	- Rešujemo enako, le da običajno ne pišemo desne strani
+	- Zmeraj vsaj ena trivialna rešitev (vse spremenljivke so $0$)
+	- $\tilde A=A$
+	- Če $A\in\Bbb R^{m\times n}$ in $m<n$ ima sistem vedno neskončno rešitev
+- Če je $A$ kvadratna matrika je $x=b*A^{-1}$
 ## Gaussova eliminacija
-1. Zapišemo *razširjeno matriko sistema* -> $\bar A=[A\ B]$
-2. Izračunamo $VKF(\bar A)$
-3. Preberemo rešitve (zadnji stolpec $VKF(\bar A)$)
+1. Zapišemo *razširjeno matriko sistema* -> $\tilde A=[A\vdots B]$
+2. Izračunamo $VKF(\tilde A)$
+3. Preberemo rešitve (zadnji stolpec $VKF(\tilde A)$)
+## Matrične enačbe
+$$A*X=B$$
+- $A\in\Bbb R^{m\times n};\ X\in\Bbb R^{n\times r};\ B\in\Bbb R^{m\times r}$
+- Rešuje enako z *Gaussovo eliminacijo*
+- Če na $B$ strani ni pivotov je sistem rešljiv.
+- **Poseben primer** $B=I=\left[\begin{matrix}1&&\huge 0 \\ &\ddots& \\ \huge 0&&1\end{matrix}\right]$
+	- Mi bomo reševali samo take primere
+	- $X$ je inverz $A$
+	- $VKF(\ [A\vdots I]\ )\Rightarrow[I\vdots X]$
+	- $A*X=X*A$
+---
