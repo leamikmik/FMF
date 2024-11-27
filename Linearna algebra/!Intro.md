@@ -3,9 +3,9 @@
 - Izpit, računski pa teoretični (ustni)
 - 4 Kolokviji (računski)
 - Snov:
-  - Vektorji v R^n
-  - Matrike
-  - Determinante
+  - [[Vektorji v R]]
+  - [[Matrike]]
+  - [[Determinante]]
   - Sistem linearnih enačb 
   - Vektorski prostori 
   - Linearne preslikave

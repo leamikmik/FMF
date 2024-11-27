@@ -39,7 +39,7 @@ $$e=\lim_{m\to\infty}{(1+\frac{1}{m})^{m}}\approx2.71828$$
 	- Dnevna => $\sigma/365$
 - **Konformna obrestna mera** => $r_{m}=\sqrt[m]{r}$
 - <u>Varčevanje z mesečnim pologom in mesešnimi stroški</u> 
-	- $a_{n}=a_{0}\frac{r^{i+1}-1}{r-1}-c\frac{r^{i}-1}{r-1}$
+	- $a_{n}=a_{0}\frac{r^{n+1}-1}{r-1}-c\frac{r^{n}-1}{r-1}$
 	- Oz če ni vplačila po zaključku varčevanja $a_{m}=(a_{0}r-c)\frac{r^{m}-1}{r-1}$
 	- $a_{0}$ -> Mesečni polog
 	- $r$ -> Mesečni faktor obresti
