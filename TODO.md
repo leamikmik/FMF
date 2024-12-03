@@ -1,2 +1,4 @@
-- Lin algb. 14.11 ->
-- Mata. 14.11 ->
+- Mata. => 3.12
+- Mata vaje: [26.11.](https://discord.com/channels/1291085390211711077/1291085391016886275/1310944095690031205)
+- Lin algb: 28.11 ->
+- MVD: Volitve
