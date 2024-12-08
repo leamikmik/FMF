@@ -2,6 +2,7 @@
 - Vaje: Blaž Jelenc
 - Izpit, računski pa teoretični (ustni)
 - 4 Kolokviji (računski)
+- A4 zapiski za kolokvij
 - Snov:
   - [[Vektorji v R]]
   - [[Matrike]]
@@ -11,3 +12,5 @@
   - Linearne preslikave
   - Lastne vrednosti in lastni vektorji
   - Skalarni produkti
+- Kolokvij 1:
+	- Vektorji, premice, matrike det inverz, sistem enacb rang
