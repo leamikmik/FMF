@@ -26,12 +26,16 @@ style: nestedOrderedList
 - **Inverzna permutacija** => $\Pi^{-1}$
 	- $ind(\Pi^{-1})=ind(\Pi)$
 ---
-# Determinanta
+# Definicija
 $$\det(A)=\sum_{\Pi\in S_{n}}sgn(\Pi)*a_{1\Pi(1)}*\dots a_{n\Pi(n)}\in\Bbb R$$
 - *V vsaki vrstici in v vsakem stolpcu vzamemo 1 element*
 - $A\in\Bbb R^{n\times n}$
 - **Označimo tudi** => $\det(A)=\left| \begin{matrix} a_{11}&\dots &a_{1n}\\\vdots&\ddots&\vdots \\ a_{n1}&\dots&a_{nn} \end{matrix} \right|$
 - Determinanta **trikotne** matrike je <u>produkt</u> diagonalnih členov
+- **Prirejenka** => $B_{A}\left[\begin{matrix} k_{11} & \dots & k_{1n} \\ \vdots & & \vdots \\ k_{n1} & \dots & k_{nn}\end{matrix}\right]^{T}$
+	- $A^{-1}=\frac{1}{\det(A)}B_{A}$
+	- Obstaja samo kadar $\det(A)\ne0$
+	- Za $A\in\Bbb R^{2\times2}$ => $A^{-1}=\frac{1}{ad-bc}\left[\begin{matrix}d & -b \\ -c & a \end{matrix}\right]$
 ## Razvoj
 ### n = 2
 ![[Pasted image 20241127131352.png]]
@@ -56,3 +60,7 @@ $$\det(A)=\sum_{\Pi\in S_{n}}sgn(\Pi)*a_{1\Pi(1)}*\dots a_{n\Pi(n)}\in\Bbb R$$
 5. $\tilde A=A: v_{i}\leftrightarrow v_{j}\lor s_{i}\leftrightarrow s_{j};\ \det(\tilde A)=-\det(A)$
 6. $v_{i}=v_{j}\lor s_{i}=s_{j};\ \det(A)=0$
 7. Prištevanje vrstic/stolpcev determinante ne spremeni
+8. $\det(AB)=\det(A)*\det(B)$
+9. $\det(A)*\det(A^{-1})=1$
+	- Če $\det(A)\ne0$
+10. $\det(A)=0$ => matrika nima inverza

@@ -11,7 +11,7 @@ $$M_{i\times j}=\left[\begin{matrix} m_{11} & \dots & m_{1j}  \\ \vdots & & \vdo
 - Matrikam z $i=j$ rečemo [[#kvadratne matrike|kvadratne matrike]]
 - Označimo jih z velikimi tiskanimi črkami.
 - Matriki polni ničel rečemo ničelna matrika
-
+- Če ima matrika $A$ **inverz** ($A*A^{-1}=I$) ji rečemo da je <u>obrnljiva</u>
 ---
 # Operacije na matrikah
 - **Seštevanje/Odštevanje** -> $A\pm B=\left[\begin{matrix} a_{11}\pm b_{11} & \dots & a_{1j}\pm b_{1j}  \\ \vdots & & \vdots \\ a_{i1}\pm b_{i1} & \dots & a_{ij}\pm b_{ij} \end{matrix}\right];\ A,B \in \Bbb R^{i\times j}$
