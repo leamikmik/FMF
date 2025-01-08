@@ -81,7 +81,7 @@ $$\vec v \times\vec w= \left[\begin{array} {}v_{2}w_{3}-v_{3}w_{2} \\ v_{3}w_{1}
 2. $(\alpha\vec x)\times\vec y=\alpha(\vec x\times\vec y)=\vec x\times(\alpha\vec y)$
 3. $\vec x\times\vec y=-\vec y\times\vec x$
 4. $(\alpha\vec x+\beta\vec y)\times\vec z=\alpha\vec x\times\vec z+\beta\vec y\times\vec z$
-5. $\vec x\times(\alpha\vec y+\beta\vec z)=\alpha\vec x\times\vec y=\beta\vec x\times\vec z$
+5. $\vec x\times(\alpha\vec y+\beta\vec z)=\alpha\vec x\times\vec y+\beta\vec x\times\vec z$
 6. $\vec x\times\vec x=\vec x\times\vec 0=\vec 0$
 7. $(\vec x\times\vec y)\times\vec z=\left<\vec x,\vec z\right>*\vec y-\left<\vec y,\vec z\right>$ -> Dvojni vektorski produkt
 
