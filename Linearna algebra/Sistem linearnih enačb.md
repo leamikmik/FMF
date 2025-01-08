@@ -15,6 +15,8 @@ $$\alpha_{m1}x_{1}+\dots+\alpha_{mn}x_{n}=\beta_{m}$$
 	- Za vsako **obrljivo** matriko $Q$
 - Če ima $\tilde A$ v zadnjem stolpcu pivot, sistem ni rešljiv.
 - Če v kakem stoplcu $VKF(A)$ **ni** pivota ima ustrezna spremenljivka poljubno vrednost -> *neskončno rešitev*
+- Sistem ima eno rešitev ko [[Determinante|determinanta]] $\det(A)\ne0$
+	- Če $\det(A)=0$ sistem ni rešljiv, oz ima <u>neskončno rešitev</u>
 - **Homogen sistem**:
 	- Kadar so na desni same $0$ -> $Ax=0$
 	- Rešujemo enako, le da običajno ne pišemo desne strani
@@ -22,6 +24,7 @@ $$\alpha_{m1}x_{1}+\dots+\alpha_{mn}x_{n}=\beta_{m}$$
 	- $\tilde A=A$
 	- Če $A\in\Bbb R^{m\times n}$ in $m<n$ ima sistem vedno neskončno rešitev
 - Če je $A$ kvadratna matrika je $x=b*A^{-1}$
+- $rang(A)$ določi največjo neničelno determinanto matrike
 ## Gaussova eliminacija
 1. Zapišemo *razširjeno matriko sistema* -> $\tilde A=[A\vdots B]$
 2. Izračunamo $VKF(\tilde A)$ ([[Matrike#Vrstična kanonična forma]])
