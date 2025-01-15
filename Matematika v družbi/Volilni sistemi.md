@@ -27,3 +27,28 @@
 ## Primerjava kandidatov
 - Enokrožni večinski sistem s točkovanjem kandidatov, ki jih **paroma (1:1)** primerjamo med sabo
 - Primerjava med dvema kandidatoma, boljši dobi točko. Če primerjava kandidatov 50/50 potem vsak dobi pol točke.
+
+---
+# Proporcionalni
+- Sistem *predstavnikov*, kjer se glasovi ne izgubijo (vsak *predstavnik* ima **volilno moč**)
+- Posebne **volilne moči**:
+	- <u>diktatorska moč</u> => brez predstavnika *ni mogoče sprejeti nobene odločitve*
+	- <u>moč veta</u> => predstavnik lahko *sam sprejme* odločitev ampak ni obvezen 
+	- <u>nobena moč</u> => v primeru diktature, ...
+- Zapis oblike $[\text{Prag};P_{1},P_{2},\dots,P_{n}]$
+- **Prag** -> Potrebnih glasov za sprejem odločitve
+- **Koalicija** -> *Zveza predstavnikov* z težo vsote števil glasov članic
+	- <u>Zmagovalna</u> koalicija => teža vsaj enaka pragu
+	- Število koalicij = $2^n$ 
+	- Najlažji način preverjanja vseh zmagovalnih z <u>binarno metodo</u>
+- **Kritičnost** -> Predstavnik čigar sodelovanje je <u>nujno</u>, da koalicija ostane zmagovalna  => $N_{k}(P_{n})$
+- **Pivot**:
+	- <u>Zaporedna koalicija</u> => Vrstni red je pomemben $\left< P_{1},\dots,P_{n} \right>$
+	- Predstavnik, pri katerem teža zaporedne koalicije doseže prag odločanja
+	- Število pivotov za danega predstavnika je $N_{p}(P_{i})$
+# Banzhafov indeks
+$$B_{r}(P_{i})=\frac{N_{k}(P_{i})}{\sum\limits^{n}_{j=1} N_{k}(P_{j})}$$
+- **Relativni** => Seštevek vseh je $1$
+# Shapley-Shubikov indeks
+$$SS(P_{i})=\frac{N_{p}(P_{i})}{!n}$$
+- **Relativni** => Seštevek vseh je $1$
