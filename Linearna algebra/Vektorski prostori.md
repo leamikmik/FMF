@@ -58,6 +58,10 @@ style: nestedOrderedList
 	- $\alpha*u+\beta*v\in U$ za $\forall \alpha,\beta\in F$ in $\forall u,v\in U$
 - **Linearna kombinacija** vektorjev $u$ in $v$
 - Če je $U$ [[Premice in ravnine#Ravnine|ravnina]] je v.p. če vsebuje točko $T(0,0,0)$
+- <u>Presek vektorskih</u> => $U_{1}\cap U_{2}\cap\dots\cap U_{n} \subseteq V$
+	- Pogojih vseh podprostorov so v veljavi
+- **Seštevanje** -> $U_{1}+U_{2}\subseteq V$ => $\dim(U_{1}+U_{2})=\dim(U_{1})+\dim(U_{2})-\dim(U_{1}\cap U_{2})$
+- *Direktna vsota* -> $U_{1}\oplus U_{2}$ => Kadar je $U_{1}\cap U_{2}=\{0\}$
 ## Linearna kombinacija
 $\alpha_{1}v_{1}+\alpha_{2}v_{2}+\dots+\alpha_{n}v_{n}$
 - $v_{1},v_{2},\dots,v_{n}\in V$
@@ -66,7 +70,28 @@ $\alpha_{1}v_{1}+\alpha_{2}v_{2}+\dots+\alpha_{n}v_{n}$
 	- Oznaka: $Lin(v_{1},v_{2},\dots,v_{n})$
 	- Je najmanjši **vektorski prostor** ki vsebuje podane vektorje
 - Če je lin. kombinacija enaka $0$ so vektorji **linearno neodvisni**
-- **Baza vektorskega prostora** $V$ ($\{v_{1},v_{2},\dots,v_{n}\}$) če:
-	1. Vektorji so linearno <u>neodvisni</u>
-	2. Vsak vektor iz $V$ lahko zapišemo kot lin. kombinacijo $v_{1},v_{2},\dots$
-	- <u>Standardna baza</u> $\{e_{1},e_{2},\dots,e_{n}\}$ => Vsak $e_{n}$ ima $n$-to komponento $1$
+## Baza vektorskega prostora
+$V$ ($\{v_{1},v_{2},\dots,v_{n}\}$) če:
+1. Vektorji so linearno <u>neodvisni</u>
+2. Vsak vektor iz $V$ lahko zapišemo kot lin. kombinacijo $v_{1},v_{2},\dots$
+- <u>Standardna baza</u> $\{e_{1},e_{2},\dots,e_{n}\}$:
+	1. $\Bbb R^{n}$ => $e_{i}=\left[\begin{matrix} 0 \\ \vdots \\ 1 \\ \vdots \\ 0 \end{matrix}\right]$ (1 na $i$-tem členu)
+	2. $\Bbb R_{n}[x]$ => $\{ 1,x,x^{2},\dots,x_{n} \}$
+- *Razvoj po bazi enolično določen*
+	- Razvoj je enak seštevku baznih vektorjev, pomnoženih z primernimi skalarji $u_{j}=\sum\limits^{m}_{i=1}\alpha_{ij}v_{i}$
+- **Dimenzija** v.p. je enaka <u>moči baze</u> $V$ -> $\dim(V)$
+	1. $\dim(\Bbb R^{n})=n$
+	2. $\dim(\Bbb R_{n}[x])=n+1$
+	3. $\dim(\Bbb R^{m\times n})=m*n$
+	- *Dve različni bazi za enak prostor imata enako moč*
+	- Kriteriji baze lahko znižajo velikost baze (vsaka formula avg. 1)
+- <u>Preverjanje lin. neodvisnosti</u> => $\sum\limits^{m}_{i=1}\alpha_{i}v_{i}=0$
+	- Bazni vektorji so lin. neodvisno samo **ko so vsi $\alpha_{i}=0$**
+## Prehod v baze
+$$B\to S\to C$$
+- $B, C$ *podani bazi*; $S$ *standardna baza*
+- $v_{c}=P_{BC}*v_{b}$
+- $P_{BC}$ => **prehodna matrika iz $B$ v $C$ bazo**
+	- $P_{BC}=P_{CB}^{-1}$
+	- $P_{BC}=P_{CS}^{-1}*P_{BS}$
+- $P_{BS}$ => <u>matrika iz </u>$B$<u> v standardno bazo je enaka matriki elementov </u>$B$<u> baze</u>
