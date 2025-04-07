@@ -1,3 +1,8 @@
+```table-of-contents
+title: # Kazalo
+style: nestedOrderedList
+```
+---
 # Kinematika
 - Opisovanje gibanja
 - Omejitve:
@@ -55,3 +60,48 @@ $F$ so konstantne
 		- $F_{1,z}+F_{2,z}=F_{z}$
 	- Izrek => $F_{z}t=\Delta G$
 		- Posebni primer ($F_{z}t=0$) -> $\Delta G=0$ 
+---
+# Navor in vrtenje
+Navor => $M$
+- $M=J_{1}\alpha;\ J_{1}=mr^{2}$
+- $M=J^{*}\alpha$
+	- $J^{*}=\frac{1}{2}mr^{2}$ => Homogen valj
+	- $J^{*}=\frac{2}{5}mr^{2}$ => Homogena krogla
+	- $J^{*}=mr^{2}$ => Votli valj
+- $M=0\Leftrightarrow\alpha=0\Leftrightarrow\omega=\omega_{0}=\text{koef}$
+- $W_{k}$ tockastega telesa, ki krozi:
+	- $W_{k}=\frac{1}{2}mv^{2}=\frac{1}{2}m(r\omega)^{2}=\frac{1}{2}J_{1}w^{2}=W_{rot}$ 
+	- $W_{rot}=\frac{1}{2}J^{*}\omega^{2}$ => Rot energija *nekega* telesa, ki se vrti
+- Izrek -> Poljubno gibanje razseznega dolgega telesa lahko razstavimo na translacijo krozisca in na rotacijo okrog teziscne osi.
+	- $W_{k}=W^{*}_{k}+W_{rot}$
+		- $W^{*}_{k}=\frac{1}{2}mv^{*^{2}}$
+		- $W_{rot}=\frac{1}{2}J^{*}\omega^{2}$
+## Kotaljenje
+- $v^{*}\Leftrightarrow\omega$
+- Telo se kotali ko ne drsi  => $v^{*}=r\omega$
+- Tocke v stiku z podlago mirujejo; prijemalisce sile podlage miruje
+	- $v_{p}=0\Rightarrow P_{p}=F_{p}v_{p}=0\Rightarrow P_{p}=\frac{A_{p}}{t}=0\Rightarrow A_{p}=0$
+- $W_{k}=\frac{x}{20}mv^{*^{2}}$ 
+	- $x=15$ => Homogen valj
+	- $x=14$ => Homogena krogla
+	- $x=20$ => Votli valj
+---
+# Mehanika tekočin
+- Tekocina -> so snovi ki jih pretakamo
+1. Gostota => $\rho=\frac{m}{V};\ [\frac{kg}{m^{3}}]$
+2. Tlak (sile glede na prijemalsice) => $p\ [\frac{N}{m^{2}}=Pa;\ 1\ bar=10^{5}Pa]$
+	1. Tockasto
+	2. Ploskovno (ploscina ploskve $S$) => $p:=\frac{F}{S}$ 
+	3. Prostorsko
+3. Stisljivost => $\chi:=- \frac{\Delta V}{V*\Delta p};\ [Pa^{-1}]$
+	- $p\rightarrow p'=p+\Delta p$ => $V\rightarrow V'=V-\Delta V$
+	- $-\frac{\Delta V}{V}$ sorazmeren $\Delta p$ => $-\frac{\Delta V}{v}=\chi\Delta p$
+- Tekocina: plini in kapljevine
+	1. Plini: 
+		- $\rho\approx1 \frac{kg}{m^{3}}$ (pri tlaku $1\ bar$ in pri sobni temp.)
+		- $\chi=10^{-5}Pa^{-1}=1\ bar^{-1}$ (pri tlaku $1\ bar$)
+		- Ne tvorijo gladine, kapelj
+	2. Kapljevine:
+		- $\rho\approx10^{3} \frac{kg}{m^{3}}$
+		- $\chi\approx10^{-10}Pa^{-1}=10^{5}bar^{-1}$
+		- Tvorijo kaplje in gladino
