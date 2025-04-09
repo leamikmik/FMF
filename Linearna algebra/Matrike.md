@@ -12,6 +12,9 @@ $$M_{i\times j}=\left[\begin{matrix} m_{11} & \dots & m_{1j}  \\ \vdots & & \vdo
 - Označimo jih z velikimi tiskanimi črkami.
 - Matriki polni ničel rečemo ničelna matrika
 - Če ima matrika $A$ **inverz** ($A*A^{-1}=I$) ji rečemo da je <u>obrnljiva</u>
+- **Sled** => $\text{sled}(A)=\sum\limits^{n}_{i=0}a_{ii}$ (vsota doagonalnih el.)
+- **Pivot** => prvi neničelni el. v vsaki vrstici
+- **Rang** => $\text{rang}(A)$ -> št. pivotov v dani matrici
 ---
 # Operacije na matrikah
 - **Seštevanje/Odštevanje** -> $A\pm B=\left[\begin{matrix} a_{11}\pm b_{11} & \dots & a_{1j}\pm b_{1j}  \\ \vdots & & \vdots \\ a_{i1}\pm b_{i1} & \dots & a_{ij}\pm b_{ij} \end{matrix}\right];\ A,B \in \Bbb R^{i\times j}$
@@ -60,8 +63,6 @@ $$A\in\Bbb R^{n\times n}$$
 # Vrstična kanonična forma 
 $$A\in\Bbb R^{n\times m}$$
 - Označimo kot $VKF(A)$
-- **Pivot** -> prvi neničelni el. v vsaki vrstici
-- **Rang** -> št. pivotov v dani matrici
 ## Elementarne transformacije
 1. $E_{i,j}(\alpha)$ **Prištej skalarni večkratnik vrstice**:
 	- $v'_{1}=v_{1}+2*v_{2}=[v_{11}+2*v_{21}\ \dots \ v_{1n}+2*v_{2n}]$
