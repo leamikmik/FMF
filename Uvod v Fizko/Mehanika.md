@@ -87,6 +87,8 @@ Navor => $M$
 	- $x=20$ => Votli valj
 ---
 # Mehanika tekočin
+## Hidrostatika
+- tekocina pri miru
 - Tekocina -> so snovi ki jih pretakamo
 1. Gostota => $\rho=\frac{m}{V};\ [\frac{kg}{m^{3}}]$
 2. Tlak (sile glede na prijemalsice) => $p\ [\frac{N}{m^{2}}=Pa;\ 1\ bar=10^{5}Pa]$
@@ -105,3 +107,19 @@ Navor => $M$
 		- $\rho\approx10^{3} \frac{kg}{m^{3}}$
 		- $\chi\approx10^{-10}Pa^{-1}=10^{5}bar^{-1}$
 		- Tvorijo kaplje in gladino
+- Sila vzgona $F_{vzg}$
+	- Telo (v celoti potopljeno v tekocini $\rho_{t}$ ($V_{izp}=V$)) => $m$, $V$, $\rho$
+	- $V_{izp}=V$
+	- $F_{g}=-mg_{0}$
+	- $F_{vzg}=-F_{g,izp}=m_{izp}g_{0}$
+		- $m_{izp}=V_{izp}\rho_{t}$
+	- $F=F_{g}+F_{vzg}=-(m-m_{izp})g_{0}=-(\rho V-\rho_{t}V_{izp})g_{0}$
+		- Telo komplet potopljeno => $F=-(\rho-\rho_{t})Vg_{0}$
+	1. $\rho>\rho_{t}$ => $F<0$ (telo potopi)
+	2. $\rho=\rho_{t}$ => $F=0$ (telo lebdi)
+	3. $\rho<\rho_{t}$ => $F>0$ (telo plava)
+		- $V_{izp}<V$
+		- potoljen del -> $\frac{V_{izp}}{V}=\frac{\rho}{\rho_{t}}$
+## Hidrodinamika
+- tekocina premika
+- **Viskoznost** -> $F_{vis}=\delta \frac{v}{z}S$
