@@ -63,7 +63,7 @@ $$A\in\Bbb C^{n\times n};\ Ax=\lambda x;\ (A-\lambda I)x=0$$
 - $C(p)=\left[\begin{matrix}0 && \huge 0 & -a_{0} \\ 1 & \ddots &&-a_{1} \\ &\ddots &0&\vdots \\ \huge 0&&1&-a_{k-1}\end{matrix}\right]\in\Bbb C^{k\times k}$ => **pridružena matrika polinoma**
 	- $p(x)=x^{k}-\alpha_{k-1}x^{k-1}+\dots+\alpha_{0};\ k\in\Bbb N$
 		- $p(x)=x-\alpha\Rightarrow C(p)=[-\alpha]$
-	- $p_{C(p})(x)=\det(C(p)-xI)=(-1)^{k}p(x)$
+	- $p_{C(p)}(x)=\det(C(p)-xI)=(-1)^{k}p(x)$
 - $a(\lambda)$ => **algebraična večkratnost** (stopnja ničle)
 - $g(\lambda)=\dim(\ker(A-\lambda I))$ => **geometrična večkratnost** (velikost podprostora)
 	- Pove nam koliko lin. neodvisnih last. vekt. lahko najdemo pri $\lambda$

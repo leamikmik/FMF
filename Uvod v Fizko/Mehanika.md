@@ -4,6 +4,7 @@ style: nestedOrderedList
 ```
 ---
 # Kinematika
+$$x(t)=x_{0}+v_{0}t+ \frac{a_{0}t^{2}}{2}$$
 - Opisovanje gibanja
 - Omejitve:
 	1. premo gibanje
@@ -32,9 +33,39 @@ style: nestedOrderedList
 	- $v_{0}<0$ => met navzdol
 
 ---
+# Dinamika
+- *Kvalitativno* -> $F$ (sila) => količina ki opisuje vpliv oklice na telo
+- *Kvantitativno* (Newtnovi zakoni):
+	1. $F=0\Leftrightarrow a=0$ -> Telo **miruje** ali pa se giblje **premo enakomerno**
+	2. $F=m*a$ -> **Pospešek je sorazmeren** s skupno silo na telo in ima smer sile; sorazmerni koef. je masa telesa
+	3. $F_{2\to1}=-F_{1\to2}$ -> Če **prvo telo vpliva na drugega** z neko silo, potem **drugo vpliva na prvega** z nasprotno-enako silo
+## Sila teže
+$$F_{g}=-mg$$
+## Sila podlage
+$$F_{p}=-F_{g}=mg$$
+- Nasprotna silam navzdol, če ne, telo nebi bilo v skladu z 1. Newt zakonom (predpostavljamo da telo ne pada)
+![[Pasted image 20250421155338.png]]
+## Sila trenja
+$$|F_{tr}|=k_{tr}|F_{p}|$$
+- $k_{tr}$ je koef. trenja (odvisen od podlage in stične ploskve)
+- Smer $F_{tr}$ je nasprotna smeri hitrosti $v$ telesa
+- $F_{tr}$ **zavira** premikanje telesa
+![[Pasted image 20250421155643.png]]
+## Sila lepenja
+$$|F_{l}|=|F_{r}|;\ |F_{l}|^{max}=k_{l}|F_{p}|$$
+- $k_{l}\gtrsim k_{tr}$ 
+- Telo **miruje**
+![[Pasted image 20250421160104.png]]
+## Sila vzmeti
+$$F_{v}=-ky$$
+- **Hookov zakon**
+- $y$ raztezek, $k\ [\frac{N}{m}]$  koef. vzmeti
+- Če vzmet niha je $y=y_{0}\sin(2\pi\nu t)$
+	- Čas nihanja $t_{0}=2\pi\sqrt{\frac{m}{k}}$
+---
 # Delo, moč in energija
 - Delo => $A:=Fs;\ [J=Nm]$
-- Moč => $P:=\frac{dA}{dt};\ [\frac{J}{s}=W]$
+- Moč => $P:=\frac{dA}{dt}=A'(t);\ [\frac{J}{s}=W]$
 - Energije:
 	- Kineticna -> $W_{k}:=\frac{mv^{2}}{2};\ [J]$
 		- Izrek -> $A=\Delta W_{k}=W_{k}'-W_{k}$
@@ -47,7 +78,6 @@ style: nestedOrderedList
 
 ---
 # Sunek sile in gibalna količina
-1D
 $F$ so konstantne
 - $F, t$ => sunek sile $:=Ft;\ [Ns]$ (predznak je smer!)
 - $m,v$ => gibalna kolicina $G:=mv;\ [Ns]$ (predznak spet smer)
@@ -60,6 +90,8 @@ $F$ so konstantne
 		- $F_{1,z}+F_{2,z}=F_{z}$
 	- Izrek => $F_{z}t=\Delta G$
 		- Posebni primer ($F_{z}t=0$) -> $\Delta G=0$ 
+## Trki
+
 ---
 # Navor in vrtenje
 Navor => $M$
