@@ -31,6 +31,7 @@ $$x(t)=x_{0}+v_{0}t+ \frac{a_{0}t^{2}}{2}$$
 	- $v_{0}=0$ => prosti pad
 	- $v_{0}>0$ => met navzgor
 	- $v_{0}<0$ => met navzdol
+	- Koncna hitrost v odv. od visine => $v_{k}=\sqrt{v_{0}^{2}+2gh}$
 
 ---
 # Dinamika
@@ -65,7 +66,8 @@ $$F_{v}=-ky$$
 ---
 # Delo, moč in energija
 - Delo => $A:=Fs;\ [J=Nm]$
-- Moč => $P:=\frac{dA}{dt}=A'(t);\ [\frac{J}{s}=W]$
+- Moč => $P:=\frac{A}{t};\ [\frac{J}{s}=W]$
+	- Pri konstanti hitrosti -> $P=F*v$
 - Energije:
 	- Kineticna -> $W_{k}:=\frac{mv^{2}}{2};\ [J]$
 		- Izrek -> $A=\Delta W_{k}=W_{k}'-W_{k}$
@@ -91,11 +93,22 @@ $F$ so konstantne
 	- Izrek => $F_{z}t=\Delta G$
 		- Posebni primer ($F_{z}t=0$) -> $\Delta G=0$ 
 ## Trki
-
+- Skupni sunek zunanjih sil je $0$
+- $G=G' \Rightarrow m_{1}v_{1}=m_{1}v_{1}'+m_{2}v_{2}'$
+1. **Popolnoma neprožni**:
+	- $v'=v_{1} \frac{m_{1}}{m_{1}+m_{2}}$
+	- Telesa ob trku sprimeta -> $v'=v_{1}'=v_{2}'$
+	- Skupna kinetična energije se <u>ne</u> ohranja, gibalna pa se ohranja
+2. **Popolnoma prožni**:
+	- $v_{1}'=v_{1} \frac{m_{2}-m_{1}}{m_{2}+m_{1}};\ v_{2}'=v_{1} \frac{2m_{1}}{m_{1}+m_{2}}$
+	- Kineticna en. se ohrani
 ---
-# Navor in vrtenje
-Navor => $M$
-- $M=J_{1}\alpha;\ J_{1}=mr^{2}$
+# Kroženje in vrtenje
+- Kotna hitrost -> $\omega\ [s^{-1}]$
+- Kotni pospešek -> $\alpha\ [s^{-2}]$
+	- $a=r\alpha$
+- Vztrajnostni moment -> $\gamma_{1}=mr^{2}\ [kgm^{2}]$
+- Navor -> $M=\gamma_{1}\alpha=rF;\ J_{1}=mr^{2}$
 - $M=J^{*}\alpha$
 	- $J^{*}=\frac{1}{2}mr^{2}$ => Homogen valj
 	- $J^{*}=\frac{2}{5}mr^{2}$ => Homogena krogla
@@ -104,7 +117,7 @@ Navor => $M$
 - $W_{k}$ tockastega telesa, ki krozi:
 	- $W_{k}=\frac{1}{2}mv^{2}=\frac{1}{2}m(r\omega)^{2}=\frac{1}{2}J_{1}w^{2}=W_{rot}$ 
 	- $W_{rot}=\frac{1}{2}J^{*}\omega^{2}$ => Rot energija *nekega* telesa, ki se vrti
-- Izrek -> Poljubno gibanje razseznega dolgega telesa lahko razstavimo na translacijo krozisca in na rotacijo okrog teziscne osi.
+- Izrek -> Poljubno gibanje razseznega togega telesa lahko razstavimo na translacijo težišča in na rotacijo okrog teziscne osi.
 	- $W_{k}=W^{*}_{k}+W_{rot}$
 		- $W^{*}_{k}=\frac{1}{2}mv^{*^{2}}$
 		- $W_{rot}=\frac{1}{2}J^{*}\omega^{2}$
@@ -120,7 +133,7 @@ Navor => $M$
 ---
 # Mehanika tekočin
 ## Hidrostatika
-- tekocina pri miru
+- Tekocina pri miru
 - Tekocina -> so snovi ki jih pretakamo
 1. Gostota => $\rho=\frac{m}{V};\ [\frac{kg}{m^{3}}]$
 2. Tlak (sile glede na prijemalsice) => $p\ [\frac{N}{m^{2}}=Pa;\ 1\ bar=10^{5}Pa]$
@@ -139,6 +152,8 @@ Navor => $M$
 		- $\rho\approx10^{3} \frac{kg}{m^{3}}$
 		- $\chi\approx10^{-10}Pa^{-1}=10^{5}bar^{-1}$
 		- Tvorijo kaplje in gladino
+- Hidrostatski tlak
+	- $p(h)=p_{0}+\rho g_{0}h$ -> Tlak na globini
 - Sila vzgona $F_{vzg}$
 	- Telo (v celoti potopljeno v tekocini $\rho_{t}$ ($V_{izp}=V$)) => $m$, $V$, $\rho$
 	- $V_{izp}=V$
@@ -153,5 +168,14 @@ Navor => $M$
 		- $V_{izp}<V$
 		- potoljen del -> $\frac{V_{izp}}{V}=\frac{\rho}{\rho_{t}}$
 ## Hidrodinamika
-- tekocina premika
-- **Viskoznost** -> $F_{vis}=\delta \frac{v}{z}S$
+- Tekocina premika
+- **Viskoznost** -> $F_{vis}=\eta \frac{v}{z}S$
+- Viskoznostni koef. (odvisna od tekocine) $\eta$
+- **Kvadratni zakon upor**:
+	- $F_{u}=- \frac{1}{2}C_{u}\rho_{t}S_{\perp}v^{2}$
+	- Vrednosti $C_{u}$ za oblike:
+		- Krogla => $C_{u}=0.4$
+		- Na pol prerezana votla krogla => $C_{u}=1.3$
+		- Ravna deska => $C_{u}=1.1$
+		- Kaplja => $C_{u}=0.04$
+		- Avtomobil => $C_{u}\approx0.3-0.5$
