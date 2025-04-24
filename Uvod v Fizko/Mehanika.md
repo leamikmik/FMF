@@ -38,8 +38,11 @@ $$x(t)=x_{0}+v_{0}t+ \frac{a_{0}t^{2}}{2}$$
 - *Kvalitativno* -> $F$ (sila) => količina ki opisuje vpliv oklice na telo
 - *Kvantitativno* (Newtnovi zakoni):
 	1. $F=0\Leftrightarrow a=0$ -> Telo **miruje** ali pa se giblje **premo enakomerno**
+		- $G=mv$
 	2. $F=m*a$ -> **Pospešek je sorazmeren** s skupno silo na telo in ima smer sile; sorazmerni koef. je masa telesa
+		- $J=\Delta G$
 	3. $F_{2\to1}=-F_{1\to2}$ -> Če **prvo telo vpliva na drugega** z neko silo, potem **drugo vpliva na prvega** z nasprotno-enako silo
+		- $\sum G=\sum G_{0}$
 ## Sila teže
 $$F_{g}=-mg$$
 ## Sila podlage
@@ -81,7 +84,7 @@ $$F_{v}=-ky$$
 ---
 # Sunek sile in gibalna količina
 $F$ so konstantne
-- $F, t$ => sunek sile $:=Ft;\ [Ns]$ (predznak je smer!)
+- $F, t$ => sunek sile $J:=Ft;\ [Ns]$ (predznak je smer!)
 - $m,v$ => gibalna kolicina $G:=mv;\ [Ns]$ (predznak spet smer)
 	- Izrek: $Ft=\Delta G$
 - Ce imamo vec teles =>
@@ -105,10 +108,11 @@ $F$ so konstantne
 ---
 # Kroženje in vrtenje
 - Kotna hitrost -> $\omega\ [s^{-1}]$
+	- $v=\omega r$
 - Kotni pospešek -> $\alpha\ [s^{-2}]$
 	- $a=r\alpha$
-- Vztrajnostni moment -> $\gamma_{1}=mr^{2}\ [kgm^{2}]$
-- Navor -> $M=\gamma_{1}\alpha=rF;\ J_{1}=mr^{2}$
+- Vztrajnostni moment -> $J_{1}=mr^{2}\ [kgm^{2}]$
+- Navor -> $M=J_{1}\alpha=rF;\ J_{1}=mr^{2}$
 - $M=J^{*}\alpha$
 	- $J^{*}=\frac{1}{2}mr^{2}$ => Homogen valj
 	- $J^{*}=\frac{2}{5}mr^{2}$ => Homogena krogla
