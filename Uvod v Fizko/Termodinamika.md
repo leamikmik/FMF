@@ -31,3 +31,18 @@ Toplota
 	- $Q=mc_{v}\Delta T$
 	- kapljevine in trdne snovi $c_{p}\approx c_{v}$
 kalorimetrija
+
+# Prevajanje toplote
+- planarna geometrija (plane) prehod toplote skozi snov
+	-  Toplotni tok $P:= \frac{Q}{t};\ [ \frac{J}{s}=W]$
+	- $P=\lambda S \frac{\Delta T}{l}$
+		- $\lambda$ -> toplotna preodnost $[\frac{W}{mK}]$
+	- $\Delta W_{n}=?$
+		- idealni plini: $\Delta W_{n}=\Delta W_{n}(\Delta T)=mc_{V}\Delta T$
+		- trde snovi in kapljevine: $\Delta W_{n}\approx mc_{p}\Delta T$
+
+# Toplotni stroj
+- Osnovne ideje: $Q_{dov}\Rightarrow A_{odv}$
+- $\eta:= \frac{|A_{odv}|}{Q_{dov}}$
+	- Idealni stroj -> $\eta_{max}=1- \frac{T_{odv}}{T_{dov}}$
+	- $0\le\eta\le\eta_{max}\lt1$
