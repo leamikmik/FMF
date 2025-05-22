@@ -6,3 +6,7 @@
 $I=jS;\ [A]$
 - el tok tece po sklenjenih el krogih
 - specifinca upornost -> $\zeta =\frac{RS}{l}$
+# Elektricno polje
+- Kodenzatorji - zbiralniki naboja
+- $C:= \frac{e}{U};\ [F]$
+- 

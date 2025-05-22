@@ -9,7 +9,7 @@ $$C = \frac{e}{U}$$
 - $C$ -> kapaciteta \[$F$]
 ![[Kondenzator 2023-11-09 15.03.35.excalidraw]]
 - $U = \frac{e}{S\varepsilon_{0}}d$
-- $C = \varepsilon\varepsilon_{0}\frac{S}{d}$
+- $C = \varepsilon\varepsilon_{0}\frac{S}{d}$ -> Snov med ploscama
 ---
 # Vezava
 - vzporedna -> $C_{n}=C_{1}+C_{2}$
