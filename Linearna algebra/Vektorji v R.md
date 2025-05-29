@@ -26,7 +26,7 @@ $\mathbb{R}^{n}=\left\{(x_{1}, x_{2},..., x_{n});\ x_{1}, x_{2},... x_{n} \in \m
 - **Seštevanje/Odštevanje** -> $\vec v\pm\vec w=\left[\begin{array} {}v_{1}\pm w_{1} \\ v_{2}\pm w_{2} \\ \vdots \\ v_{n}\pm w_{n} \end{array}\right]$
 - **Množenje s skalarjem** (konstanta) -> $\alpha*\vec v=\left[\begin{array} {}\alpha*v_{1} \\ \alpha*v_{2} \\ \vdots \\ \alpha*v_{n} \end{array}\right]$
 - [[#Norma]] (dolžina) vektorja -> $\|\vec v\|=\sqrt{v_{1}^{2}+v_{2}^{2}+\dots+v_{n}^{2}}$   
-- [[#Skalarni produkt]] vektorjev -> $\left<\vec v, \vec w\right>=v_1*w_1+...+v_n*w_n$
+- [[Skalarni produkt]] vektorjev -> $\left<\vec v, \vec w\right>=v_1*w_1+...+v_n*w_n$
 - [[#Vektorski produkt]] vektorjev -> $\vec v \times\vec w= \left[\begin{array} {}v_{2}w_{3}-v_{3}w_{2} \\ v_{3}w_{1}-v_{1}w_{3}  \\ v_{1}w_{2}-v_{2}w_{1} \end{array}\right]$
 - [[#Mešani produkt]] ->$\left[\vec x,\vec y,\vec z\right]=\left<\vec x\times\vec y,\vec z\right>$
 ## Lastnosti operacij 
@@ -47,24 +47,14 @@ $$\|\vec v\|=\sqrt{v_{1}^{2}+v_{2}^{2}+\dots+v_{n}^{2}}$$
 - $\vec u$ je **enotski** vektor, če je $\|\vec u\|=1$
 ## Lastnosti norme
 1. $\|\alpha*\vec u\|=|\alpha|*\|\vec u\|$ -> absolutna homogenost 
-2. $\|\vec u\|= 0$ => $\vec u=\vec0$ -> pozitivna definiranost
+2. $\|\vec u\|\ge 0$ -> pozitivna definiranost
+	- $\|\vec u\|= 0\iff\vec u=\vec0$
 3. $\|\vec u+\vec v\|\le\|\vec u\|+\|\vec v\|$ -> trikotniška neenakost
-
----
-# Skalarni produkt
-$$\left<\vec a, \vec b\right>=\sum\limits_{i=1}^{n}a_{i}b_{i}=a_{1}*b_{1}+a_{2}*b_{2}+\dots+a_{n}*b_{n}$$
-- *Dva vektorja sta pravokotna če je njun skalarni produkt enak $0$*
-## Lastnosti skalarnega produkta
-1. $\left<\alpha*\vec u+\beta*\vec v,\vec w\right>=\alpha\left<\vec u,\vec w\right>+\beta\left<\vec v, \vec w\right>$
-2. $\left<\vec u,\vec v\right>=\left<\vec v,\vec u\right>$ -> Simetričnost
-3. $\left<\vec v, \vec v\right>=\|\vec v\|^2$
-4. $|\left<\vec u,\vec v\right>|\le\|\vec u\|*\|\vec v\|$ -> Cauchy-schwartz izrek
-5. $\left<\vec v,\vec u\right>=\|\vec v\|*\|\vec u\|*\cos{\gamma}$
 
 ---
 # Pravokotna projekcija
 ![[Vektorji v R 2024-10-10 11.52.13.excalidraw]]
-$$proj_{\vec u}(\vec v)=\frac{<\vec u,\vec v>}{{\|\vec u\|}^{2}}*\vec u$$
+$$\text{proj}_{\vec u}(\vec v)=\frac{<\vec u,\vec v>}{{\|\vec u\|}^{2}}*\vec u$$
 - $\cos \gamma=\frac{\|proj_{\vec u}(\vec v)\|}{\vec v}$
 - Pravokotna projekcija vektorja $\vec v$ na vektor $\vec u$
 

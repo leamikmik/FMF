@@ -75,4 +75,30 @@ $$A_{B}=\left[\begin{matrix} \lambda_{1} & & \huge 0 \\ & \ddots &  \\ \huge 0 &
 	- Če $g(\lambda)=a(\lambda);\ \forall\lambda$
 - Če se ne da diagonalizirati, lahko naredimo *zgornje-trikotno*, pri tem so na diagonali lastne vrednosti.
 	- Vrstni red lastnih vrednosti je poljuben (**Schurov izrek**)
+## Funkcija matrik
+$$f(A);\ f:\Bbb C\to\Bbb C$$
+- Gledali bomo funkcije le na matrikah, ki se *jih da diagonalizirati*
+- $f(A)=Pf(D)P^{-1}=\left[\begin{matrix}f(d_{1})&&0\\&\ddots& \\ 0&&f(d_{n})\end{matrix}\right]$
+---
+# Spektralni razcep matrike
+$$A=\left[\begin{matrix}\ker(p_{1}(A)) & \dots &0 \\ \vdots &\ddots & \\ 0& &\ker(p_{i}(A))  \end{matrix}\right]$$
+- $p_{1}(x), p_{2}(x)$ sta si **tuja polinoma** (*nimata nobenega skupnega faktorja v razcepih*)
+	- $p_{1}(x)q_{1}(x)+p_{2}(x)q_{2}(x)=1;\ \exists q_{1}(x),q_{2}(x)$
+- Naj bo $A\in\Bbb C^{n\times n}$ in $p(x)=p_{1}(x)p_{2}(x)$ neničelni polinom, ki $p(A)=0$. Potem je $\Bbb C^{n}=V_{1}\oplus V_{2}$, kjer $V_{i}=\ker(p_{i}(A))$
+- Če kark. polinom $p_{A}(x)=(-1)^{n}(x-\alpha_{1})^{k_{1}}+\dots+(x-\alpha_{r})^{k_{r}}$, kjer so $\alpha_{r}$ lastne različne lastne vrednosti, potem je $V_{j}=\ker(A-\alpha_{j}I)^{k_{j}}$ ($1\le j \le r$) in $\Bbb C^{n}=V_{1}\oplus\dots\oplus V_{r}$.
+- **Projektor**:
+	- $P^{2}=P;\ P\in\Bbb C^{n\times n}$
+	- Npr.: $I,0,\left[\begin{matrix}1&2&1\\0&0&0\\0&0&0\end{matrix}\right],\dots$
+	- Minimalni polinom za projektor ($P\ne 0,I$) je $m(x)=x^{2}-x$
+	- Spektralni razcep ($P\ne 0,I$)-> $\Bbb C^{n}=\ker(P)\oplus\text{im}(P)$ => $\left[\begin{matrix}0&\\&I\end{matrix}\right]$
+- **Involucija**:
+	- $A^{2}=I;\ A\in\Bbb C^{n\times n}$
+	- Npr.: $I,-I,\left[\begin{matrix}4&-1\\15&-4\end{matrix}\right],\dots$
+	- $m(x)=x^{2}-1$ in $\Bbb C^{n}=\ker(A-I)\oplus\ker(A+I)$ 
+	- Razcep pa je $A=\left[\begin{matrix}I&0\\0&-I\end{matrix}\right]$
+- **Nilpotent**:
+	- $A^{k}=0;\ k\in\Bbb N$
+		- Najmanjši $k$ je *red nilpotentnosti* matrike A
+	- Matrika je nilpotentna ko je $0$ edina lastna vrednost
+	- Razcep je $A=\left[\begin{matrix}0&\dots&0&0\\ 1&\ddots&\vdots&\vdots \\ &1&0& \\0 &\dots &&0\end{matrix}\right]$
 ---

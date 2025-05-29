@@ -18,6 +18,7 @@ $$M_{i\times j}=\left[\begin{matrix} m_{11} & \dots & m_{1j}  \\ \vdots & & \vdo
 ---
 # Operacije na matrikah
 - **Seštevanje/Odštevanje** -> $A\pm B=\left[\begin{matrix} a_{11}\pm b_{11} & \dots & a_{1j}\pm b_{1j}  \\ \vdots & & \vdots \\ a_{i1}\pm b_{i1} & \dots & a_{ij}\pm b_{ij} \end{matrix}\right];\ A,B \in \Bbb R^{i\times j}$
+- **Neposredno seštevanje** -> $A\oplus B=\left[\begin{matrix}A & 0 \\ 0 & B\end{matrix}\right]$
 - **Množenje z skalarjem** -> $\alpha*A=\left[\begin{matrix} \alpha*a_{11} & \dots & \alpha*a_{1j}  \\ \vdots & & \vdots \\ \alpha*a_{i1} & \dots & \alpha*a_{ij} \end{matrix}\right] \in \Bbb R^{i\times j};\ \alpha\in\Bbb R$
 - **[[#Množenje matrik]]**
 - [[#Transponiranje]]
