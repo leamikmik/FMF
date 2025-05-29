@@ -2,7 +2,7 @@
 ---
 # Definicija
 $$U(+)=U_{0}\sin(\omega t);\ \omega=2\pi\nu$$
-- $U_{0}=NSB\omega$ -> amplitudna [[Fizika/Elektricno polje/Električna napetost|napetost]]; [[Magnetno polje|$B$]]
+- $U_{0}=NSB\omega$ -> amplitudna [[Električna napetost|napetost]]; [[Magnetno polje|$B$]]
 - $P = U*I$ -> moč; [[El. tok in upornost|$I$]]
 ```functionplot
 ---

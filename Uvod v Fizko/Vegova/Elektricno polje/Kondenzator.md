@@ -4,7 +4,7 @@
 ---
 # Definicija
 $$C = \frac{e}{U}$$
->[[Električni naboj|$e$]], [[Fizika/Elektricno polje/Električna napetost|$U$]]
+>[[Električni naboj|$e$]], [[Električna napetost|$U$]]
 - *Kondenzator je elektrotehniški element, ki lahko shranjuje energijo v obliki električnega polja.*
 - $C$ -> kapaciteta \[$F$]
 ![[Kondenzator 2023-11-09 15.03.35.excalidraw]]

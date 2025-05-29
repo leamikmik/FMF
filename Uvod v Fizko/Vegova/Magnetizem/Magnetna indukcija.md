@@ -11,7 +11,7 @@ $$\Phi_{m}= BS *\cos(\varphi) \dots[Wb=Vs]$$
 ---
 # Premikanje vodnika
 $$U_{i}=Blv\dots[V]$$
-- $U_{i}$ -> inducirana [[Fizika/Elektricno polje/Električna napetost|napetost]]
+- $U_{i}$ -> inducirana [[Električna napetost|napetost]]
 - **Lenzovo pravilo** -> *Inducirana napetost požene induciran tok v takšno smer, da nastala magnetna sila nasprotuje gibanju vodnika $(v)$*
 - **Faradayev zakon** -> $U_{i}=-\frac{\Delta\Phi*N}{\Delta t}$
 	- $N$ -> št. ovojev tuljave

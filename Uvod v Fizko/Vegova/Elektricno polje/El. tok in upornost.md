@@ -8,7 +8,7 @@
 $$I = \frac{\Delta e}{\Delta t}$$
 >[[Električni naboj|$e$]]
 - $I$ -> tok \[$A$]
-- **Ohmov zakon** -> [[Fizika/Elektricno polje/Električna napetost|$U$]]$=R*I$
+- **Ohmov zakon** -> [[Električna napetost|$U$]]$=R*I$
 - El. moč -> $P=U*I$ \[$W$]
 ---
 # Upornost
