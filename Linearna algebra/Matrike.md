@@ -32,6 +32,7 @@ $$A\in\Bbb R^{m\times n};\ B\in\Bbb R^{n\times r};\ C=A*B \in\Bbb R^{m\times r}$
 - Transporirana matrika je $B$, kjer velja da $b_{ij}=a_{ji}$ (*rotacija*)
 - Označimo z $A^{T}$
 - Če $A^T=A$ rečemo da je $A$ **simetrična** matrika
+- Če $A=\overline{A^{T}}$ rečemo da je **hermitska** matrika
 ## Lastnosti operacij
 ### Seštevanje
 1. $(A+B)+C=A+(B+C)$ -> Asociativnost

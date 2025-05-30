@@ -68,6 +68,7 @@ $$A\in\Bbb C^{n\times n};\ Ax=\lambda x;\ (A-\lambda I)x=0$$
 - $g(\lambda)=\dim(\ker(A-\lambda I))$ => **geometrična večkratnost** (velikost podprostora)
 	- Pove nam koliko lin. neodvisnih last. vekt. lahko najdemo pri $\lambda$
 	- $g(\lambda)=n-\text{rang}(A-\lambda I)$
+- Vse lastne vrednosti simetrične ali hermitke matrike so realne.
 ## Diagonalizacija
 $$A_{B}=\left[\begin{matrix} \lambda_{1} & & \huge 0 \\ & \ddots &  \\ \huge 0 & & \lambda_{n} \end{matrix}\right]=B^{-1}AB$$
 - $A$ se da diagonalizirati če obstaja baza $B$ sestavljena iz last. vekt.
