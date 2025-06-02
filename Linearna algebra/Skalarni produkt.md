@@ -11,7 +11,7 @@ $$\left<\ ,\ \right>:V\times V\to\Bbb C;\ V\subseteq\Bbb C$$
 - *Vektorja sta pravokotna (**ortagonalna**) če* $\left< a, b\right>=0$
 	- $a$ in $b- \frac{< a, b>}{< a, a>} a$ sta pravokotna
 - Lahko zapisemo $\left< a,  b\right>= a^{T}*S* b$
-	- $S^{T}=S$, $S$ je strogo pozitivno definirana. (*Determinante glavnih minorjev strogo pozitivni*)
+	- $S^{T}=S$, $S$ je strogo pozitivno definitna. (*Determinante glavnih minorjev strogo pozitivni*)
 	- $S=\left[\begin{matrix} \left< v_{1},  v_{1}\right> & \dots & \left< v_{1},  v_{n}\right> \\ \vdots & \ddots & \vdots \\ \left< v_{n},  v_{1}\right> & \dots & \left< v_{n},  v_{n}\right> \end{matrix}\right]$, kjer je $\{ v_{1}, v_2,\dots v_{n}\}$ baza za $V$
 ## Osnovna definicija
 $$\left< a,  b\right>=\sum\limits_{i=1}^{n}a_{i}b_{i}=a_{1}*b_{1}+a_{2}*b_{2}+\dots+a_{n}*b_{n}$$
@@ -28,10 +28,10 @@ $$\left< a,  b\right>=\sum\limits_{i=1}^{n}a_{i}b_{i}=a_{1}*b_{1}+a_{2}*b_{2}+\d
 	- Samo če sta vektorja pravokotna
 ## Ortogonalnost
 $$S^{\perp}=\{ a\in V;\ \left< a,  b\right>=0;\ \forall b\in S\}$$
-- Ortogonalna baza
+- Ortogonalni komplement
 - $S^{\perp}$ je [[Vektorski prostori#Vektorski podprostor|vektorski podprostor]] v $V$
 	- $S^{\perp}$ rečemo "*$S$ ortagonalno*"
-- Če tudi $\| a_{i}\|=1$ je baza **ortonomirana** (*ON*)
+- Če tudi $\| a_{i}\|=1$ je baza **ortonomirana** (ON)
 - *V vsakem neničelnem vektorskem prostoru obstaja ortonomirana baza.*
 - *Vsaka ortogonalna množica je linearno neodvisna.*
 - **Postopek Gramm-Schmidotve ortogonalizacije**:
@@ -71,9 +71,9 @@ $$U\to V\to\Bbb C;\ u\to Au\to\left<Au,v\right>$$
 	- $A_{BC}=\left[\begin{matrix} \left<A b_{1},  c_{1}\right> & \dots & \left<A b_{n},  c_{1}\right> \\ \vdots & \ddots & \vdots \\ \left< Ab_{1},  c_{n}\right> & \dots & \left< Ab_{n},  c_{n}\right> \end{matrix}\right]$
 	- $A^{*}_{CB}=\left[\begin{matrix} \left<A^{*} c_{1},  b_{1}\right> & \dots & \left<A^{*} c_{n},  b_{1}\right> \\ \vdots & \ddots & \vdots \\ \left< A^{*}c_{1},  b_{n}\right> & \dots & \left< A^{*}c_{n},  b_{n}\right> \end{matrix}\right]$
 	- $(i,j)$-ti el. v $A_{BC}$ je enak **konjugirano** $(j,i)$-temu el. v $A^{*}_{CB}$
-- $A^{*}_{i,j}=\overline{A^{T}_{i,j}}$ (Matrika $A^{*}$ v ON-bazi je enaka transponirani in po elementih konjugirani matriki $A$)
-1. **Sebiadjungirana** matrika -> $A=A^{*}$
-2. **Normalna** matrika -> $A*A^{*}=A^{*}*A 
+- $A^{*}=\overline{A^{T}}$ (Matrika $A^{*}$ v ON-bazi je enaka transponirani in po elementih konjugirani matriki $A$)
+1. **Sebi adjungirana** matrika -> $A=A^{*}$
+2. **Normalna** matrika -> $A*A^{*}=A^{*}*A$
 3. **Unitarna** matrika -> $AA^{*}=A^{*}A=I$
 	- Če $AA^{T}=I$ je $A$ ortogonalna
 	- Za te matrike obstaja ON-baza iz last. vektorjev, vse lastne vrednosti pa so absolutno enake $1$

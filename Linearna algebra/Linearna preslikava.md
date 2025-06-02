@@ -82,7 +82,7 @@ $$f(A);\ f:\Bbb C\to\Bbb C$$
 - $f(A)=Pf(D)P^{-1}=\left[\begin{matrix}f(d_{1})&&0\\&\ddots& \\ 0&&f(d_{n})\end{matrix}\right]$
 ---
 # Spektralni razcep matrike
-$$A=\left[\begin{matrix}\ker(p_{1}(A)) & \dots &0 \\ \vdots &\ddots & \\ 0& &\ker(p_{i}(A))  \end{matrix}\right]$$
+$$A=\left[\begin{matrix}\ker(p_{1}(A)) &  &0 \\  &\ddots & \\ 0& &\ker(p_{i}(A))  \end{matrix}\right]$$
 - $p_{1}(x), p_{2}(x)$ sta si **tuja polinoma** (*nimata nobenega skupnega faktorja v razcepih*)
 	- $p_{1}(x)q_{1}(x)+p_{2}(x)q_{2}(x)=1;\ \exists q_{1}(x),q_{2}(x)$
 - Naj bo $A\in\Bbb C^{n\times n}$ in $p(x)=p_{1}(x)p_{2}(x)$ neničelni polinom, ki $p(A)=0$. Potem je $\Bbb C^{n}=V_{1}\oplus V_{2}$, kjer $V_{i}=\ker(p_{i}(A))$
