@@ -6,9 +6,9 @@ $$U(+)=U_{0}\sin(\omega t);\ \omega=2\pi\nu$$
 - $P = U*I$ -> moč; [[El. tok in upornost|$I$]]
 ```functionplot
 ---
-title: U
+title: U, I
 xLabel: t
-yLabel: U
+yLabel: U, I
 bounds: [0,10,-2,2]
 disableZoom: true
 grid: true
