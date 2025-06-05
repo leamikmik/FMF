@@ -74,7 +74,7 @@ style: nestedOrderedList
 # Prevajanje toplote
 - Planarna geometrija (plane) prehod toplote skozi snov
 -  **Toplotni tok** $P= \frac{Q}{t};\ [ \frac{J}{s}=W]$ -> količina toplote, ki preide skozi snov na enoto časa
-- $P=\lambda S \frac{\Delta T}{l}$
+- $P=\lambda S \frac{\Delta T}{l}=hS\Delta T$
 	- $\lambda$ -> toplotna prehodnost $[\frac{W}{mK}]$
 ---
 # Notranja energija

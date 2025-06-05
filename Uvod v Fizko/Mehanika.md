@@ -66,6 +66,7 @@ $$F_{v}=-ky$$
 - $y$ raztezek, $k\ [\frac{N}{m}]$  koef. vzmeti
 - Če vzmet niha je $y=y_{0}\sin(2\pi\nu t)$
 	- Čas nihanja $t_{0}=2\pi\sqrt{\frac{m}{k}}$
+	- $\omega=\sqrt{ \frac{k}{m}};\ \nu= \frac{\omega}{2\pi}$
 ---
 # Delo, moč in energija
 - Delo => $A:=Fs;\ [J=Nm]$

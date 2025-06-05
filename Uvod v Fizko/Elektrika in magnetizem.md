@@ -68,7 +68,7 @@ $$F_{el}=eE$$
 	- Odvisno od naboja ga vleče v eno smer
 	- Ko pride do ene stene, spremeni naboj in gre nazaj
 ## Jakost el. polja
-- $E=\frac{F_{el}}{q}= \frac{e}{4\pi\varepsilon_{0}r^{2}};\ [\frac{V}{m}]$
+- $E=\frac{F_{el}}{q}= \frac{e}{4\pi\varepsilon_{0}r^{2}};\ [\frac{V}{m}]=Pt$
 	- $F_{el}=\frac{e_{1}e_{2}}{4\pi\varepsilon_{0}r^{2}}$ -> Sila med dvema nabojema (**Columbov zakon**)
 - Med ploščama kond. -> $E=\frac{U}{l}$
 	- Smer -> Od $+$ proti $-$
