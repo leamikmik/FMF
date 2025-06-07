@@ -23,7 +23,7 @@ style: nestedOrderedList
 - Tok je lahko enakomeren ali izmeničen
 - Smer toka sovpada s smerjo desnega vijaka, ki ga vrtimo v smeri kroženja
 ## Električni naboj
-$e=It;\ [As]$
+$$e=It;\ [As]$$
 
 ---
 # El. delo, el. moč in el. napetost
@@ -68,32 +68,33 @@ $$F_{el}=eE$$
 	- Odvisno od naboja ga vleče v eno smer
 	- Ko pride do ene stene, spremeni naboj in gre nazaj
 ## Jakost el. polja
-- $E=\frac{F_{el}}{q}= \frac{e}{4\pi\varepsilon_{0}r^{2}};\ [\frac{V}{m}]=Pt$
-	- $F_{el}=\frac{e_{1}e_{2}}{4\pi\varepsilon_{0}r^{2}}$ -> Sila med dvema nabojema (**Columbov zakon**)
+$$E=\frac{F_{el}}{q}= \frac{e}{4\pi\varepsilon_{0}r^{2}}=Pt;\ [\frac{V}{m}]$$
+- $F_{el}=\frac{e_{1}e_{2}}{4\pi\varepsilon_{0}r^{2}}$ -> Sila med dvema nabojema (**Columbov zakon**)
 - Med ploščama kond. -> $E=\frac{U}{l}$
 	- Smer -> Od $+$ proti $-$
 - $W_{E}=\frac{1}{2}\varepsilon\varepsilon_{0}UE_{2}^{2}$ => energija el. polja
 ---
 # Magnetno polje
-- $B\ [T]$ -> Gostota mag. polja z enoto tesla
+- $B\ [T]$ -> **Gostota mag. polja** z enoto tesla
 	- $F_{m}=evB\sin\phi;\ \phi\angle v,B$
-- Po vodniku z tokom
+- $W_{B}=\frac{1}{2} \frac{B^{2}}{\mu\mu_{0}}U$ => energija mag. polja 
+- Po vodniku z tokom:
 	- Vpliv magnetne sile na naboje v žici
 	- $F_{m}=IlB\sin\phi;\ \phi\angle l(I),B$
-- V okolici vodnika s tokom
+- V okolici vodnika s tokom:
 	- $B=\mu_{0}\frac{I}{2\pi r}$
-	- $r$ je razdalja med gledano točko in vodnikkom
+	- $r$ je razdalja med gledano točko in vodnikom
 	- $\mu_{0}$ je konstanta mag. polja
 - $\frac{1}{\sqrt{\mu_{0}\varepsilon_{0}}}=c_{0}$ (hitrost svetlobe v vakumu)
 - $B$ v tuljavi
 	- $B=\mu_{0}\frac{IN}{l}$
-- Magnetni pretok $\phi_{B}=BS\cos\phi;\ [Vs]$
+- **Magnetni pretok** $\phi_{B}=BS\cos\phi;\ [Vs]$
 - Induktivnost tuljave:
 	- Magnetni pretok skozi 1 navoj (površine $S_{1}$)
 		- $\phi_{B,1}=\frac{\mu_{0}NIS_{1}}{l}$
 	- Mag. pretok skozi vseh N:
 		- $\phi_{B}=\frac{\mu_{0}N^{2}IS_{1}}{l}$
-	- Induktivnost tuljave $L=\frac{\mu\mu_{0}N^{2}S_{1}}{l};\ [H]$ enota henry
+	- **Induktivnost tuljave** $L=\frac{\mu\mu_{0}N^{2}S_{1}}{l};\ [H]$ enota henry
 ---
 # Indukcija
 - $U_{i}$ je inducirana napetost

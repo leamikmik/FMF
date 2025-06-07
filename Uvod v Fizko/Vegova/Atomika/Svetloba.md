@@ -24,6 +24,7 @@
 ### Fotocelica
 $$W_{k_{max}}=e_{0}*U_{0}$$
  ![[Fotoefekt 2024-04-10 17.46.18.excalidraw]]
+
 ---
 # Rentgenska svetloba
 $$W_{k_{max}}=W_{f}=h*\nu_{max}=\frac{h*c}{\lambda_{min}}$$

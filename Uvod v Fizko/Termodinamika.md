@@ -12,7 +12,7 @@ style: nestedOrderedList
 - $T=0K$ je nedosegljivo
 ## Plinska enačba
 - **Idealen plin** => Zanemarimo privlačne sile med molekulami
-- Plinska enačba -> $\frac{p_{1}V_{1}}{T_{1}}= \frac{p_{2}V_{2}}{T_{2}}=\text{konst.}$ ali $pV= \frac{m}{M}RT$
+- **<u>Plinska enačba</u>** -> $\frac{p_{1}V_{1}}{T_{1}}= \frac{p_{2}V_{2}}{T_{2}}=\text{konst.}$ ali $pV= \frac{m}{M}RT$
 	- $p_{1},V_{1},T_{1}$ podatki na začetku
 	- $p_{2},V_{2},T_{2}$ podatki na koncu
 	- Pri poljubni spremembi *idealnega plina* se $\frac{pV}{T}$ **ne** spremeni
@@ -22,11 +22,11 @@ style: nestedOrderedList
 	- **Kilomolska masa $M$** je masa enega kilomola te snovi
 	- Za idealne pline (pri $p=1\text{bar}$ in $T=273K$) => $1\text{kmol}$ poljubnega plina zavzame prostornino $V=22.4m^{3}$
 ## Linearno in prostorninsko raztezanje
-1. $V_{Hg}=V_{Hg}(T)$ prostornina odvisna od temp.
+1. $V=V(T)$ prostornina odvisna od temp.
 	- $\Delta V=\beta V\Delta T$ => $\beta= \frac{1}{V} \frac{\Delta V}{\Delta T};\ [K^{-1}]$
-	- $\beta$ => koef. prostorninkega temp. raztezanja ($\beta\approx3\alpha$)
+	- $\beta$ => koef. prostorninskega temp. raztezanja ($\beta\approx3\alpha$)
 		- za idealne pline $\beta= \frac{1}{T}$
-2. $l=l(T)$ dolzina odvisna od temp
+2. $l=l(T)$ dolžina odvisna od temp
 	- $\Delta l=\alpha l\Delta T$ => $\alpha= \frac{1}{l}\frac{\Delta l}{\Delta T};\ [K^{-1}]$
 	- $\alpha$ -> koeficient lin. temp. raztezanja (odvisen od materiala (ponavadi okoli $10^{-5}K^{-1}$))
 
@@ -37,12 +37,13 @@ style: nestedOrderedList
 - Zakon -> $Q+A''=\Delta W_{k}+\Delta W_{p}+\Delta W_{pr}+\Delta W_{n}$
 - $\Delta W_{n}$ => sprememba notranje en.
 	- Energija, ki jo ima telo zaradi stanja, v kakršnem se nahaja
-- $Q\ [J]$ -> Toplota => delež en. ki, pri stiku dveh teles brez dela preide iz enega na drugo telo.
 ## Entropijski zakon
 - $Q$ samo od sebe vedno teče iz toplejšega na hladnejše telo
 
 ---
 # Toplota
+$$Q\ [J]$$
+- **delež en. ki, pri stiku dveh teles brez dela preide iz enega na drugo telo.**
 - $\Delta T>0\Rightarrow Q>0$ (toploto dovedemo)
 - $\Delta T<0\Rightarrow Q<0$ (toploto odvedemo)
 1. **Specifična toplota pri $p=$ konstanten**
