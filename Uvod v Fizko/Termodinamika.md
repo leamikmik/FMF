@@ -8,11 +8,11 @@ style: nestedOrderedList
 - V *Celzijevi temperaturni lestvici* definiramo (pri $p\approx 1\text{bar}$):
 	- mešanica vode in ledu (led topi/voda zmrzuje), ima temperaturo $0°C$
 	- mešanica vode in pare (voda vre), ima temperaturo $100\text{°C}$
-- Telesom v toplotnem stiku se po dovolj dolgem času **temperature izenačijo**
+- 0. zakon TD => Telesom v toplotnem stiku se po dovolj dolgem času **temperature izenačijo**
 - $T=0K$ je nedosegljivo
 ## Plinska enačba
 - **Idealen plin** => Zanemarimo privlačne sile med molekulami
-- **<u>Plinska enačba</u>** -> $\frac{p_{1}V_{1}}{T_{1}}= \frac{p_{2}V_{2}}{T_{2}}=\text{konst.}$ ali $pV= \frac{m}{M}RT$
+- **<u>Plinska enačba</u>** -> $\frac{p_{1}V_{1}}{T_{1}}= \frac{p_{2}V_{2}}{T_{2}}=\text{konst.}$ ali $pV= \frac{m}{M}RT$ ali $p=nk_{B}T$
 	- $p_{1},V_{1},T_{1}$ podatki na začetku
 	- $p_{2},V_{2},T_{2}$ podatki na koncu
 	- Pri poljubni spremembi *idealnega plina* se $\frac{pV}{T}$ **ne** spremeni
@@ -74,7 +74,7 @@ $$Q\ [J]$$
 ---
 # Prevajanje toplote
 - Planarna geometrija (plane) prehod toplote skozi snov
--  **Toplotni tok** $P= \frac{Q}{t};\ [ \frac{J}{s}=W]$ -> količina toplote, ki preide skozi snov na enoto časa
+- **Toplotni tok** $P= \frac{Q}{t};\ [ \frac{J}{s}=W]$ -> količina toplote, ki preide skozi snov na enoto časa
 - $P=\lambda S \frac{\Delta T}{l}=hS\Delta T$
 	- $\lambda$ -> toplotna prehodnost $[\frac{W}{mK}]$
 ---

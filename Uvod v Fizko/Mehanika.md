@@ -10,12 +10,12 @@ $$x(t)=x_{0}+v_{0}t+ \frac{a_{0}t^{2}}{2}$$
 	1. premo gibanje
 	2. točkasta telesa
 1. Položaj telesa $x$
-2. Hitrost telesa $x=x(t)$ 
+2. Hitrost telesa $v=\frac{x}{t}$ 
 	- graf $x(t)$ v odvisnosti $t$; $T(t, x)$
-	- $v(t_{1}):=k(T_{1}):=\frac{dx}{dt}t_{1}$
-	- $[v]=\frac{m}{s}$
+	- $v(t_{1})=\lim_{\Delta t\to0} \frac{x(t_{1}+\Delta t)-x(t_{1})}{\Delta t} =x'(t_{1});\ [\frac{m}{s}]$
 	- $1\frac{m}{s}=3.6 \frac{km}{h}$
-3. Pospešek $[a]= \frac{m}{s^{2}}$ 
+3. Pospešek $[a]= \frac{m}{s^{2}}$
+	- $a(t_{1})=x''(t_{1})=v'(t_{1})$
 ## Primeri
 1. $x(t)=x_{0}+v_{0}*t$; $x_{0},v_{0}$ konstanti
 	- $[x_{0}]=m$; $[v_{0}]=\frac{m}{s}$
@@ -36,7 +36,7 @@ $$x(t)=x_{0}+v_{0}t+ \frac{a_{0}t^{2}}{2}$$
 ---
 # Dinamika
 - *Kvalitativno* -> $F$ (sila) => količina ki opisuje vpliv oklice na telo
-- *Kvantitativno* (Newtnovi zakoni):
+- *Kvantitativno* (**Newtonovi zakoni**):
 	1. $F=0\Leftrightarrow a=0$ -> Telo **miruje** ali pa se giblje **premo enakomerno**
 		- $G=mv$
 	2. $F=m*a$ -> **Pospešek je sorazmeren** s skupno silo na telo in ima smer sile; sorazmerni koef. je masa telesa
@@ -66,35 +66,35 @@ $$F_{v}=-ky$$
 - $y$ raztezek, $k\ [\frac{N}{m}]$  koef. vzmeti
 - Če vzmet niha je $y=y_{0}\sin(2\pi\nu t)$
 	- Čas nihanja $t_{0}=2\pi\sqrt{\frac{m}{k}}$
-	- $\omega=\sqrt{ \frac{k}{m}};\ \nu= \frac{\omega}{2\pi}$
+	- $my''=-ky$
 ---
 # Delo, moč in energija
 - Delo => $A:=Fs;\ [J=Nm]$
-- Moč => $P:=\frac{A}{t};\ [\frac{J}{s}=W]$
+- Moč => $P:=\frac{A}{t}=A';\ [\frac{J}{s}=W]$
 	- Pri konstanti hitrosti -> $P=F*v$
 - Energije:
-	- Kineticna -> $W_{k}:=\frac{mv^{2}}{2};\ [J]$
-		- Izrek -> $A=\Delta W_{k}=W_{k}'-W_{k}$
+	- Kinetična -> $W_{k}:=\frac{mv^{2}}{2};\ [J]$
+		- **Izrek** -> $A=\Delta W_{k}=W_{k}'-W_{k}$
 	- Potiencalna -> $W_{p}:=mg_{0}y;\ [J]$
 	- Proznostna -> $W_{pr}:=\frac{1}{2}ky^{2};\ [J]$
 - Konzervativne sile:
 	- Teza -> $F_{g};\ A_{g}=-(mg_{0}y'-mg_{0}y)= -\Delta W_{p}$
 	- Vzmet -> $F_{v};\ A_{v}=-(\frac{ky'^{2}}{2}-\frac{ky^{2}}{2})=-\Delta W_{pr}$
-- Delo sil, razen kozervativnih => $A'':=A-A_{g}-A_{v}=\Delta W_{k}+\Delta W_{p}+\Delta W_{pr}$
+- Delo sil, razen kozervativnih (**izrek o mehanski energiji**) => $A'':=A-A_{g}-A_{v}=\Delta W_{k}+\Delta W_{p}+\Delta W_{pr}$
 
 ---
 # Sunek sile in gibalna količina
 $F$ so konstantne
 - $F, t$ => sunek sile $J:=Ft;\ [Ns]$ (predznak je smer!)
 - $m,v$ => gibalna kolicina $G:=mv;\ [Ns]$ (predznak spet smer)
-	- Izrek: $Ft=\Delta G$
+	- **Izrek** => $Ft=\Delta G$
 - Ce imamo vec teles =>
 	- $G=G_{1}+G_{2}$
 	- $F_{1\to2}, F_{2\to1}$ -> Notranje sile
 	- $F_{1,z}, F_{2,z}$ -> zunanje sile
 		- $F_{1}=F_{1,z}+F_{2\to1}$
 		- $F_{1,z}+F_{2,z}=F_{z}$
-	- Izrek => $F_{z}t=\Delta G$
+	- **Izrek o gibalni količini sistema 2 teles** => $F_{z}t=\Delta G$
 		- Posebni primer ($F_{z}t=0$) -> $\Delta G=0$ 
 ## Trki
 - Skupni sunek zunanjih sil je $0$
@@ -108,23 +108,25 @@ $F$ so konstantne
 	- Kineticna en. se ohrani
 ---
 # Kroženje in vrtenje
-- Kotna hitrost -> $\omega\ [s^{-1}]$
+- Kot -> $\phi=\frac{l}{r}; [/]\ rd$
+	- razmerje med krožnim lokom in polmerom krožnice
+- Kotna hitrost -> $\omega=\phi';\ [s^{-1}]$
 	- $v=\omega r$
-- Kotni pospešek -> $\alpha\ [s^{-2}]$
-	- $a=r\alpha$
+- Kotni pospešek -> $\alpha=\phi'';\ [s^{-2}]$
+	- $a=r\alpha$ => $rF=mr^{2}\alpha$
 - Vztrajnostni moment -> $J_{1}=mr^{2}\ [kgm^{2}]$
 - Navor -> $M=J_{1}\alpha=rF;\ J_{1}=mr^{2}$
 - $M=J^{*}\alpha$
-	- $J^{*}=\frac{1}{2}mr^{2}$ => Homogen valj
-	- $J^{*}=\frac{2}{5}mr^{2}$ => Homogena krogla
-	- $J^{*}=mr^{2}$ => Votli valj
-- $M=0\Leftrightarrow\alpha=0\Leftrightarrow\omega=\omega_{0}=\text{koef}$
+	- $J^{*}=\frac{1}{2}mr^{2}$ => **Homogen valj**
+	- $J^{*}=\frac{2}{5}mr^{2}$ => **Homogena krogla**
+	- $J^{*}=mr^{2}$ => **Votli valj**
+- $M=0\Leftrightarrow\alpha=0\Leftrightarrow\omega=\omega_{0}=\text{koef}$ (enakomerno vrtenje)
 - $W_{k}$ tockastega telesa, ki krozi:
-	- $W_{k}=\frac{1}{2}mv^{2}=\frac{1}{2}m(r\omega)^{2}=\frac{1}{2}J_{1}w^{2}=W_{rot}$ 
+	- $W_{k}=\frac{1}{2}mv^{2}=\frac{1}{2}m(r\omega)^{2}=\frac{1}{2}J_{1}w^{2}$ 
 	- $W_{rot}=\frac{1}{2}J^{*}\omega^{2}$ => Rot energija *nekega* telesa, ki se vrti
-- Izrek -> Poljubno gibanje razseznega togega telesa lahko razstavimo na translacijo težišča in na rotacijo okrog teziscne osi.
+- I**zrek** -> Poljubno gibanje razseznega togega telesa lahko razstavimo na translacijo težišča in na rotacijo okrog teziscne osi.
 	- $W_{k}=W^{*}_{k}+W_{rot}$
-		- $W^{*}_{k}=\frac{1}{2}mv^{*^{2}}$
+		- $W^{*}_{k}=\frac{1}{2}mv^{*^{2}}$ ($v^{*}$ hitrost težišča) 
 		- $W_{rot}=\frac{1}{2}J^{*}\omega^{2}$
 ## Kotaljenje
 - $v^{*}\Leftrightarrow\omega$
@@ -147,7 +149,7 @@ $F$ so konstantne
 	3. Prostorsko
 3. Stisljivost => $\chi:=- \frac{\Delta V}{V*\Delta p};\ [Pa^{-1}]$
 	- $p\rightarrow p'=p+\Delta p$ => $V\rightarrow V'=V-\Delta V$
-	- $-\frac{\Delta V}{V}$ sorazmeren $\Delta p$ => $-\frac{\Delta V}{v}=\chi\Delta p$
+	- $-\frac{\Delta V}{V}$ sorazmeren $\Delta p$ => $-\frac{\Delta V}{V}=\chi\Delta p$
 - Tekocina: plini in kapljevine
 	1. Plini: 
 		- $\rho\approx1 \frac{kg}{m^{3}}$ (pri tlaku $1\ bar$ in pri sobni temp.)
@@ -159,7 +161,7 @@ $F$ so konstantne
 		- Tvorijo kaplje in gladino
 - Hidrostatski tlak
 	- $p(h)=p_{0}+\rho g_{0}h$ -> Tlak na globini
-- Sila vzgona $F_{vzg}$
+- Sila vzgona (**Arhimedovo načelo**) $F_{vzg}$
 	- Telo (v celoti potopljeno v tekocini $\rho_{t}$ ($V_{izp}=V$)) => $m$, $V$, $\rho$
 	- $V_{izp}=V$
 	- $F_{g}=-mg_{0}$

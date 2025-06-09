@@ -52,7 +52,7 @@ $$P_{R_{1}}=I_{1}^{2}R_{1}$$
 ## Kondenzator
 $$C=\frac{e}{U}$$
 -  *Kondenzator je elektrotehniški element, ki lahko shranjuje energijo v obliki električnega polja.*
-- $C$ -> kapaciteta \[$F$]
+- $C$ -> kapaciteta \[$F$ - farat] 
 - Ploščati kondenzator:
 	- $U = \frac{e}{S\varepsilon_{0}}d$
 	- $C = \varepsilon\varepsilon_{0}\frac{S}{d}$
