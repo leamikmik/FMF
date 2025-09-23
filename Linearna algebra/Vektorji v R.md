@@ -54,8 +54,8 @@ $$\|\vec v\|=\sqrt{v_{1}^{2}+v_{2}^{2}+\dots+v_{n}^{2}}$$
 ---
 # Pravokotna projekcija
 ![[Vektorji v R 2024-10-10 11.52.13.excalidraw]]
-$$\text{proj}_{\vec u}(\vec v)=\frac{<\vec u,\vec v>}{{\|\vec u\|}^{2}}*\vec u$$
-- $\cos \gamma=\frac{\|proj_{\vec u}(\vec v)\|}{\vec v}$
+$$\text{proj}_{\vec u}(\vec v)=\frac{<\vec u,\vec v>}{{<\vec u,\vec u>}}*\vec u$$
+- $\cos \gamma=\frac{\|proj_{\vec u}(\vec v)\|}{\vec \|v\|}$
 - Pravokotna projekcija vektorja $\vec v$ na vektor $\vec u$
 
 ---

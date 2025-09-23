@@ -7,7 +7,7 @@ style: nestedOrderedList
 # Definicija
 $$\left<\ ,\ \right>:V\times V\to\Bbb C;\ V\subseteq\Bbb C$$
 - je skalarni produkt če **veljajo [[#Lastnosti skalarnega produkta|prve 3 lastnosti]]**
-- [[Vektorji v R#Norma|Norma]] => $\| a\|=\sqrt{\left< a,  b\right>}$
+- [[Vektorji v R#Norma|Norma]] => $\| a\|=\sqrt{\left< a,  a\right>}$
 - *Vektorja sta pravokotna (**ortagonalna**) če* $\left< a, b\right>=0$
 	- $a$ in $b- \frac{< a, b>}{< a, a>} a$ sta pravokotna
 - Lahko zapisemo $\left< a,  b\right>= a^{T}*S* b$
