@@ -1,0 +1,7 @@
+- ni dobr zamujat (ne bo spuscu folka not po 8.15)
+- Algebra:
+	- kolobar: $\Bbb Z$ (teorija st)
+- diskr:
+	- logika
+	- kombinatorika
+	- teorija grafov

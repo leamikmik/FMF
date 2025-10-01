@@ -1,0 +1,2 @@
+- 2 kolokvija
+- 2 predmet (prvi sem. vrjetnost, 2. statistika)
