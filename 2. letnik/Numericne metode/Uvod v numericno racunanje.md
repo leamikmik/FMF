@@ -1,0 +1,25 @@
+- Numericna mat. -> Analiza in razvoj algoritmov za resevanje mat. poblemov
+- Iscemo resitev v numericni obliki (npr. namesto $\pi$ iscemo $3.14159...$)
+- **Numericna metoda** -> postopek, kjer iz vhodnih num. podatkov z koncnim stevilom elementarnih operacij izracunamo priblizek za rezultat problema
+- Kdaj uporabimo:
+	- ko ne poznamo drugih metod
+	- ko so bolj udobne in manj zapletene od analiticnih
+- Glavne zahteve za dobro metodo:
+	- Zanesljivost in robustnost
+	- Natancnost
+	- Ekonomicnost
+- Napake:
+	- $x$ je tocna vrednost, $\bar x$ pa priblizek
+	- **Absolutna napaka** $d_{a}=\bar x - x$ => $\bar x = x+d_{a}$
+	- **Relativna napaka** $d_{r}=\frac{\bar x - x}{x}; x\ne0$ => $\bar x=x(1+d_{r})$
+# Predstavitev števil v računalniku
+**oz. plavajoča vejica**
+- Omejeno stevilo mest za zapis nekega števila -> **Koncna aritmetika**
+- Stevila so predstavljena v obliki => $x=\pm0.c_{1}c_{2}c_{3}...c_{t}*b^{e}$ 
+	- $x$ je stevilo
+	- $b$ je baza
+	- $e$ je exponenta ($L\le e\le U$)
+	- $0.c_{1}...c_{t}$ je mantisa
+		- $c_{1},c_{2},...,c_{t}\in\{0,1,...,b-1\}$
+		- Mnozico zapisemo kot $P(b,t,L,U)$
+	- Enolicno zapisemo tako, da $c_{1}\ne0$ (recemo **normalizirana stevila**)
