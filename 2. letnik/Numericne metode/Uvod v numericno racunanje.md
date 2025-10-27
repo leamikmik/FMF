@@ -83,3 +83,10 @@
 	- direktna napaka $\frac{|\bar y - y|}{|y|}$
 - ce je obratna napak majhna, potem je algoritem **obratno stabilen**, sicer je **obratno nestabilen**
 - Ce je algoritem obratno stabilen, je numaricno izracunana resitev tocna resitev "malo" spremenjenih vhodnih podatkov
+
+# Racunanje vrednosti polinoma preko Hornerjevega algoritma
+- $p(x)=a_{n}x^{n}+a_{n-1}x^{n-1}+\dots+a_{0}$
+- Naj bo $x$ dano predstavljivo st.
+	- $p\dots$ tocna vrednost $p(x)$
+	- $\bar p\dots$ numericno izracunana vrednost
+- $|\frac{\bar p-p}{p}|\le2n u \frac{\sum\limits^{n}_{i=0}|a_{i}||x|^{i}}{|\sum\limits^{n}_{i=0}a_{i}x^{i}|}$
