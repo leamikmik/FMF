@@ -90,3 +90,10 @@
 	- $p\dots$ tocna vrednost $p(x)$
 	- $\bar p\dots$ numericno izracunana vrednost
 - $|\frac{\bar p-p}{p}|\le2n u \frac{\sum\limits^{n}_{i=0}|a_{i}||x|^{i}}{|\sum\limits^{n}_{i=0}a_{i}x^{i}|}$
+
+- $I_{n}=\int_{0}^{1}x^{n}e^{x}dx$
+	- $I_{n}=1-nI_{n-1}$
+	- $I_{0}=1-\frac{1}{e}$
+	- $0<I_{n}<\frac{1}{n+1}$
+	- Pri racunanju teh clenov zap. v Matlabu dobimo po 20 korakih popolnoma napacne rezultate. Razlog je v rekurzivni formuli. Napaka pri clenu $I_{n-1}$ se pomnozi z $n$. Torej se pri $I_{n}$ napaka zacetnega clena pomnozi z $n!$ Tocne vrednosti padajo proti $0$ napaka pa y vsakim korako narašča in prevlada nad točno rešitvijo
+	- REŠITEV: Clen zaporedja bomo racunali v obratnem vrtnem redu: $I_{n-1}=\frac{1-I_{n}}{n}$ ce zacnemo pri clenu $I_{N}$ za nek dovolj velik $N$ in postavimo $I_{N}=0$ potem se napaka na koraku deli z $n$ in prej ali slej "izgine"
