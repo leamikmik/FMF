@@ -42,3 +42,42 @@
 - Ce je na intervalu vec nicel bomo z bisekcijo izracunali samo eno
 - Koliko korakov potrebujemo za izracun nicle na natancnost $\epsilon$?
 	- $\frac{b-a}{2^{k}}<\epsilon$ => $k>\log_{2}(\frac{b-a}{\epsilon})$
+
+- Navadna iteracija $f(x)=0$
+	- $x=g(x)$
+	- Izberemo $x_{0}$ ponavljamo $r=0,1,2,3$
+	- $x_{r+1}=g(x_{r})$
+	- zaustavitveni kriterij $\frac{|x_{r+1}-x_{r}|}{|x_{r+1}|}<$ toleranca
+	- $g(\alpha)=\alpha$ kjer $\alpha$ fiksna tocka
+	- Ce odvod g $<1$ je $\alpha$ privlacna fiksna tocka
+## Hitrost konvergence
+- $\alpha$ privlacna fiksna tocka iteracijske funk. $g$ in naj bo $x_{r+1}=g(x_{r})$ zaporedje iteracij
+- Pravimo, da je hitrost konvergence tega zap. (red konvergence) enaka $p$ ce obstajata konstanti $c_{1},c_{2}$ da velja $c_{1}|x_{r}-\alpha|^{p}\le|x_{r+1}-\alpha|\le c_{2}|x_{r}-\alpha|^{p}$ za vse dovolj pozne clene zaporedja
+- **Ekvivalentno** $|x_{r}-\alpha|=O(|x_{r}-\alpha|^{p})=C|x_{r}-\alpha|^{p}+$ cleni visjega reda
+	- $\lim_{r\to\infty} \frac{|x_{r+1}-\alpha|}{|x_{r}-\alpha|^{p}}=C$
+- naj bo iteracijska funkcija $g$ v okolci $\alpha$ fiksne tocke p-krat zvezno odvedljiva in naj velja $g(\alpha)=\alpha,g'(\alpha)=0,\dots,g^{(p-1)}(\alpha)=0,p^{(p)}\ne0$
+	- Potem je red konvergence enak $p$
+- $p=1$ lin konvergenca
+- $p=2$ kvadraticna konv.
+	- ko smo dovolj blizu resitve, se na vsakem koraku st. tocnik decimalk priblizno podvoji (v splosnem je $*p$)
+- $p=3$ kubicna konv.
+## Tangentna metoda (newtnova metoda)
+- je poseben primer navadne iteracije
+- resujemo enacbo $f(x)=0$
+- Tangentna premica 
+	- $p(x)=f(x_{0})+f'(x_{0})(x-x_{0})$
+	- presecisce z premico $p(x)=0$
+		- $x=x_{0}- \frac{f(x_{0})}{f'(x_{0})}$
+		- to vzamemo za nov priblizek
+	- postopek ponavljamo 
+	- tj. tangentna metoda
+		- izberemo zacetni $x_{0}$ ponavljamo $r=0,1,2,\dots$
+		- $x_{r+1}=x_{r}- \frac{f(x_{r})}{f'(x_{r})}$
+- drug nacin izpeljave/dokaz:
+	- iz razvoja v Taylorja 
+	- Naj bo $f(x_{r})\approx0$. Iscemo popravek $h$, da bo $f(x_{r}+h)=0$
+	- $0=f(x_{r})+f'(x_{r})h+ \frac{1}{2}f''(x_{r})h^{2}+\dots$
+	- zanemarimo od vlkjucno drugega odvoda
+	- tj. $h=- \frac{f(x_{r})}{f'(x_r)}$
+	- ker je to priblizek za popravek nam $x_{r}+h=x_{r}-\frac{f(x_{r})}{f'(x_{r})}=x_{r+1}$
+- Iteracijska funkcija za tangento metodo je $g(x)=x- \frac{f(x)}{f'(x)}$
