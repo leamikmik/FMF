@@ -59,7 +59,7 @@ style: nestedOrderedList
 - **Verjetnostni prostor** je trojica $(G,D,P)$ kjer je $G$ dana neprazna množica, $D$ $\sigma$-algebra podmnožic v $G$ in $P:D\to\Bbb R$ verjetnostna preslikava. Sedaj imenujemo elemente v $G$ <u>izide</u>, elemente v $D$ pa <u>dogodke</u>
 ---
 # Pogojna verjetnost
-- Verjetnost dogodka $A$ pri fiksiranem dogodku $B$  -> $P(A|B)= \frac{P(AB)}{P(A)}$
+- Verjetnost dogodka $A$ pri fiksiranem dogodku $B$  -> $P(A|B)= \frac{P(AB)}{P(B)}$
 - **Več fazni poskusi**
 	- $H_{1},H_{2},\dots$ paroma nezdružljivi dogodki (v prvi fazi)
 	- **Popolna verjetnost** -> $P(A)=P(H_{1})P(A|H_{1})+P(H_{2})P(A|H_{2})+\dots$
@@ -73,13 +73,16 @@ style: nestedOrderedList
 - Dva poskusa sta neodvisna, kadar rezultati enega poskusa ne vplivajo na verjetnost dogodkov v drugem.
 - Iščemo verjetnost da se dogodek $A$ v $n$ ponovitvah poskusa zgodi $k$ krat
 	- oz. $P_{n}(k)$
-	- možnih kombinacij je $n\choose k$
+	- možnih kombinacij je ${n\choose k}=\frac{n!}{(n-k)!*k!}$
 	- $P(A)=p;P(\bar A)=q=1-p$
 - **Bernoullijeva formula**: $P_{n}(k)={n\choose k} p^{k}q^{n-k}$
 - Aproksimacije formule za $P_{n}(k)$:
 	- $p$ blizu 0 -> $P_{n}(k)\approx \frac{(np)^{k}}{k!}e^{-np}$
 	- $p$ blizu 1/2 -> $P_{n}(k)\approx \frac{1}{\sqrt{2\pi npq}}e^{- \frac{(k-np)^{2}}{2npq}}$
-	- da se zgodi vsaj $k_{1}$ in manj od $k_{2}$ krat -> $P_{n}(k_{1},k_{2})\approx \Phi( \frac{k_{2}-np}{\sqrt{npq}} )-\Phi( \frac{k_{1}-np}{\sqrt{npq}} )$
+	- da se zgodi vsaj $k_{1}$ in manj od $k_{2}$ krat -> $P_{n}(k_{1},k_{2})\approx \Phi(\mu_{2} )-\Phi( \mu_{1})$
+		- $\mu_{i}=\frac{k_{i}-np}{\sqrt{npq}}$
+		- vsaj $k$ => $P_{n}(k,n)\approx \frac{1}{2}-\Phi(\mu)$
+		- do $k$ => $P_{n}(0,k)\approx \frac{1}{2}+\Phi(\mu)$
 		- **Funkcija napake** ->$\Phi(x)= \frac{1}{\sqrt{2\pi}}\int^{x}_{0}e^{-\frac{1}{2}t^{2}} dt$
 ---
 # Slučajne spremenljivke
@@ -119,13 +122,15 @@ style: nestedOrderedList
 1. **Enakomerna diskretna porazdelitev** na $n$ točkah:
 	- $X:\left(\begin{matrix}x_{1} & x_{2} & \dots & x_{n} \\ 1/n & 1/n & \dots & 1/n\end{matrix}\right)$
 	- npr. met kocke
-2. **Bernoullijeva porazdelitev** -> $\text{Ber}(p)$
-	- $p\in(0,1); q=1-p$
-	- $X:\left(\begin{matrix}0 & 1 \\ q & p\end{matrix}\right)$
+2. **Binomska porazdelitev** -> $\text{Bin}(n,p)$
+	- $n$ je št. neodvisnih ponovitev poskusa
+	- $X:\left(\begin{matrix}0 &1 & 2 & \dots \\ p_{1} & p_{2} & p_{3} & \dots\end{matrix}\right)$
+	- $p_{k}={n\choose k}p^{k}(1-p)^{n-k}$
 3. **Poissonova porazdelitev** -> $\text{Poi}(\lambda); \lambda>0$
 	- $X:\left(\begin{matrix}x_{1} & x_{2} & x_{3} & \dots \\ p_{1} & p_{2} & p_{3} & \dots\end{matrix}\right)$
 	- $p_{k}=\lambda^{k} \frac{e^{-\lambda}}{k!}$
 4. **Pascalova porazdelitev** -> $\text{Pas}(m,p)$
+	- Porazdeljeno število ponovitev poskusa, da se dogodek zgodi $m$-krat
 	- Zaloga vrednosti je $\{m,m+1,m+2,\dots\}$
 	- $p_{k}={k-1\choose m-1}p^{m}(1-p)^{k-m}$
 	- Če je $m=1$ rečemo temu *geometrijska porazdelitev* $\text{Geo}(p)$
