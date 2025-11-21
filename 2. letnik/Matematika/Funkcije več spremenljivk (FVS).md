@@ -65,6 +65,7 @@ $$D\subset\Bbb R,f:D\to\Bbb R^{m}$$
 	- Odvedljiva če vse funkcije ($\forall f_{i}:D\to\Bbb R^{n}$) odvedljive v $a\in D$
 	- $f'(a)=(f_{1}'(a),\dots,f_{n}'(a))$
 	- Diferenciabilnost skoraj enaka kot za $f:\Bbb R\to\Bbb R$
+- **Razred** $C^{n}$ -> funkcija $n$-krat zvezno odvedljiva
 ## Parcialni odvodi in diferenciabilnost
 $$D\subset\Bbb R^{n},f:D\to\Bbb R^{m},a\in\text{int}(D),h\in\Bbb R^{n}>\vec0$$
 - **Parcialni odvod funkcije** $f$ po $x_{i}$ v točki $a$:
@@ -97,3 +98,45 @@ $$D\subset\Bbb R^{n},f:D\to\Bbb R^{m},a\in\text{int}(D),h\in\Bbb R^{n}>\vec0$$
 - **Gradient** -> $\nabla f(a)=( \frac{df}{dx_{1}}(a),\dots, \frac{df}{dx_{n}}(a))$
 	- $n=\nabla f(a)$ kaže v smer največjega naraščanja
 	- $\frac{df}{dn}(a)=\left< \nabla f(a),n\right>$
+---
+# Taylerjova formula FVS
+$$f(\vec x)\approx\sum\limits_{h=0}^{k} \frac{1}{h!}\sum\limits^{n}_{i_{1},\dots,i_{h}=1} \frac{d^{h}f}{dx_{i_{1}}\dots dx_{i_{h}}}(\vec a)(x_{i_{1}}-a_{i_{1}})\dots(x_{i_{h}}-a_{i_{h}})$$
+- to je razvoj $f:D\subset\Bbb R^{n}\to\Bbb R$, razreda $C^{k}(D)$ v okolici $a\in\text{int}(D)$
+- **Hessejeva matrika drugih odvodov** => $\text{Hess }(f)(a)\left[\begin{matrix} \frac{d^{2}f}{dx_{1}dx_{1}}(a) & \dots & \frac{d^{2}f}{dx_{n}dx_{1}}(a) \\ \vdots & \ddots & \vdots \\ \frac{d^{2}f}{dx_{1}dx_{n}}(a) & \dots & \frac{d^{2}f}{dx_{n}dx_{n}}(a) \end{matrix}\right]$
+	- Matrika je simetrična
+	- Lahko uporabimo za drugo stopnjo Taylorja 
+		- $f(x)=f(a)+\dots+ \frac{1}{2!}\left<\text{Hess }(f)(a)*(x-a),(x-a)\right>+\dots$
+- Mi bomo uglavnem delali funkcijo 2 spremenljivk
+- *Znani Taylorji* (substituiramo $t$):
+	- $e^{t}=\sum\limits^{\infty}_{n=0} \frac{t^{n}}{n!}$
+	- $\sin(t)=\sum\limits^{\infty}_{n=0}(-1)^{n} \frac{t^{2n+1}}{(2n+1)!}$
+	- $\cos(t)=\sum\limits^{\infty}_{n=0} \frac{t^{2n}}{(2n)!}$
+	- $\frac{1}{1-t}=\sum\limits^{\infty}_{n=0}t^{n}; |t|<1$
+	- $\ln(1+t)=\sum\limits^{\infty}_{n=1}(-1)^{n+1}\frac{t^{n}}{n}; |t|<1$
+	- $(1+t)^{\alpha}= \sum\limits^{\infty}_{n=0} {\alpha\choose n}t^{n};|t|<1$
+---
+# Ekstremi
+$$f:D\subset\Bbb R^{n}\to\Bbb R$$
+## Lokalni
+- Imamo neko okolico $U$ točke $a$ ($\forall x\in U\backslash \{a\}$):
+	1. $f(x)>f(a)$ -> $a$ lokalni minimum
+	2. $f(x) < f(a)$ -> $a$ lokalni maksimum
+- Če je $f$ v $a\in\text{int}(D)$ parcialno odvedljiv po vseh spremenljivkah in ima v $a$ lokalni ekstrem => $\nabla f(a)=\vec 0$
+- Če je $C^{2}(D)$ na okolici $a\in\text{int}(D)$ in $\nabla f(a)=0$ (kriterij za lokalne ekstreme $n=2$):
+	1. $\det(\text{Hess }f(a))>0$ in $\frac{d^{2}f}{dx^{2}}(a)>0$ => lokalni minimum
+	2. $\det(\text{Hess }f(a))>0$ in $\frac{d^{2}f}{dx^{2}}(a)<0$ => lokalni maksimum
+	3. $\det(\text{Hess }f(a))<0$ => sedlo
+	4. $\det(\text{Hess }f(a))=0$ => ne vemo
+	- Da najdemo potencialne točke za ekstrem: $\frac{df}{dx}(a)=0$ in $\frac{df}{dy}(a)=0$
+## Vezani
+- Iskanje globalnih ekstremov na neki kompaktni množici
+- $f:D\to\Bbb R$ zvezna in $D$ kompaktna potem $f$ na $D$ zavzame svoja <u>globalna ekstrema</u>
+- Če iščemo ekstreme v nekem območju, moremo preveriti še robne točke
+- Naj bosta $f$ in $g$ definirana na okolici $a$ in $g(a)=0$. Funkcija $f$ ima lokalni vezani ekstrem v $a$ če $\exists\delta>0$ da $f(a)>f(x)$ oz  $f(a)<f(x)$ $\forall x\in\{y\in K(a,\delta):g(y)=0\}$
+- Naj bosta $f$ in $g$ razreda $C^{1}$ v okolici $a$ in $g(a)=0$ in $\nabla g(a)\ne0$
+- Če $f$ v $a$ lokalni vezan ekstrem pri $g(x)=0$ potem  $\nabla f(a)=\lambda \nabla g(a)$
+- V praksi (iščemo ekstreme $f(x,y)$ pri $g(x,y)=0$):
+	- $F(x,y,\lambda)=f(x,y)+\lambda g(x,y)$
+	- odvod vsake spremenljivke je $0$ tj. $\nabla F(a)=0$
+	- Rešimo sistem ki pride (ne rabimo vedeti vrednost $\lambda$)
+	- Vstavimo točke v $f$ in pogledamo največje/najmanjše vrednosti
