@@ -114,6 +114,11 @@ $$f(\vec x)\approx\sum\limits_{h=0}^{k} \frac{1}{h!}\sum\limits^{n}_{i_{1},\dots
 	- $\frac{1}{1-t}=\sum\limits^{\infty}_{n=0}t^{n}; |t|<1$
 	- $\ln(1+t)=\sum\limits^{\infty}_{n=1}(-1)^{n+1}\frac{t^{n}}{n}; |t|<1$
 	- $(1+t)^{\alpha}= \sum\limits^{\infty}_{n=0} {\alpha\choose n}t^{n};|t|<1$
+- **Mešani odvod** => $\frac{d^{n}f}{dx^{n-m}dy^{m}}(a)$
+	- Imamo Taylorjevo vrsto funkcije $f$ z obliko podobno $F(a)=\sum\limits_{i=0}x^{\alpha_{1} i+\beta_{1}}y^{\alpha_{2} i\beta_{2}}$
+	- Poiščemo $i$ da velja $\alpha_{1}i+\beta_{1}=n-m$ in $\alpha_{2}i+\beta_{2}=m$
+	- Če tak $i$ ne obstaja, je vrednost mešanega odvoda enaka $0$
+	- Drugače je $(n-m)!*m!*F_{i}(a)$ kjer $F_{i}(a)$ $i$-ti člen vsote
 ---
 # Ekstremi
 $$f:D\subset\Bbb R^{n}\to\Bbb R$$
