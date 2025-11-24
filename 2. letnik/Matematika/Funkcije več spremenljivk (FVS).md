@@ -81,6 +81,7 @@ $$D\subset\Bbb R^{n},f:D\to\Bbb R^{m},a\in\text{int}(D),h\in\Bbb R^{n}>\vec0$$
 		- potem je tudi zvezna in parcialno odvedljiva v $a$
 	- $L(a)=(Df)(a)=\left[\begin{matrix} \frac{df_{1}}{dx_{1}}(a) & \dots & \frac{df_{1}}{dx_{n}}(a) \\ \vdots & \ddots & \vdots \\ \frac{df_{m}}{dx_{1}}(a) & \dots & \frac{df_{m}}{dx_{n}}(a) \end{matrix}\right]$
 		- imenujemo tudi **Jacobijeva matrika**
+		- funk. diferenciabilna za $n=2$ v točki $(a,b)$ => $\lim_{r\to0}= \frac{f(a+r\cos\phi, b+r\sin\phi)-f(a,b)- \frac{df}{dx}(a,b)*r\cos\phi - \frac{df}{dy}(a,b)*r\sin\phi}{r}=0$
 - **Verižno pravilo**
 	- Naj bo $f:D\to\Bbb R^{m}$ in $g:\bar D\to\mathbb{R}^{k}$ kjer $D\subset\Bbb R^{n}$ in $\bar D\subset\Bbb R^{m}$, naj bo $a\in\text{int}(D)$ in $f(a)\in\text{int}(\bar D)$. Naj bo $f$ diferenciabilen v $a$ in $g$ v $f(a)$
 	- Potem je $g\circ f$ diferenciabilen v $a$ in $D(g\circ f)(a)=Dg(f(a))*Df(a)$
@@ -89,15 +90,16 @@ $$D\subset\Bbb R^{n},f:D\to\Bbb R^{m},a\in\text{int}(D),h\in\Bbb R^{n}>\vec0$$
 	- **Nivojnica** -> $N_{c}=\{x\in\Bbb R^{n};f(x)=c\}$
 		- imamo $a\in N_{c}$
 	- Tangentni prostor na nivojnico v $a$ je definiran kot
-		- $T_{a}N_{c}=\{v\in\Bbb R^{n};<\nabla f(a),v>=0\}$
+		- $T_{a}N_{c}=\{v\in\Bbb R^{n};\left<\nabla f(a),v\right>=0\}$
 		- tj. $v$ je v $T_{a}N_{c}$ natanko tedaj, ko je smerni odvod $f$ v smeri $v$ enak 0
+	- **Ravnina** (pri funk. 2 spremenljivk v točki $a$) => $R(a)=f(a)+ \frac{df}{dx}(a)(x-a_{x})+ \frac{df}{dy}(a)(y-a_{y})$
 ## Smerni odvod in gradient FVS
 - Imamo $n\in\Bbb R^{n}$ enotski vektor, FVS $f$ in $a\in\text{int}(D)$
 - Če obstaja $\frac{df}{dn}(a)=\lim_{h\to0} \frac{f(a+hn)-f(a)}{h}$ temu rečemo **smerni odvod** v točki $a$ in smeri $n$
 	- Parcialni odvodi so smerni odvodi v smeri koordinate odvajanja
 - **Gradient** -> $\nabla f(a)=( \frac{df}{dx_{1}}(a),\dots, \frac{df}{dx_{n}}(a))$
 	- $n=\nabla f(a)$ kaže v smer največjega naraščanja
-	- $\frac{df}{dn}(a)=\left< \nabla f(a),n\right>$
+	- $\frac{df}{dn}(a)=\left< \nabla f(a),n\right>$ ($n$ je smer)
 ---
 # Taylerjova formula FVS
 $$f(\vec x)\approx\sum\limits_{h=0}^{k} \frac{1}{h!}\sum\limits^{n}_{i_{1},\dots,i_{h}=1} \frac{d^{h}f}{dx_{i_{1}}\dots dx_{i_{h}}}(\vec a)(x_{i_{1}}-a_{i_{1}})\dots(x_{i_{h}}-a_{i_{h}})$$
@@ -118,7 +120,9 @@ $$f(\vec x)\approx\sum\limits_{h=0}^{k} \frac{1}{h!}\sum\limits^{n}_{i_{1},\dots
 	- Imamo Taylorjevo vrsto funkcije $f$ z obliko podobno $F(a)=\sum\limits_{i=0}x^{\alpha_{1} i+\beta_{1}}y^{\alpha_{2} i\beta_{2}}$
 	- Poiščemo $i$ da velja $\alpha_{1}i+\beta_{1}=n-m$ in $\alpha_{2}i+\beta_{2}=m$
 	- Če tak $i$ ne obstaja, je vrednost mešanega odvoda enaka $0$
-	- Drugače je $(n-m)!*m!*F_{i}(a)$ kjer $F_{i}(a)$ $i$-ti člen vsote
+	- Drugače je $(n-m)!*m!*F_{i}(a)$
+		- $F_{i}(a)$ je faktor brez $x$ oz. $y$
+		- Če imamo člen brez vsaj $n-m$ $x$-ov oz. $m$ $y$-ov ga ignoriramo (je odvajan stran)
 ---
 # Ekstremi
 $$f:D\subset\Bbb R^{n}\to\Bbb R$$
