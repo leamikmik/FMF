@@ -59,6 +59,15 @@ $$D\subset\Bbb R,f:D\to\Bbb R^{m}$$
 - Limita (vektor) v točki $a$ -> $\lim_{t\to a}f(t)=A$
 	- Vrednost limite je limita vseh koordinatnih funkcij -> $\lim_{t\to a}f_{k}(t)=A_{k};k\in\{1,\dots,n\}$
 	- Če je funkcija zvezna v točki $a$ je enaka vrednosti v $a$ -> $\lim_{t\to a}f(t)=f(a)$
+## Stožnice
+- Krožnica: $(x-p)^{2}+(y-q)^{2}=r^{2}$
+	- $r$ radius, $T(p,q)$ izhodišče 
+- Elipsa: $\frac{(x-p)^{2}}{a^{2}}+ \frac{(y-q)^{2}}{b^{2}}=r^{2}$
+	- Krožnica z raztezkom $a$ po $x$-osi in $b$ po $y$-osi
+- Hiperbola: $\frac{(x-p)^{2}}{a^{2}} - \frac{(y-q)^{2}}{b^{2}}=1$
+	- izhodišče $T(p,q)$, limite proti $k=\frac{b}{a}$ in $-k$
+- Parabola: $(y-q)^{2}=2a(x-p)$
+	- izhodišče $T(p,q)$, $a$ raztezek
 ---
 # Odvod
 - Odvod vektorske funkcije ($D\subset\Bbb R,f:D\to\Bbb R^{n},f=(f_{1},\dots,f_{n})$):
