@@ -110,24 +110,43 @@ style: nestedOrderedList
 # Direktna in obratna stabilnost
 - Pojem stabilnost se navezuje na numerično metodo.
 - Ločimo direktno in obratno stabilnost, glavno orodje za preverjanje je pa *analiza zaokrožitvenih napak*
-- Recimo da namesto $f(x)=y$ dobimo $\bar y$
-- *Direktna napaka* -> absolutna ali relativna na $y$
+- Recimo da namesto $f(x)=y$ dobimo $fl(x)=\bar y$
+- *Direktna napaka* -> absolutna ali relativna napaka med $y$ in $\bar y$
 	- Če je direktna napaka majhna -> Proces direktno stabilen
 	- Napaka velika -> Proces direktno nestabilen
-- *Obratna napaka* -> absolutna ali relativna na $x$
-	- Za koliko je treba zmotiti $x$ v $\bar x$ da dobimo $f(\bar x)=\bar y$
-	- Če je za vsak $x$ obrtna napaka majhna, je proces obratno stabilen
+- *Obratna napaka* -> absolutna ali relativna napaka med $x$ in $\bar x$
+	- Za koliko je treba zmotiti $x$ v $\bar x$ da dobimo $f(\bar x)=fl(x)=\bar y$
+	- Če je za vsak $x$ obratna napaka majhna, je proces obratno stabilen
 ---
-# Racunanje vrednosti polinoma preko Hornerjevega algoritma
+# Analiza zaokrožitvenih napak
+- Vsaka operacija ima neko napako $1+\delta;|\delta|\le u$
+- Če napake množimo (npr. $d=\frac{a+b}{c}$ in $fl(d)=\frac{(a+b)(1+\delta_{1})}{c}(1+\delta_{2})$) lahko zapišemo v obliki $\frac{a+b}{c}(1+\gamma)$ in $|\gamma|\le2u$ oz $nu$ pri $n$ operacijah
+	- Če npr. $|\delta_{1}|\le3u$ in $|\delta_{2}|\le2u$ potem $|\gamma|\le5u$ (napake se seštevajo)
+- Obratno stabilnost pogledamo z zamikom vnešenih podatkov. Npr. na prejšnjem primeru:
+	- $\frac{\bar a+\bar b}{\bar c}=\frac{a+b}{c}(1+\gamma)$ in iščemo $\bar a, \bar b, \bar c$
+	- $\bar c=c$, $\bar a=a(1+\gamma)$ in $\bar b=b(1+\gamma)$
+	- Zato ker je $\gamma$ majhna je obratno stabilen
+- Direktno stabilnost pogledamo pa z absolutno oz. relativno napako:
+	- najprej $fl(d)-d= \frac{a+b}{c}\gamma$
+	- potem $fl(d)-d\le2u( \frac{a+b}{c})$
+	- na koncu pa $|\frac{fl(d)-d}{d}|\le| \frac{2u(\frac{a+b}{c})}{\frac{a+b}{c}} |=2u$
+	- Torej ta primer tudi direktno stabilen
+- Velik problem je odštevanje skoraj enakih števil, saj pride do velike izgube natančnosti
+## Računanje vrednosti polinoma preko Hornerjevega algoritma
 - $p(x)=a_{n}x^{n}+a_{n-1}x^{n-1}+\dots+a_{0}$
 - Naj bo $x$ dano predstavljivo st.
-	- $p\dots$ tocna vrednost $p(x)$
-	- $\bar p\dots$ numericno izracunana vrednost
-- $|\frac{\bar p-p}{p}|\le2n u \frac{\sum\limits^{n}_{i=0}|a_{i}||x|^{i}}{|\sum\limits^{n}_{i=0}a_{i}x^{i}|}$
+	- $p\dots$ točna vrednost $p(x)$
+	- $\bar p\dots$ numerično izračunana vrednost
+- $|\frac{\bar p-p}{p}|\le2n u \frac{\sum\limits^{n}_{i=0}|a_{i}||x|^{i}}{|\sum\limits^{n}_{i=0}a_{i}x^{i}|}$ => Ni direktno stabilen
+## Glej skripto str. 18-22
+[[Uvod v numerične metode (matematika).pdf]]
 
-- $I_{n}=\int_{0}^{1}x^{n}e^{x}dx$
-	- $I_{n}=1-nI_{n-1}$
-	- $I_{0}=1-\frac{1}{e}$
-	- $0<I_{n}<\frac{1}{n+1}$
-	- Pri racunanju teh clenov zap. v Matlabu dobimo po 20 korakih popolnoma napacne rezultate. Razlog je v rekurzivni formuli. Napaka pri clenu $I_{n-1}$ se pomnozi z $n$. Torej se pri $I_{n}$ napaka zacetnega clena pomnozi z $n!$ Tocne vrednosti padajo proti $0$ napaka pa y vsakim korako narašča in prevlada nad točno rešitvijo
-	- REŠITEV: Clen zaporedja bomo racunali v obratnem vrtnem redu: $I_{n-1}=\frac{1-I_{n}}{n}$ ce zacnemo pri clenu $I_{N}$ za nek dovolj velik $N$ in postavimo $I_{N}=0$ potem se napaka na koraku deli z $n$ in prej ali slej "izgine"
+---
+# Poučni primeri
+## Rekurzivno integriranje
+$$I_{n}=\int_{0}^{1}x^{n}e^{x-1}dx$$
+- Z pomočjo per partesa spremenimo integral v rekurzivno obliko, tako da so vsi $n$-ji v novem integralu $n-1$. 
+	- $I_{n}=x^{n}e^{x-1}\mid_{0}^{1}-n\int_{0}^{1}x^{n-1}e^{x-1}dx=1-nI_{n-1}$
+- Da naredimo postopek bol stabilen izpostavimo $I_{n-1}$.
+	- $I_{n-1}= \frac{1-I_{n}}{n}$
+- Sedaj vzamemo aproksimacijo za velik $n$ je enak $0$.
