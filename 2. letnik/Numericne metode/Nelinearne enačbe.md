@@ -99,3 +99,4 @@ style: nestedOrderedList
 	- tj. $h=- \frac{f(x_{r})}{f'(x_r)}$
 	- ker je to priblizek za popravek nam $x_{r}+h=x_{r}-\frac{f(x_{r})}{f'(x_{r})}=x_{r+1}$
 - Iteracijska funkcija za tangento metodo je $g(x)=x- \frac{f(x)}{f'(x)}$
+- **Red konvergence**
