@@ -97,7 +97,7 @@ style: nestedOrderedList
 		- Kjer $\circ$ lahko $<,>,=,\le,\ge$ (glej nižje za formule)
 	- Imamo še $F(x)=P(y\circ X\circ z)$ ki se imenuje **porazdelitvena funkcija** slučajne spremenljivke $X$
 - Lastnosti porazdelitvene funkcije:
-	1. Funkcija je definirana na vsej realni oni in velja $0\ge F(x)\ge 1;\forall x\in\Bbb R$
+	1. Funkcija je definirana na vsej realni oni in velja $0\le F(x)\le 1;\forall x\in\Bbb R$
 	2. Funkcija je naraščajoča -> $x_{1}<x_{2}\Rightarrow F(x_{1})\le F(x_{2})$
 	3. $\lim_{x\to-\infty}F(x)=0$ in $\lim_{x\to\infty}F(x)=1$
 	4. Funkcija levo zvezna -> $F(x)=F(x-)$
@@ -110,6 +110,20 @@ style: nestedOrderedList
 	6. $P(x_{1}<X\le x_{2})=F(x_{2}+)-F(x_{1}+)$
 	7. $P(x_{1}\le X\le x_{2})=F(x_{2}+)-F(x_{1})$
 	8. $P(x_{1}<X<x_{2})=F(x_{2})-F(x_{1}+)$
+- **Slučajni vektorji**:
+	- Je $n$-terica slučajnih spremenljivk -> $X=(X_{1},X_{2},\dots,X_{n})$
+	- $F(x_{1},x_{2},\dots)=P(X_{1}<x_{1},X_{2}<x_{2},\dots)$
+	- Če pošljemo nekatere spremenljivke v neskončnost dobimo porazdelitveno funkcijo krajšega vektorja
+		- $\lim_{x_{n}\to\infty}F(x)=G(x_{1},x_{2},\dots,x_{n-1})$
+		- $\lim_{x_{i}\to\infty}=F_{1}(x_{1});\ \forall i\in\{2,3,\dots,n\}$ => *robna porazdelitvena funkcija*
+	- V večini diskretnih primerih ($n=2$) sestavimo verjetnostno tabelo
+		- $p_{ij}=P(X=x_{i},Y=y_{j})$
+		- ![[Pasted image 20251225120314.png]]
+		- $p_{i}=P(X=x_{i})=\sum\limits^{n}_{j=1}p_{ij}$
+- **Neodvisnost:**
+	- Slučajne spremenljivke $X_{1},\dots,X_{n}$ so med seboj neodvisne če velja $F(x_{1},\dots,x_{n})=F_{1}(x_{1})\dots F_{n}(x_{n})$
+	- Če sta $X,Y$ slučajni spremenljivki, $p_{ij}$ pa verjetnostna funkcija vektorja $(X,Y)$ potem sta spremenljivki neodvisni če velja $p_{ij}=p_{x_{i}}p_{y_{j}}$ oz. $p(x,y)=p_{X}(x)p_{Y}(y)$
+- **Pogojna porazdelitev** -> $F(x|B)=P(X<x|B)= \frac{P(X<x,B)}{P(B)}$
 ## Diskretno razporejene slučajne spremenljivke
 - Slučajna spremenljivka $X$ je *diskretna*, če je njena zaloga vrednosti končna ali števna množica.
 - Predstavimo s shemo:
@@ -159,3 +173,63 @@ style: nestedOrderedList
 4. **Cauchyjeva porazdelitev**
 	- $p(x)=\frac{1}{\pi(1+x^{2})}$
 	- $F(x)=\frac{1}{\pi}\arctan(x)+\frac{1}{2}$
+## Funkcije slučajnih spremenljivk in vektorjev
+$$Y(e)=f(X(e)); \forall e\in G$$
+- $f$ je *zvezna funkcija* na realni osi
+- Če sta $X$ in $Y$ neodvisni, $f$ in $g$ pa zvezni funkciji, sta tudi $U=f(X)$ in $V=g(Y)$ neodvisni
+- Za vektorje je $f=(f_{1},f_{2},\dots):\Bbb R^{n}\to\Bbb R^{m}$ in $Y=(f_{1}(X),f_{2}(X),\dots)=f(X)$
+- Če so $X_{1},X_{2},\dots,X_{n}$ neodvisne standardizirane normalne slučajne spremenljivke je $Y=X^{2}_{1}+X^{2}_{2}+\dots+X^{2}_{n}$ porazdeljen po zakonu $\chi^{2}(n)$
+
+---
+# Matematično upanje
+$$E(X)=\sum\limits_{k=1}^{n}x_{k}p_{k};\ X:\left(\begin{matrix}x_{1} & x_{2} & x_{3} & \dots \\ p_{1} & p_{2} & p_{3} & \dots\end{matrix}\right)$$
+- "Povprečna" vrednost slučajne spremenljivke
+- Zgornje je za **končno** zalogo vrednosti
+- Če je zaloga vrednosti **neskončna**:
+	1. *Diskretna* -> Če $\sum\limits^{\infty}_{k=1}|x_{k}|p_{k}<\infty$ => $E(X)=\sum\limits^{\infty}_{k=1}x_{k}p_{k}$
+	2. *Zvezna* -> Če $\int\limits^{\infty}_{-\infty}|x|p(x)dx<\infty$ => $\int\limits^{\infty}_{-\infty}xp(x)dx$
+- **Osnovne lastnosti**:
+	1. $a$ poljubna realna konstanta. Če $P(X=a)=1$ je $E(X)=a$
+	2. Slučajna sprem. $X$ ima matematično upanje natanko ko $|X|$ in $|E(X)|\le E(|X|)$
+		- *Diskretna* -> $E(|X|)=\sum\limits^{\infty}_{k=1}|x_{k}|p_{k}$
+		- *Zvezna* -> $E(|X|)=\int\limits^{\infty}_{-\infty}|x|p(x)dx$
+	3. $E(X^{2})=\int\limits^{\infty}_{-\infty}x^{2}p(x)dx$ oz. $E(X^{2})=\sum\limits^{\infty}_{k=1}x_{k}^{2}p_{k}$
+	4. $E(aX)=aE(X)$ => $E(E(X))=E(X)$
+	5. $E(X+Y)=E(X)+E(Y)$
+	6. Če obstajata $E(X^{2})$ in $E(Y^{2})$ potem obstaja $E(XY)$
+		- $E(|XY|)\le\sqrt{E(X^{2})E(Y^{2})}$
+	7. Če sta $X$ in $Y$ neodvisni, obstaja $E(XY)=E(X)E(Y)$
+- Spremenljivki $X$ in $Y$ sta **nekorelirani**, če $E(XY)=E(X)E(Y)$. V nasprotnem primeru sta *korelirani*.
+- **Pogojno upanje**:
+	- Diskretno:
+		- $E(X|Y=y_{k})= \frac{1}{q_{k}}\sum\limits^{\infty}_{i=1}x_{i}p_{ik}$
+		- $E(X|Y):\left(\begin{matrix}E(X|y_{1}) & E(X|y_{2}) & \dots \\ q_{1} & q_{2} & \dots\end{matrix}\right)$
+	- Zvezno:
+		- $E(X|Y=y)= \frac{1}{P_{Y}(y)}\int^{\infty}_{-\infty}xp(x,y)dx$
+	- $E(E(X|Y))=E(X)$
+- **Regresijska funkcija**:
+	- $x\to E(Y|x)$ -> regresija slučajne spremenljivke $Y$ glede na $X$
+## Disperzija, kovarianca in korelacijski koeficient
+- **Disperzija** => $D(X)=E(X^{2})-E(X)^{2}$
+	- $D(X)\ge0$
+	- *Standardna deviacija/odklon* => $\sigma(x)=\sqrt{D(X)}$
+	- Lastnosti:
+		1. Če $P(X=a)=1 \Rightarrow D(X)=0$
+		2. $D(aX)=a^{2}D(X)$
+		3. $E((X-a)^{2})\ge D(X)$
+- **Kovarianca** => $K(X,Y)=E(XY)-E(X)E(Y)$
+	1. $K(X,X)=D(X)$
+	2. $K(X,Y)=K(Y,X)$
+	3. $K(aX+bY,Z)=aK(X,Z)+bK(Y,Z)$
+	4. Kovarianca obstaja, če obstajata dispreziji spremenljivk
+	5. $|K(X,Y)|\le\sqrt{D(X)D(Y)}$
+	6. Spremenljivki nekorelirani $\iff K(X,Y)=0$
+	7. $D(X+Y)=D(X)+D(Y)+2K(X,Y)$
+		- $D(\sum\limits^{n}X_{k})=\sum\limits^{n}D(X_{k})+\sum\limits_{i\ne j}K(X_{i},X_{j})$
+- **Korelacijski koeficient** => $r(X,Y)= \frac{K(X,Y)}{\sigma(X)\sigma(Y)}$
+	- Zvezno -> $r(X,Y)=\int^{\infty}_{-\infty}\int^{\infty}_{-\infty} \frac{x-E(X)}{\sigma(X)}\frac{y-E(Y)}{\sigma(Y)}p(x,y)\ dxdy$
+	- Diskretno -> $r(X,Y)=\sum\limits^{\infty}_{i=1}\sum\limits^{\infty}_{j=1}\frac{x_{i}-E(X)}{\sigma(X)}\frac{y_{j}-E(Y)}{\sigma(Y)}p_{ij}$
+	- *Lastnosti*:
+		1. $-1\le r(X,Y)\le 1$
+		2. Spremenljivki nekorelirani $\iff r(X,Y)=0$
+	
