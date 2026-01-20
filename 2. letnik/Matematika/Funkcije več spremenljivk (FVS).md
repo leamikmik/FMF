@@ -158,3 +158,20 @@ $$f:D\subset\Bbb R^{n}\to\Bbb R$$
 	- odvod vsake spremenljivke je $0$ tj. $\nabla F(a)=0$
 	- Rešimo sistem ki pride (ne rabimo vedeti vrednost $\lambda$)
 	- Vstavimo točke v $f$ in pogledamo največje/najmanjše vrednosti
+
+---
+# Inverzna preslikava
+- Naj bo $D\subset\Bbb R^{n}$ odprta množica in $f:D\to\Bbb R^{n}$ preslikava razreda $C^{1}$. Naj bo $a\in D$ in naj bo $(Df)(a):\Bbb R^{m}\to\Bbb R^{m}$ izomorfizem ($\det((Df)(a))\ne0$). Tedaj obstaja okolica $U\subset D$ točke $a$ in okolica $V\subset\Bbb R^{n}$ okolica $f(a)$, da je $f|_{U}:U\to V$ difeomorfizem (bijektivna preslikava, katere inverz $(f|_{U})^{-1}:V\to U$ je diferenciablien v vsaki točki iz $V$)
+- $Df^{-1}(f(a))=(Df(a))^{-1}$
+- $(f^{-1}\circ f)(x)=I$
+- $Df^{-1}(f(x))*Df(x)=1$
+- Da preverimo če obstaja inverz funkcije:
+	1. Preverimo če je definicijsko območje odprto in definirano v točki $a$
+	2. Izračunamo $Df(a)$
+	3. Pogledamo ali $\det Df(a)\ne 0$
+
+---
+# Implicitna funkcija
+- Naj bo $f:(D^{odp}_{1} \times D^{odp}_{2})\subseteq (\Bbb R^{n_{1}} \times\Bbb R^{n_{2}})\to\Bbb R^{n_{2}}$ preslikava razreda $C^{1}$, $(a,b)\in D_{1}\times D_{2}$ ničla funkcije $f$ in $(D_{2}f)(a,b)$ nesingularna. Tedaj obstaja okolica $U_{1}\times U_{2}\subset D_{1}\times D_{2}$, da $\forall x\in U_{1}$ obstaja natanko en $y=\phi(x)\in U_{2}$ da je $f(x,\phi(x))=0$. Preslikava $\phi:U_{1}\to U_{2}$ je razreda $C^{1}$.
+	- Zadnjo spremenljivko lahko izrazimo z pomočjo prvih $n$
+- Odvod zadnje spremenljivke $\ne 0$
