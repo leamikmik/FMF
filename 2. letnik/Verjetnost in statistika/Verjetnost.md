@@ -120,6 +120,10 @@ style: nestedOrderedList
 		- $p_{ij}=P(X=x_{i},Y=y_{j})$
 		- ![[Pasted image 20251225120314.png]]
 		- $p_{i}=P(X=x_{i})=\sum\limits^{n}_{j=1}p_{ij}$
+	- V zveznih:
+		- $F(x_{1},x_{2},\dots)=\int^{x_{1}}_{-\infty}\int^{x_{2}}_{-\infty}\dots\ p(t_{1},t_{2},\dots)\ dt_{1}dt_{2}\dots$
+		- $F(\infty)=1$
+		- $p_{X}(x)=\int^{\infty}_{-\infty} p(x,y)dy$
 - **Neodvisnost:**
 	- Slučajne spremenljivke $X_{1},\dots,X_{n}$ so med seboj neodvisne če velja $F(x_{1},\dots,x_{n})=F_{1}(x_{1})\dots F_{n}(x_{n})$
 	- Če sta $X,Y$ slučajni spremenljivki, $p_{ij}$ pa verjetnostna funkcija vektorja $(X,Y)$ potem sta spremenljivki neodvisni če velja $p_{ij}=p_{x_{i}}p_{y_{j}}$ oz. $p(x,y)=p_{X}(x)p_{Y}(y)$
