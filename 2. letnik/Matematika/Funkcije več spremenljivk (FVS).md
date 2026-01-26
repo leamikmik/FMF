@@ -165,10 +165,14 @@ $$f:D\subset\Bbb R^{n}\to\Bbb R$$
 - $Df^{-1}(f(a))=(Df(a))^{-1}$
 - $(f^{-1}\circ f)(x)=I$
 - $Df^{-1}(f(x))*Df(x)=1$
+	- Torej $\left[\begin{matrix} \frac{dx}{du}  & \frac{dx}{dv} \\ \frac{dy}{du} & \frac{dy}{dv}\end{matrix}\right]=\left[\begin{matrix} \frac{du}{dx}  & \frac{du}{dy} \\ \frac{dv}{dx} & \frac{dv}{dy}\end{matrix}\right]^{-1}$
 - Da preverimo če obstaja inverz funkcije:
 	1. Preverimo če je definicijsko območje odprto in definirano v točki $a$
 	2. Izračunamo $Df(a)$
 	3. Pogledamo ali $\det Df(a)\ne 0$
+- Aproksimacija z odvodom v tocki $(z,w)$
+	- $z(x,y),w(x,y)$
+	- $x_{1}=x_{0}+ \frac{dx}{dz}(z-z_{0})+ \frac{dx}{dw}(w-w_{0})$
 
 ---
 # Implicitna funkcija

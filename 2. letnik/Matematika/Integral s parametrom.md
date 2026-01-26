@@ -11,7 +11,8 @@ style: nestedOrderedList
 	- $F(x)=\int_{I}f(t,x)dt$ zvezna
 - **Odvajanje** -> Naj bo $J\subset\Bbb R$ odprt interval in $f:[a,b]\times J\to\Bbb R$ zvezna. Naj $\forall (t,x)\in[a,b]\times J$ obstaja $\frac{df}{dx}(t,x)$ in je zvezna. 
 	- $\frac{d}{dx}\int^{b}_{a}f(t,x)dt=\int^{b}_{a} \frac{d}{dx}f(t,x)dt$.
-	- $\frac{dF}{dx_{j}}(x)=\int^{b}_{a} \frac{df}{dx_{j}}(t,x)dt$
+		- $\frac{dF}{dx_{j}}(x)=\int^{b}_{a} \frac{df}{dx_{j}}(t,x)dt$
+	- $\frac{d}{dx}  \int^{\beta(x)}_{\alpha(x)}f(t,x)dt=f[\beta(x),x]\beta'(x)-f[\alpha(x),x]\alpha'(x)+\int^{\beta(x)}_{\alpha(a)} \frac{d}{dx}f(t,x)dt$
 - **Integracija** -> Naj bo $f$ zvezna na $[a,b]\times[c,d]$ in $F(x)=\int^{b}_{a}f(t,x)dt$
 	- $\int^{d}_{c}F(x)dx=\int^{b}_{a}(\int^{d}_{c}f(t,x)dx)dt$
 
@@ -19,7 +20,7 @@ style: nestedOrderedList
 # Posplošeni integral
 $$\int^\infty_{a}f(t,x)dt$$
 - integral konvergira enakomerno na $[c,d]$ če $\forall\epsilon>0; \exists \bar b>a$ tako da $\forall b>\bar b$ velja $|\int^{\infty}_{\bar b}f(x,t)dt|<\epsilon; \forall x\in[c,d]$
-- Naj bo $f$ zvezen na $[c,d]\times[a,\infty]$ in integral $F=\int^{\infty}_{a}f(x,t)dt$ konvergira enakomirno. 
+- Naj bo $f$ zvezen na $[c,d]\times[a,\infty]$ in integral $F=\int^{\infty}_{a}f(x,t)dt$ konvergira enakomerno. 
 	- Potem je $F$ zvezna na $[c,d]$
 	- $\int^{d}_{c}(\int^{\infty}_{a}f(x,t)dt)dx=\int^{\infty}_{a}(\int^{b}_{a}f(x,t)dx)dt$
 - $F'(x)=\int^{\infty}_{a} \frac{df}{dx}(x,t)dt$ če $\frac{df}{dx}(x,t)$ zvezna in lahko omejimo $|\frac{df}{dx}|$ z konstanto. Potem $F(x)=\int F'(x)dx$
