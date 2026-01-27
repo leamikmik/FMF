@@ -179,3 +179,8 @@ $$f:D\subset\Bbb R^{n}\to\Bbb R$$
 - Naj bo $f:(D^{odp}_{1} \times D^{odp}_{2})\subseteq (\Bbb R^{n_{1}} \times\Bbb R^{n_{2}})\to\Bbb R^{n_{2}}$ preslikava razreda $C^{1}$, $(a,b)\in D_{1}\times D_{2}$ ničla funkcije $f$ in $(D_{2}f)(a,b)$ nesingularna. Tedaj obstaja okolica $U_{1}\times U_{2}\subset D_{1}\times D_{2}$, da $\forall x\in U_{1}$ obstaja natanko en $y=\phi(x)\in U_{2}$ da je $f(x,\phi(x))=0$. Preslikava $\phi:U_{1}\to U_{2}$ je razreda $C^{1}$.
 	- Zadnjo spremenljivko lahko izrazimo z pomočjo prvih $n$
 - Odvod zadnje spremenljivke $\ne 0$
+- Če obstaja $b=\phi(a)$ potrebujemo pogoj $\det(D_{b}f(a,b)\ne0)$
+- Parcialni odvod => $\frac{dy}{dx}(a)= -\frac{ \frac{df}{dx}(a)}{\frac{df}{dy}(a)}$
+- Da dobimo odvod implicitne funkcije v točki $x$ iz enačbe
+	- Zapišemo enačbo v obliki $b=f(a)$ in odvajamo enačbo po $a$
+	- Vstavimo $x$
