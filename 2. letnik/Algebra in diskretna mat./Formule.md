@@ -1,0 +1,121 @@
+```table-of-contents
+title: # Kazalo
+style: nestedOrderedList
+```
+---
+# Logika
+- Lukasiewicz-Piercova operacija -> $\uparrow\iff\neg\wedge$
+- Shefferjeva operacija -> $\downarrow\iff\neg\vee$
+- de Morganova zakona -> $\neg(A\wedge B)=\neg A\vee\neg B$ in $\neg(A\vee B)=\neg A\wedge\neg B$
+- Def. implikacije $A\Rightarrow B=\neg A\vee B$
+- Nasprotje od **vsi** je **vsaj en ne**
+- in nasprotje od **noben** je **vsaj en**
+---
+# Relacije
+![[Pasted image 20260208175850.png]]
+- **Ekvivalenčna** relacije $\iff$ refleksivna, simetrična in tranzitivna
+- **Ekvivalenčni** razred  -> $R(a)=\{x\in A;a\text{R}x\}$
+- R **tranzitivna**:
+	- refleksivna, antisimetrična => *delna urejenost*
+	- antisimetrična, strogo sovisna => *linearna urejenost*
+	- asimetrična => *stroga delna urejenost*
+	- asimetrična, sovisna => *stroga linearna urejenost*
+---
+# Kombinatorika
+- Izbori ($n$ elementov, $r$ izbor):
+	- Urejen s ponavljanjem => $n^{r}$
+	- Urejen brez ponavljanja => $\frac{n!}{(n-r)!}$
+	- Neurejen s ponavljanjem => $n+r-1\choose n-1$
+	- Neurejen brez ponavljanja => ${n\choose r} = \frac{n!}{(n-r)!*r!}$
+- Pascalova identiteta => ${n+1\choose r+1}={n\choose r}+{n\choose r+1}$
+- $(x+y)^{n}=\sum\limits^{n}_{r=0}{n\choose r}x^{n-r}y^{r}$
+	- $\sum\limits^{n}_{r=0}{n\choose r}=2^{n}$
+	- $\sum\limits^{n}_{r=0}(-1)^{r}{n\choose r}=0$
+- **Strilingovo število druge vrste**:
+	- $S(n,k)=0; k>n$
+	- $S(n,n)=1$, $S(n,1)=1$ in $S(n,0)=0$
+	- $S(n,k)=S(n-1,k-1)+kS(n-1,k)$
+	- ![[Pasted image 20260208181831.png]]
+- **Razčlenitev naravnega števila $n$ na $k$ členov**:
+	- $p_{k}(n)=0;\ k>n$
+	- $p_{0}(0)=1$, $p_{0}(n)=0$ in $p_{n}(n)=1$
+	- $p_{k}(n)=p_{k-1}(n-1)+p_{k}(n-k)$
+	- ![[Pasted image 20260208182132.png]]
+- **Preslikave** (iz $N$ v $K$ oz. porazdeljujemo $n$ elementov v $k$ škatel):
+	- $|K^{N}|=k^{n}$ => vseh možnih kombinacij
+	- $|(K^{N})_{i}|= \frac{k!}{(n-k)!}$ => vsaki škatli največ en element
+	- $|(K^{N})_{s}|=k!S(n,k)$ => v vsaki škatli vsaj en element
+- $\begin{array}{c|c|c|c} & K^{N} & (K^{N})_{i} & (K^{N})_{s} \\ \hline \text{ločimo po }N \text{ in } K & k^{n} & \frac{k!}{(k-n)!} & k!S(n,k)\\ \hline \text{ločimo po } N & {n+k-1\choose n} & {k\choose n} & {n-1\choose n-k} \\ \hline \text{ločimo po } K & \sum^{k}_{i=1}S(n,1) & 1 \text{ če } k\ge n \text{ sicer } 0 & S(n,k) \\\hline \text{ne ločimo} & \sum^{k}_{i=1}p_{i}(n) & 1 \text{ če } k\ge n \text{ sicer } 0 & p_{k}(n) \\ \hline\end{array}$
+---
+# Teorija števil
+- $\gcd( \frac{a}{c}, \frac{b}{c})= \frac{\gcd(a,b)}{c}$
+- $\gcd(m,n)=p_{1}^{\min(\alpha_{1},\beta_{1})}\dots p_{n}^{\min(\alpha_{n},\beta_{n})}$
+- $\text{lcm}(m,n)=p_{1}^{\max(\alpha_{1},\beta_{1})}\dots p_{n}^{\max(\alpha_{n},\beta_{n})}$
+- $\gcd(m,n)*\text{lcm}(m,n)=mn$
+- **Diofantska enačba** $ax+by=c$ ($x,y\in\Bbb Z$)
+	- Rešljivo $\iff c|\gcd(a,b)$
+	- Če $(x_{0},y_{0})$ neka rešitev potem
+	- $x=x_{0}-k* \frac{b}{\gcd(a,b)}$
+	- $y= y_{0}+k* \frac{a}{\gcd(a,b)}$
+- ![[Pasted image 20260208190720.png]]
+- $(x_{1}\equiv y_{1})\mod m$ in $(x_{2}\equiv y_{2})\mod m$
+	- $(x_{1}+x_{2}\equiv y_{1}+y_{2})\mod m$ in $(x_{1}x_{2}\equiv y_{1}y_{2})\mod m$
+- $(x^{r}\equiv y^{r})\mod m$
+- Element $a$ kolobarja $\Bbb Z_{n}$ je obrnljiv $\iff$ je tuj $n$
+	- $a^{-1} \Rightarrow ax-ny=1$
+- [[Vektorski prostori#Algebraične strukture]]
+- **Eulerjeva funkcija** (Število naravnih števil med $1$ in $n-1$ ki so tuja $n$):
+	- $\varphi(p^{r})=p^{r}(1- \frac{1}{p})$ => $p$ praštevilo
+	- $\varphi(ab)=\varphi(a)\varphi(b)$ => $a,b$ tuji
+		- $\varphi(n)=n(1- \frac{1}{p_{1}})\dots(1- \frac{1}{p_{k}})$ => Razcep $n$ na prafaktorje
+- **Fermatov izrek** => $(a^{p-1}\equiv1)\mod p$ kjer $a\in\Bbb Z_{p},p$ tuja in $p$ praštevilo
+- **Eurlerjev izrek** => $(a^{\varphi(n)}\equiv1)\mod n$ kjer $a,n$ tuja
+	- Če v kolobarju, more $a$ biti obrnljiv
+---
+# Grafi
+- $\Gamma=(V,E)$ -> graf, točke, povezave
+- $\deg_{\Gamma}(v)$ -> stopnja točke oz. število povezav na točko
+- $\sum\limits_{v\in V}\deg(v)=2*|E|$
+- Regularen graf -> vsaka točka enako povezav
+- Podgraf $\Gamma'$ ima $V(\Gamma')\subseteq V(\Gamma)$ in $E(\Gamma')\subseteq E(\Gamma)$
+	- Vpet podgraf -> $V(\Gamma')=V(\Gamma)$
+	- Induciran z množico $U=V(\Gamma')$ -> $U\subseteq V(\Gamma)$ in $E(\Gamma')=\{uv\in E(\Gamma)|u,v\in U\}$
+	- Dvodelen -> Lahko $V$ razdelimo na dve disjunktni podmnožici $A,B$, tako da za vsako povezavo je ena točka v $A$ in druga v $B$
+- Sprehod
+	- Enostaven -> vse povezave različne
+	- Sklenjen -> začetna točka enaka končni
+	- Pot -> vse točke različne
+- Cikel -> Enostaven sklenjen sprehod
+- Komponenta -> množica točk, kjer za dve poljubni obstaja vsaj en sprehod
+- Razdalja $d_{\Gamma}(u,v)$ -> dolžina najkrajše poti med $u$ in $v$
+- Premer $\text{diam}(\Gamma)$ -> dolžina najdaljše poti
+	- Ožina -> dolžina najkrajšega cikla
+- Družine grafov:
+	- **Polni** $K_{n}$ (vsaka točka povezana z vsako drugo) -> $n$ točk in $n\choose 2$ povezav
+	- **Poti** $P_{n}$ (samo povezane točke) -> $n-1$ povezav
+	- **Cikli** $C_{n}$ (n-kotnik) -> $n$ točk in povezav, 2-regularen in dvodelen če $n$ sodo
+	- **Polni dvodelni** $K_{m,n}$ ($|A|=m$, $|B|=n$) -> ima $m+n$ točk in $mn$ povezav
+	- **Kolesa** $W_{n}$ (cikel z notranjo točko) -> $n+1$ točk, $2n$ povezav
+	- **Posplešen Petersonov** $P_{n,k}$ -> $2n$ točk, če $n$ sodo je $3n$ povezav, drugače $\frac{5n}{2}$
+		- ![[Pasted image 20260209132710.png]]
+- **Drevesa** $n$ točk
+	- $n-1$ povezav
+- **Eulerjev graf** -> sprehod po grafu, tako da vsako povezavo prehodimo enkrat
+	- Multigraf brez izoliranih točk je Eulerjev če je povezan in so vse točke sode stopnje
+- **Hamiltonov graf** -> sprehod po grafu, tako da gremo čez vsako točko točno enkrat
+	- Pot -> če imamo pot ki je hamiltonova
+	- Cikel -> če imamo cikel ki je hamiltonov, je graf tudi
+	- Če odstranimo $n$ točk in dobimo strogo več kot $n$ komponent, graf ni hamiltonov
+	- Če ima graf vsaj 3 točke in velja, da je stopnja točke z najmanjšo stopnjo večja ali enaka polovici števila točk, je graf hamiltonov
+	- Če je vsota stopenj dveh nesosednjih točk večja ali enaka številu točk, je graf hamiltonov
+- **Barvanje** -> pobarvamo točke grafa, tako da vsaki dve sosednji točki nimata enake barve
+	- $\chi(\Gamma)$ -> kromatično število (najmanjše št. barv da pobarvamo vse točke)
+		- $\chi'(\Gamma)$ -> kromatični indeks (najmanj št. za povezave)
+	- Če $\Gamma'\subseteq\Gamma$ potem $\chi(\Gamma')\le\chi(\Gamma)$
+	- $m(\Gamma)$ velikost največjega polnega podgrafa, $n(\Gamma)$ največja stopnja neke točke v grafu
+		- $m(\Gamma)\le\chi(\Gamma)\le n(\Gamma)+1$
+		- Naj bo $\Gamma$ povezan graf, ki ni lih cikel in ni poln graf -> $\chi(\Gamma)\le n(\Gamma)$
+	- $\chi(K_{n})=n$
+	- $\chi(C_{n})=2$ za sode in $3$ za lihe $n$
+	- $\chi(\Gamma)\le 2$ natanko ko je graf dvodelen
+	- $\chi(\Gamma)\le4$ za ravninski graf (graf ki se ga da narisati, da se povezave ne sekajo)
