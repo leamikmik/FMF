@@ -1,4 +1,40 @@
-
+```table-of-contents
+title: # Kazalo
+style: nestedOrderedList
+```
+---
+# Uvod
+- Rešujemo sistem več linearnih enačb
+- Zapišemo kot $Ax=b$ 
+	- $A^{H}=\overline{A^{T}}$
+- [[Matrike]]
+---
+# Norme
+- Enaka pravila kot normalna [[Vektorji v R#Norma|norma]].
+- **Vektorske norme**:
+	- $\|x\|_{1}=\sum\limits^{n}_{i=1}|x_{1}|$ -> 1-norma
+	- $\|x\|_{2}=\left(\sum\limits^{n}_{i=1}|x_{i}|^{2}\right)^{1/2}$ -> 2-norma oz. *evklidska norma*
+	- $\|x\|_{\infty}=\max_{i=1,\dots,n}|x_{i}|$ -> $\infty$-norma
+	- Vse so oblike Holderjeve $p$-norme => $\|x\|_{p}=(\sum^{n}_{i=1}|x_{i}|^{p})^{1/p}$
+		- Holderjeva neenakost -> $|x^{H}y|\le\|x\|_{p}\|y\|_{q}$ kjer $\frac{1}{p} + \frac{1}{q}=1$\
+	- Ocene:
+		- $\|x\|_{2}\le\|x\|_{1}\le\sqrt{n}\|x\|_{2}$
+		- $\|x\|_{\infty}\le\|x\|_{2}\le\sqrt{n}\|x\|_{\infty}$
+		- $\|x\|_{\infty}\le\|x\|_{1}\le n\|x\|_{\infty}$
+- **Matrična norma**:
+	- Ima še lastnost $\|AB\|\le\|A\|*\|B\|$ -> submultiplikativnost
+	- Operatorska norma => $\|A\|=\max \frac{\|Ax\|}{\|x\|}$
+	- $\|A\|_{1}=\max_{j=1,\dots,n}\left(\sum^{n}_{i=1}|a_{ij}|\right)$
+	- $\|A\|_{2}=\sigma_{1}(A)=\max_{i=1,\dots,n}\sqrt{\lambda_{i}(A^{H}A)}$ -> spektralna norma
+		- Največja singularna vrednost (pozitivni kvadratni koreni lastnih vrednosti matrike $B=A^{H}A$)
+	- $\|A\|_{\infty}=\max_{i=1,\dots,n}\left(\sum^{n}_{j=1}|a_{ij}|\right)$
+	- $\|A\|_{F}=\left(\sum^{n}_{i,j=1}|a_{ij}|^{2}\right)^{1/2}$ -> Forbeniusova norma
+	- $\|I\|=1$ in $\|I\|_{F}=\sqrt{n}$
+	- Normo $\|A\|_{2}$ je zelo težko izračunati, zato uporabimo ocene:
+		- $\frac{1}{\sqrt{n}}\|A\|_{F}\le\|A\|_{2}\le\|A\|_{F}$
+		- $\frac{1}{\sqrt{n}}\|A\|_{1}\le\|A\|_{2}\le\sqrt{n}\|A\|_{1}$
+		- $\frac{1}{\sqrt{n}}\|A\|_{\infty}\le\|A\|_{2}\le\sqrt{n}\|A\|_{\infty}$
+		- $\|A\|_{2}\le\sqrt{\|A\|_{1}\|A\|_{\infty}}$
 ---
 15.12
 
