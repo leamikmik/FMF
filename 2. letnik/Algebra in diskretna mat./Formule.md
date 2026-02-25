@@ -45,9 +45,9 @@ style: nestedOrderedList
 	- $|K^{N}|=k^{n}$ => vseh možnih kombinacij
 	- $|(K^{N})_{i}|= \frac{k!}{(n-k)!}$ => vsaki škatli največ en element
 	- $|(K^{N})_{s}|=k!S(n,k)$ => v vsaki škatli vsaj en element
-- $\begin{array}{c|c|c|c} & K^{N} & (K^{N})_{i} & (K^{N})_{s} \\ \hline \text{ločimo po }N \text{ in } K & k^{n} & \frac{k!}{(k-n)!} & k!S(n,k)\\ \hline \text{ločimo po } N & {n+k-1\choose n} & {k\choose n} & {n-1\choose n-k} \\ \hline \text{ločimo po } K & \sum^{k}_{i=1}S(n,1) & 1 \text{ če } k\ge n \text{ sicer } 0 & S(n,k) \\\hline \text{ne ločimo} & \sum^{k}_{i=1}p_{i}(n) & 1 \text{ če } k\ge n \text{ sicer } 0 & p_{k}(n) \\ \hline\end{array}$
+- $\begin{array}{c|c|c|c} & K^{N} & (K^{N})_{i} & (K^{N})_{s} \\ \hline \text{ločimo po }N \text{ in } K & k^{n} & \frac{k!}{(k-n)!} & k!S(n,k)\\ \hline \text{ločimo po } K & {n+k-1\choose n} & {k\choose n} & {n-1\choose n-k} \\ \hline \text{ločimo po } N & \sum^{k}_{i=1}S(n,i) & 1 \text{ če } k\ge n \text{ sicer } 0 & S(n,k) \\\hline \text{ne ločimo} & \sum^{k}_{i=1}p_{i}(n) & 1 \text{ če } k\ge n \text{ sicer } 0 & p_{k}(n) \\ \hline\end{array}$
 ---
-# Teorija števil
+# Teorij a števil
 - $\gcd( \frac{a}{c}, \frac{b}{c})= \frac{\gcd(a,b)}{c}$
 - $\gcd(m,n)=p_{1}^{\min(\alpha_{1},\beta_{1})}\dots p_{n}^{\min(\alpha_{n},\beta_{n})}$
 - $\text{lcm}(m,n)=p_{1}^{\max(\alpha_{1},\beta_{1})}\dots p_{n}^{\max(\alpha_{n},\beta_{n})}$
@@ -62,7 +62,7 @@ style: nestedOrderedList
 	- $(x_{1}+x_{2}\equiv y_{1}+y_{2})\mod m$ in $(x_{1}x_{2}\equiv y_{1}y_{2})\mod m$
 - $(x^{r}\equiv y^{r})\mod m$
 - Element $a$ kolobarja $\Bbb Z_{n}$ je obrnljiv $\iff$ je tuj $n$
-	- $a^{-1} \Rightarrow ax-ny=1$
+	- $a^{-1} \Rightarrow ax+ny=1$
 - [[Vektorski prostori#Algebraične strukture]]
 - **Eulerjeva funkcija** (Število naravnih števil med $1$ in $n-1$ ki so tuja $n$):
 	- $\varphi(p^{r})=p^{r}(1- \frac{1}{p})$ => $p$ praštevilo
@@ -100,7 +100,10 @@ style: nestedOrderedList
 		- ![[Pasted image 20260209132710.png]]
 - **Drevesa** $n$ točk
 	- $n-1$ povezav
-- **Eulerjev graf** -> sprehod po grafu, tako da vsako povezavo prehodimo enkrat
+	- Št. upetih dreves -> $\det(L(\Gamma))$
+		- $L$ -> Laplacova matrika
+		- Oštevilčimo točke in nastavimo kvadratno matriko $n$ velikosti. Po diagonali damo $\deg(u)$, drugje pa $0$ če točki nimata povezave oz. $-1$ če imata. Sedaj odstranimo eno vrstico in stolpec ter izračunamo $\det$
+- Eulerjev graf -> sprehod po grafu, tako da vsako povezavo prehodimo enkrat
 	- Multigraf brez izoliranih točk je Eulerjev če je povezan in so vse točke sode stopnje
 - **Hamiltonov graf** -> sprehod po grafu, tako da gremo čez vsako točko točno enkrat
 	- Pot -> če imamo pot ki je hamiltonova
