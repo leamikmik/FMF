@@ -11,30 +11,48 @@ style: nestedOrderedList
 ---
 # Norme
 - Enaka pravila kot normalna [[Vektorji v R#Norma|norma]].
-- **Vektorske norme**:
-	- $\|x\|_{1}=\sum\limits^{n}_{i=1}|x_{1}|$ -> 1-norma
-	- $\|x\|_{2}=\left(\sum\limits^{n}_{i=1}|x_{i}|^{2}\right)^{1/2}$ -> 2-norma oz. *evklidska norma*
-	- $\|x\|_{\infty}=\max_{i=1,\dots,n}|x_{i}|$ -> $\infty$-norma
-	- Vse so oblike Holderjeve $p$-norme => $\|x\|_{p}=(\sum^{n}_{i=1}|x_{i}|^{p})^{1/p}$
-		- Holderjeva neenakost -> $|x^{H}y|\le\|x\|_{p}\|y\|_{q}$ kjer $\frac{1}{p} + \frac{1}{q}=1$\
-	- Ocene:
-		- $\|x\|_{2}\le\|x\|_{1}\le\sqrt{n}\|x\|_{2}$
-		- $\|x\|_{\infty}\le\|x\|_{2}\le\sqrt{n}\|x\|_{\infty}$
-		- $\|x\|_{\infty}\le\|x\|_{1}\le n\|x\|_{\infty}$
-- **Matrična norma**:
-	- Ima še lastnost $\|AB\|\le\|A\|*\|B\|$ -> submultiplikativnost
-	- Operatorska norma => $\|A\|=\max \frac{\|Ax\|}{\|x\|}$
-	- $\|A\|_{1}=\max_{j=1,\dots,n}\left(\sum^{n}_{i=1}|a_{ij}|\right)$
-	- $\|A\|_{2}=\sigma_{1}(A)=\max_{i=1,\dots,n}\sqrt{\lambda_{i}(A^{H}A)}$ -> spektralna norma
-		- Največja singularna vrednost (pozitivni kvadratni koreni lastnih vrednosti matrike $B=A^{H}A$)
-	- $\|A\|_{\infty}=\max_{i=1,\dots,n}\left(\sum^{n}_{j=1}|a_{ij}|\right)$
-	- $\|A\|_{F}=\left(\sum^{n}_{i,j=1}|a_{ij}|^{2}\right)^{1/2}$ -> Forbeniusova norma
-	- $\|I\|=1$ in $\|I\|_{F}=\sqrt{n}$
-	- Normo $\|A\|_{2}$ je zelo težko izračunati, zato uporabimo ocene:
-		- $\frac{1}{\sqrt{n}}\|A\|_{F}\le\|A\|_{2}\le\|A\|_{F}$
-		- $\frac{1}{\sqrt{n}}\|A\|_{1}\le\|A\|_{2}\le\sqrt{n}\|A\|_{1}$
-		- $\frac{1}{\sqrt{n}}\|A\|_{\infty}\le\|A\|_{2}\le\sqrt{n}\|A\|_{\infty}$
-		- $\|A\|_{2}\le\sqrt{\|A\|_{1}\|A\|_{\infty}}$
+## Vektorske norme:
+- $\|x\|_{1}=\sum\limits^{n}_{i=1}|x_{1}|$ -> 1-norma
+- $\|x\|_{2}=\left(\sum\limits^{n}_{i=1}|x_{i}|^{2}\right)^{1/2}$ -> 2-norma oz. *evklidska norma*
+- $\|x\|_{\infty}=\max_{i=1,\dots,n}|x_{i}|$ -> $\infty$-norma
+- Vse so oblike Holderjeve $p$-norme => $\|x\|_{p}=(\sum^{n}_{i=1}|x_{i}|^{p})^{1/p}$
+	- Holderjeva neenakost -> $|x^{H}y|\le\|x\|_{p}\|y\|_{q}$ kjer $\frac{1}{p} + \frac{1}{q}=1$\
+- Ocene:
+	- $\|x\|_{2}\le\|x\|_{1}\le\sqrt{n}\|x\|_{2}$
+	- $\|x\|_{\infty}\le\|x\|_{2}\le\sqrt{n}\|x\|_{\infty}$
+	- $\|x\|_{\infty}\le\|x\|_{1}\le n\|x\|_{\infty}$
+## Matrična norma:
+- Ima še lastnost $\|AB\|\le\|A\|*\|B\|$ -> submultiplikativnost
+- Operatorska norma => $\|A\|=\max \frac{\|Ax\|}{\|x\|}$
+- Singularna vrednost => $\sigma_{i}=+\sqrt{\lambda_{i}}$
+	- $\sigma_{1}\ge\sigma_{2}\ge\dots\ge\sigma_{n}\ge0$
+- $\|A\|_{1}=\max_{j=1,\dots,n}\left(\sum^{n}_{i=1}|a_{ij}|\right)$
+- $\|A\|_{2}=\sigma_{1}(A)=\max_{i=1,\dots,n}\sqrt{\lambda_{i}(A^{H}A)}$ -> spektralna norma
+	- Največja singularna vrednost (pozitivni kvadratni koreni lastnih vrednosti matrike $B=A^{H}A$)
+	- $\|A\|_{2}=\|UA\|_{2}=\|AU\|_{2}$
+- $\|A\|_{\infty}=\max_{i=1,\dots,n}\left(\sum^{n}_{j=1}|a_{ij}|\right)$
+	- $\|A\|_{F}=\|UA\|_{F}=\|AU\|_{F}$
+- $\|A\|_{F}=\left(\sum^{n}_{i,j=1}|a_{ij}|^{2}\right)^{1/2}$ -> Forbeniusova norma
+- $\|I\|=1$ in $\|I\|_{F}=\sqrt{n}$
+- Normo $\|A\|_{2}$ je zelo težko izračunati, zato uporabimo ocene:
+	- $\frac{1}{\sqrt{n}}\|A\|_{F}\le\|A\|_{2}\le\|A\|_{F}$
+	- $\frac{1}{\sqrt{n}}\|A\|_{1}\le\|A\|_{2}\le\sqrt{n}\|A\|_{1}$
+	- $\frac{1}{\sqrt{n}}\|A\|_{\infty}\le\|A\|_{2}\le\sqrt{n}\|A\|_{\infty}$
+	- $\|A\|_{2}\le\sqrt{\|A\|_{1}\|A\|_{\infty}}$
+- $|\lambda|\le \|A\|;\ \forall\lambda(A)$
+---
+# Občutljivost linearnih sistemov
+- Zanima nas, kako je rešitev sistema občutljiva na spremembe matrike $A$ in $b$
+- $\|(I-X)^{-1}\|\le  \frac{1}{1-\|X\|}$
+	- Če $\|X\|<1$ v matrični normi, v kateri je $\|I\|=1$
+- $\kappa(A)=\|A\|*\|A^{-1}\|$ -> občutljivost oz. pogojenostno število matrike 
+	- Če je število veliko lahko kljub majhnim relativnim napakam s podatki dobimo visoko relativno napako rešitve
+	- $1\le\kappa(A)$ => Enakost le če unitarna matrika pomnožena z neničelnim skalarjem
+	- $\kappa_{2}= \frac{\sigma_{1}(A)}{\sigma_{n}(A)}$
+- $A$ nesigularna in $\delta A$ motnja da $\|A^{-1}\|*\|\delta A\|<1$
+	- $\frac{\|\delta x\|}{\|x\|}\le \frac{\kappa(A)}{1-\kappa(A) \frac{\|\delta A\|}{\|A\|} }(\frac{\|\delta A\|}{\|A\|}+\frac{\|\delta b\|}{\|b\|})$
+	- $\min\left\{\frac{\|\sigma A\|_{2}}{\|A\|_{2}}; \det(A+\sigma A)=0\right\}= \frac{1}{\kappa_{2}(A)}$
+- Direktna stabilnost => $\frac{\|x-\bar x\|}{\|x\|}\le \kappa(A)* \frac{\| A\bar x - b \|}{\|b\|}$
 ---
 15.12
 
@@ -66,12 +84,12 @@ style: nestedOrderedList
 		- normi sta vsklajeni
 	- zanima nas ocena $(A+\delta A)\bar x=b+\delta b$
 		- $\bar x = x+ \delta x$ in $\frac{\|\delta x\|}{\|x\|}\le\ ?$
-	- $\frac{\|\delta x\|}{\|x\|}\le \frac{\kappa(A)}{1-\kappa(A) \frac{\|\delta A\|}{\|A\|} }(\frac{\|\delta A\|}{\|A\|}+\frac{\|\delta b\|}{\|b\|})\approx \kappa(A)*2\epsilon$
+	- $\frac{\|\delta x\|}{\|x\|}\le \frac{\kappa(A)}{1-\kappa(A) \frac{\|\delta A\|}{\|A\|} }(\frac{\|\delta A\|}{\|A\|}+\frac{\|\delta b\|}{\|b\|})$
 	- $\kappa(A)=\|A\|*\|A^{-1}\|$ -> Pogojenostno stevilo matrike 
 		- ce je stevilo veliko lahko kljub majhnim relativnim napakam s podatki dobimo visoko relativno napako resitve
 		- matrikam ki imajo veliko pogojenostno stevilo recemo OBCUTLJIVE
 
-- direktna stabilnost ...
+- direktna stabilnost 
 	- $\frac{\|x-\bar x\|}{\|x\|}\le \kappa(A)* \frac{\| A\bar x - b \|}{\|b\|}$
 # Sistem lin enacb s posebno obliko
 - tridiagonalne matrike

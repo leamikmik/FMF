@@ -33,6 +33,11 @@ $$A\in\Bbb R^{m\times n};\ B\in\Bbb R^{n\times r};\ C=A*B \in\Bbb R^{m\times r}$
 - Označimo z $A^{T}$
 - Če $A^T=A$ rečemo, da je $A$ **simetrična** matrika
 - Če $A=\overline{A^{T}}$ rečemo, da je **hermitska** matrika
+	- Označimo z $A^{H}$
+- Če $A^{H}A=AA^{H}$ rečemo, da je **normalna** matrika
+- Če $A^{H}A=AA^{H}=I$ rečemo, da je **unitarna** matrika
+- Če $A=A^{*}$ in $\left<Au,u\right>>0;\ \forall u\ne0$ rečemo, da je **pozitivno definitna** matrika
+	- Za hermitsko (in simetrično) matriko, samo pomembno da so vse lastne vrednosti pozitivne
 - Če $\det(A)\ne0$ rečemo, da je **nesingularna** matrika
 ## Lastnosti operacij
 ### Seštevanje

@@ -72,12 +72,10 @@ $$U\to V\to\Bbb C;\ u\to Au\to\left<Au,v\right>$$
 	- $A^{*}_{CB}=\left[\begin{matrix} \left<A^{*} c_{1},  b_{1}\right> & \dots & \left<A^{*} c_{n},  b_{1}\right> \\ \vdots & \ddots & \vdots \\ \left< A^{*}c_{1},  b_{n}\right> & \dots & \left< A^{*}c_{n},  b_{n}\right> \end{matrix}\right]$
 	- $(i,j)$-ti el. v $A_{BC}$ je enak **konjugirano** $(j,i)$-temu el. v $A^{*}_{CB}$
 - $A^{*}=\overline{A^{T}}$ (Matrika $A^{*}$ v ON-bazi je enaka transponirani in po elementih konjugirani matriki $A$)
-1. **Sebi adjungirana** matrika -> $A=A^{*}$
-2. **Normalna** matrika -> $A*A^{*}=A^{*}*A$
-3. **Unitarna** matrika -> $AA^{*}=A^{*}A=I$
+-  **Sebi adjungirana** matrika -> $A=A^{*}$
 	- Če $AA^{T}=I$ je $A$ ortogonalna
 	- Za te matrike obstaja ON-baza iz last. vektorjev, vse lastne vrednosti pa so absolutno enake $1$
-4. **Pozitivno definitne** matrike ->$A=A^{*}$ in $\left<Au,u\right>>0;\ \forall u\ne0$
+-  **Pozitivno definitne** matrike ->$A=A^{*}$ in $\left<Au,u\right>>0;\ \forall u\ne0$
 	- Simetrična oz. hermitska matrika je pozitivno definitna natanko, ko so vse lastne vrednosti pozitivne
 ## Lastnosti
 1. $(A+B)^{*}=A^{*}+B^{*}$
