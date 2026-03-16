@@ -88,7 +88,7 @@ $$D\subset\Bbb R^{n},f:D\to\Bbb R^{m},a\in\text{int}(D),h\in\Bbb R^{n}>\vec0$$
 - **Diferencial** $L:\Bbb R^{n}\to\Bbb R^{m}$ => $f(a+h)=f(a)+L(a)h+o(h)$
 	- kjer $\lim_{h\to0} \frac{\|o(h)\|}{\|h\|}=0$, potem rečemo, da je $f$ *diferenciabilna* v točki $a$
 		- potem je tudi zvezna in parcialno odvedljiva v $a$
-	- $L(a)=(Df)(a)=\left[\begin{matrix} \frac{df_{1}}{dx_{1}}(a) & \dots & \frac{df_{1}}{dx_{n}}(a) \\ \vdots & \ddots & \vdots \\ \frac{df_{m}}{dx_{1}}(a) & \dots & \frac{df_{m}}{dx_{n}}(a) \end{matrix}\right]$
+	- $L(a)=(Df)(a)=Jf(a)=\left[\begin{matrix} \frac{df_{1}}{dx_{1}}(a) & \dots & \frac{df_{1}}{dx_{n}}(a) \\ \vdots & \ddots & \vdots \\ \frac{df_{m}}{dx_{1}}(a) & \dots & \frac{df_{m}}{dx_{n}}(a) \end{matrix}\right]$
 		- imenujemo tudi **Jacobijeva matrika**
 		- funk. diferenciabilna za $n=2$ v točki $(a,b)$ => $\lim_{r\to0}= \frac{f(a+r\cos\phi, b+r\sin\phi)-f(a,b)- \frac{df}{dx}(a,b)*r\cos\phi - \frac{df}{dy}(a,b)*r\sin\phi}{r}=0$
 - **Verižno pravilo**

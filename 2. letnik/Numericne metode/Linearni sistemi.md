@@ -215,94 +215,24 @@ end
 		- Aasenova metoda
 	- Potrebujejo $\frac{1}{3}n^{3}+O(n^{2})$
 ## Tridiagonalne matrike
-
-
-15.12
-
-- pri delnem pivotiranju pred eleminicaijo v j-tem stolpcu primerjamo elemente v tem stoplcu od diagonalnega navzdol in zamenjamo j-to vrstico s tisto vrstico, ki vsebuje po absolutni vrednosti najvecji element. Menjave belezimo v permutacijksi matriki. Razcep ki dobimo je oblike
-- $P*A=L*U$
-- ce je matrika obrnljia potem je pivot na vsakem koraku razlicen od 0
-	- razcep ni enolicen
-- postopek:
-	1. nastavimo permutacijsko matriko $P=I$
-	2. pogledamo po absoluti najvecji el v 1. stolpcu
-	3. ce 1. el ni najvecji, zamenjamo vrstice (tudi v $P$)
-	4. potem delimo vse elemente stolpca, ki niso prvi, z pivotom
-	5. potem vzamemo podmatriko brez trenutnega stolpca in vrstice (oz vseh visjih)
-	6. vsakemu elementu te matrike odstejemo zmnozek elementa trenutne vrstice in trenutnega stolpca
-	7. postopek ponavljamo n-1 krat
-	8. potem je $L=I+\text{elementi koncne matrike pod diagonalo}$ in $U=\text{vsi elementi koncne matrike nad vkljucno diagonalo}$
-- Kako do resitve $Ax=b$?
-	- $PAx=Pb$
-	- $LUx=Pb$
-	1. Resimo $Ly=Pb$
-		- Dobimo $y$ -> preme substitucije
-	2. Resimo $Ux=y$
-		- Dobimo $x$ -> obratne substitucije
-- Pri delnem pivotiranju so vsi elementi matrike $L$ po abs vrednosti $\le 1$
-Obcustljivost sistemov linearnih enacb
-- kako se spremeni resitev $x$ sistema enacb $Ax=b$ ce malo spremenimo vhodne podatke
-	- $\bar A = A+\delta A$ in $\bar b=b+\delta b$
-	- $\frac{\|\delta A\|}{\|A\|}\le \epsilon$ in $\frac{\|\delta b\|}{\|b\|}\le \epsilon$
-		- normi sta vsklajeni
-	- zanima nas ocena $(A+\delta A)\bar x=b+\delta b$
-		- $\bar x = x+ \delta x$ in $\frac{\|\delta x\|}{\|x\|}\le\ ?$
-	- $\frac{\|\delta x\|}{\|x\|}\le \frac{\kappa(A)}{1-\kappa(A) \frac{\|\delta A\|}{\|A\|} }(\frac{\|\delta A\|}{\|A\|}+\frac{\|\delta b\|}{\|b\|})$
-	- $\kappa(A)=\|A\|*\|A^{-1}\|$ -> Pogojenostno stevilo matrike 
-		- ce je stevilo veliko lahko kljub majhnim relativnim napakam s podatki dobimo visoko relativno napako resitve
-		- matrikam ki imajo veliko pogojenostno stevilo recemo OBCUTLJIVE
-
-- direktna stabilnost 
-	- $\frac{\|x-\bar x\|}{\|x\|}\le \kappa(A)* \frac{\| A\bar x - b \|}{\|b\|}$
- Sistem lin enacb s posebno obliko
-- tridiagonalne matrike
-- pasovne matrike
-- kompleksne
-- razprsene
-- simetricne pozitivno definitne
-simetricne pozitivno definitne
-- Matrika A je s.p.d ce velja $A=A^{T}$ in $x^{T}Ax>0$ za $\forall x\ne\vec 0$
-	- ali pa lastne vrednosti strogo vec od 0
-- lastnosti 
-	- naj bo $C$ obrnljiva mat. Potem je $A$ spd $\iff$ $C^{T}AC$ spd
-	- vse vodilne podmatrike (podmatrika k vsebuje prvi clen) spd $A$ so tudi spd 
-	- naj bo $A$ spd potem tudi $A([i_{1}i_{2}\dots i_{k}],[i_{1}i_{2}\dots i_{k}])$ spd (lahko poljubno vzamemo vrstice in stolpce. ni nujno da zaporedno)
-	- naj bo $A$ spd potem so vsi diagonalni elementi $>0$ in maximum je na diagonali
-	- ce je $A$ spd potem $LU$ razcep brez pivotiranja, tj $A=LU$ in vsi diagonalni el matrike $U$ so $>0$
-- matrika $A$ je spd iff ko obstaja razcep CHOLESKEGA to je razcep oblike $A=V*V^{T}$ kjer je $V$ spodnje trikotna matrika z pozitivnimi diagonalnimi el
-- algoritm - razcept choleskega (vhod $A$ izhod $V$)
-```
-	for j=1:n
-	  v_jj = sqrt(a_jj - sum_k=1^j-1(v_jk^2) )
-	  for i=j+1:n
-		  v_ij = 1/v_jj (a_ij - sum_k=1^j-1(v_jk * v_ik) )
-	  end
-	end
-```
-
+- $A=\left[\begin{matrix}a_{1} & b_{1} \\ c_{2} & a_{2} & b_{2} \\  & \ddots & \ddots & \ddots \\ & & c_{n-1} & a_{n-1} & b_{n-1} \\ &&& c_{n} & a_{n} \end{matrix}\right]$
+- Če naredimo razcep brez pivotiranja
+	- $L=\left[\begin{matrix}1 \\ l_{2} & 1 \\ & \ddots & \ddots \\ &&l_{n} & 1\end{matrix}\right]$
+	- $U=\left[\begin{matrix}u_{1} & b_{1} \\ & \ddots & \ddots \\ &&u_{n-1} & b_{n-1} \\ &&& u_{n}\end{matrix}\right]$
+- Delno pivotiranje
+	- $U=\left[\begin{matrix}u_{1} & v_{1} & w_{1} \\ &\ddots & \ddots & \ddots \\ &&u_{n-2} & v_{n-2} & w_{n-2} \\ &&&u_{n-1} & v_{n-1} \\ &&&& u_{n}\end{matrix}\right]$
+	- Obratno stabilno
+- Podobno za *pasovne matrike* (poleg glavne še $p$ diagonal nad in $q$ diagonal pod glavno)
+	- Če razcep brez pivotiranja, je enaka oblika v spodnjem in zgornjem trikotniku kot ima matrika $A$
+	- Če $p,q<<n$ je delno pivotiranje obratno stabilno
+## Kompleksni sistemi
+- Kaj pa če $A$ in $b$ kompleksna?
+- Lahko naredimo $\left[\begin{matrix}A_{1} & -A_{2} \\ A_{2} & A_{1}\end{matrix}\right]\left[\begin{matrix}x_{1} \\ x_{2}\end{matrix}\right]=\left[\begin{matrix}b_{1} \\ b_{2}\end{matrix}\right]$, če ni na voljo kompleksna aritmetika
+	- $A=A_{1}+iA_{2}$, $x=x_{1}+ix_{2}$ in $b=b_{1}+ib_{2}$
+	- $\frac{16}{3}n^{3}+O(n^{2})$ realnih operacij
+- Če je možno računati v kompleksnih, lahko uporabimo standradni algoritem z delnim pivotiranjem
+	- $\frac{8}{3}n^{3}+O(n^{2})$ operacij
+## Razpršene matrike
+- Je *razpršena* če je večina elementov enaka $0$
+- Lahko le preuredimo v lepši sistem 
 ---
-23.2.
-Algoritem (gran-schmidtov postpek)
-```
-for i=1:n
-	q^(0)_i = a_i
-end
-for i=1:n
-	r_ii = ||q^(i-1)_i||_2
-	q_i = 1/r_ii q^(i-1)_i
-	for j=i+1:n
-		r_ij = q^T_i * a_j
-		q^(i)_j = q^(i-1)_j - r_ij * q_i
-	end
-end
-```
-Vrstica 8. taka kot je, recemo Klasicni GSP (CGS)
-Al pa (`r_ij = q^T_i * q^(i-1)_j`) Modificiran GSP (MGS)
-CGS in MGS nam data enak eksakten rezultat, pri numericnem je pa MGS bolj stabilen.
-
-Kako z pomocjo $QR$ razcepa do resitve $Ax=b$ po MNK?
-- $A=QR$
-- $A^{T}Ax=A^{T}b$
-- $(QR)^{T}QRx=(QR)^{T}b$
-- $R^{T}Q^{T}QRx=R^{T}Q^{T}b$
-- $Rx=Q^{T}b$
