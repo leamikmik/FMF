@@ -80,6 +80,7 @@ $$PA=LU$$
 	1. $PA=LU$
 	2. $Ly=Pb=:b'$ -> [[#Prema substitucija]]
 	3. $Ux=y$ -> [[#Obratna substitucija]]
+- $\det(A)=\det(U)$
 ## Algoritmi
 ### Razcep brez pivotiranja
 - (vnos $A$, izhod $A$ z poddiagonalo enako $L-I$, zgornji trikotnik pa $U$)
@@ -206,6 +207,7 @@ end
 	```
 	- $\|\delta A\|_{\infty}\le 3n^{2}u\|A\|_{\infty}$ -> obratno stabilna
 	- Cenejše in stabilnejše od $LU$ razcepa
+	- $\det(A)=\det(V)^{2}$
 - Če pa matrika ni definitna ne moremo uporabiti Choleskega
 - Za nedefinitno obstaja $PAP^{T}=LDL^{T}$
 	- $D$ bločno diagonalna z bloki $1\times 1$ in $2\times 2$
