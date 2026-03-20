@@ -29,7 +29,7 @@ $$A: U\to V$$
 	- A je *injektivna* => $\ker(A)=\{0\}$
 2. **Slika** preslikave ($Z_{f}$) => $\text{im}(A)=\{y\in V; \exists x\in U \Rightarrow y=A(x)\}\le V$
 	- A je *surjektivna* => $\text{im}(A)=V$
-- *Jedro* in *sliko* dobimo z [[Sistem linearnih enačb#Gaussova eliminacija|gaussom]] mat. $A$:
+- *Jedro* in *sliko* dobimo z [[1. letnik/Linearna algebra/Sistem linearnih enačb#Gaussova eliminacija|gaussom]] mat. $A$:
 	- $\ker$ -> rešitev gaussa
 	- $\text{im}$ -> vrstice matrike kjer so pivoti
 3. $\dim(U)=\dim(\ker(A))+\dim(\text{im}(A))$
