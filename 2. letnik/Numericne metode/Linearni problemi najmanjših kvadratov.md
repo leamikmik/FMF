@@ -29,7 +29,7 @@ $$\min\|Ax-b\|_{2};\ A\in\Bbb R^{m\times n}, b\in\Bbb R^{m},x\in\Bbb R^{n}$$
 - razcep => $A=QR$ kjer $Q\in\Bbb R^{m\times n}$ pravokotna matrika z ortobnomiranimi stolpci in $R\in\Bbb R^{n\times n}$ zgornje trikotna matrika s pozitivnimi diagonalnimi el.
 	- Enoličen razcep
 - Potem je naš sistem $Rx=Q^{T}b$
-- Lahko uporabimo **Gram-Schimotovo** ortogonalizacijo stolpcev matrike $A$
+- Lahko uporabimo [[#Algoritem|Gram-Schimotovo]] ortogonalizacijo stolpcev matrike $A$
 	- *Klasična GS metoda* => CGS
 	- *Modificirana GS metoda* => MGS
 		- Računamo $\bar Q\bar R$ razcep razširjene matrike $[\begin{matrix}A & b\end{matrix}]$
@@ -37,7 +37,16 @@ $$\min\|Ax-b\|_{2};\ A\in\Bbb R^{m\times n}, b\in\Bbb R^{m},x\in\Bbb R^{n}$$
 			- $\bar R=\left[\begin{matrix}R & z \\  & \rho\end{matrix} \right];\ z\in\Bbb R^{n}$
 		- Nato rešujemo $Q(Rx-z)-\rho q_{n+1}$, ki ima minimum pri $Rx=z$
 	- MGS stabilnejši od CGS
-	- ```
+	- Število operacij je $2mn^{2}$
+## Razširjeni $QR$ razcep
+$$A=\bar Q\bar R$$
+- $\bar Q\in\Bbb R^{m\times m}$ ortogonalna, $\bar R\in\Bbb R^{m\times n}$ zgornja trapezna matrika
+- Prvih $n$ stolpcev $\bar Q=Q$ in $\bar R=\left[\begin{matrix}R \\ 0\end{matrix}\right]$ 
+- **Tudi razširjeni $QR$ razcep bomo ponavadi imenovali kar $QR$ razcep**
+## Algoritem
+- vhod $A$ izhod $QR$
+- **Gran-Schimitov algoritem**
+```
 for k=1:n
 	q_k = a_k
 	for i=1:k-1
@@ -47,38 +56,80 @@ for k=1:n
 	r_kk = ||q_k||_2
 	q_k = q_k / r_kk
 end
-	  ```
-	- Število operacij je $2mn^{2}$
-- Poznamo še *razširjeni $QR$ razcep* => $A=\bar Q\bar R$
-	- $\bar Q\in\Bbb R^{m\times m}$ ortogonalna, $\bar R\in\Bbb R^{m\times n}$ zgornja trapezna matrika
-	- Prvih $n$ stolpcev $\bar Q=Q$ in $\bar R=\left[\begin{matrix}R \\ 0\end{matrix}\right]$ 
-	- **Tudi razširjeni $QR$ razcep bomo ponavadi imenovali kar $QR$ razcep**
+```
 ---
 # Givensove rotacije
-- 
-
-23.2.
-Algoritem (gran-schmidtov postpek)
+- Vektor $x\in\Bbb R^{n}$ sučemo za kot $\varphi$ v negativni smeri, če ga množimo z ortagonalno matriko $R^{T}=\left[\begin{matrix}c & s \\ -s & c\end{matrix}\right]$
+- **Beri pazljivo, saj je matrika včasih transponirana** (zamenjata se samo $s$ in $-s$)
+	- $c:=\cos\varphi$
+	- $s:=\sin\varphi$
+- $R_{ik}$ je sestavljen:
+	- $r_{jj}=1;\ j\ne i,k$
+	- $r_{jj}=c;\ j=i,k$
+	- $r_{ki}=-r_{ik}=s$
+- Če pomnožimo matriko $A\in\Bbb R^{m\times n}$ z $R_{ik}^{T}$ se spremenita samo $i$-ta in $k$-ta vrstica
+	- Če hočemo uničiti $a_{ki}$ potem za $R_{ik}^{T}$ nastavimo:
+		- $r=\sqrt{a^{2}_{ii}+a^{2}_{ki}}$
+		- $c= \frac{a_{ii}}{r}$
+		- $s= \frac{a_{ki}}{r}$
+	- Če $A$ uničimo vse poddiagonalne elemente dobimo matriko $\bar R\left[\begin{matrix}R \\ 0\end{matrix}\right]$
+	- Za $Q$ pa dobimo produkt $\bar Q=R_{12}R_{13}\dots R_{nm}$ (vseh rotacij ki smo uporabili za $\bar R$), kjer je $Q$ enak prvih $n$ stolpcev
+	- S tem sistemom lahko dobimo $QR$ razcep
+- Če uporabimo ta sistem za reševanje $Ax=b$ ne potrebujemo $Q$ iz $QR$ razcepa
+	- Samo v vsakem koraku $b$ pomnožimo z $R_{ik}^{T}$
+	- Na koncu dobimo $\bar Q^{T}b$ in vzamemo prvih $n$ elementov tj. $Rx=\bar Q^{T}x(1:n)$
+	- Potrebno $3mn^{2}-n^{3}$ operacij
+## Algoritem
+- Vhod $A$, izhod $\bar R$ in po želji $\bar Q$ in $\bar Q^{T}b$
 ```
-for i=1:n
-	q^(0)_i = a_i
-end
-for i=1:n
-	r_ii = ||q^(i-1)_i||_2
-	q_i = 1/r_ii q^(i-1)_i
-	for j=i+1:n
-		r_ij = q^T_i * a_j
-		q^(i)_j = q^(i-1)_j - r_ij * q_i
+Q = I_m (če iščemo \bar Q)
+for j = 1:n
+	for k = j+1:m
+		r = \sqrt{a_jj^2 + a_kj^2}
+		if r > 0:
+			c = a_jj / r
+			s = a_kj / r
+			A([j k], j:n) = R^T A([j k], j:n)
+			b([j k]) = R^T b([j k]) (če iščemo \bar Q^T * b)
+			Q(1:m, [j k]) = Q(1:m, [j k]) R^T (če iščemo \bar Q)
 	end
 end
 ```
-Vrstica 8. taka kot je, recemo Klasicni GSP (CGS)
-Al pa (`r_ij = q^T_i * q^(i-1)_j`) Modificiran GSP (MGS)
-CGS in MGS nam data enak eksakten rezultat, pri numericnem je pa MGS bolj stabilen.
-
-Kako z pomocjo $QR$ razcepa do resitve $Ax=b$ po MNK?
-- $A=QR$
-- $A^{T}Ax=A^{T}b$
-- $(QR)^{T}QRx=(QR)^{T}b$
-- $R^{T}Q^{T}QRx=R^{T}Q^{T}b$
-- $Rx=Q^{T}b$
+- Izračun $\bar Q$ vzame dodatnih $6m^{2}n-3mn^{2}$ operacij
+- Sistem lin. enačb velikosti $n\times n$ lahko rešimo z $2n^{3}+O(n^{2})$ operacijami oz. dodatnih $3n^{3}+O(n^{2})$ če še iščemo $\bar Q$
+---
+# Householderjeva zrcaljenja
+$$P=I- \frac{2ww^{T}}{w^{T}w}$$
+- kjer je $w\in\Bbb R^{n}$ neničelni vektor 
+- $P$ predstavlja zrcaljenje preko hiperravnine, ki je ortogonalna na vektor $w$
+	- $P=P^{T}$ in $P^{2}=I$ (oz. simetrična in ortogonalna)
+- $\forall x\in\Bbb R^{n}$ lahko predstavimo z $x=\alpha w+u;\ u\perp w$
+	- oz. preslikavo $Px=-\alpha w+u$
+- Zrcalimo z $Px=x- \frac{1}{m}(x^{T}w)w$ 
+	- $m= \frac{1}{2}w^{T}w$
+	- Dela tudi za matrike
+	- Ne rabimo računati $P$ iščemo samo $w$
+	- $\|Px\|_{2}=\|x\|_{2}$
+- Za nas je dobra preslikava, ki vektor $x$ preslika v $\left[\begin{matrix}\pm\|x\|_{2} \\ 0\end{matrix}\right]$
+	- $w= x+\text{sign}(x_{1})\|x\|_{2}e_{1}$
+		- $\text{sign}(0)=1$ (signatura od nič drugače definirana kot v MATLAB)
+	- $m=\|x\|_{2}(\|x\|_{2}+|x_{1}|)$
+	- Za izračun $Px$ potrebno $4n+O(1)$ operacij
+		- Za $w$ in $m$ pa $2n+O(1)$
+	- Z tem lahko izračunamo $\bar R$ iz razširjenega $QR$ razcepa
+- Za $Ax=b$ potrebno $2mn^{2}- \frac{2}{3}n^{3}$ operacij
+- Za polno matriko je Householderjevo zrcaljenje učinkovitejšo od Givensovih rotacij
+- $n\times n$ sistem uzame $\frac{4}{3}n^{3}$ operacij
+## Algoritem
+- Vhod $A\in\Bbb R^{m\times n}$, izhod $\bar R$ in po potrebi $\bar Q$ in $\bar Q^{T}b$
+```
+Q = I_m 
+for i = 1:n
+	določi w_i v R^{m-i+1}, ki prezrcali A(i:m, i) v \pm k*e_1
+	A(i:m, i:n) = P_i * A(i:m, i:n)
+	b(i:m) = P_i * b(i:m)  (če rešujemo Ax = b)
+	Q(i:m, 1:n) = P_i * Q(i:m, 1:n)  (če iščemo \bar Q)
+end
+Q = Q^T
+```
+- Za $\bar Q$ potrebnih ekstra $4m^{2}n-2mn^{2}$

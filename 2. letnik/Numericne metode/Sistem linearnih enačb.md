@@ -207,6 +207,7 @@ end
 	```
 	- $\|\delta A\|_{\infty}\le 3n^{2}u\|A\|_{\infty}$ -> obratno stabilna
 	- Cenejše in stabilnejše od $LU$ razcepa
+	- Za reševanje $Ax=b$ pri koraku $Vy=b$ ne moremo uporabiti preme substitucije. Namesto rešimo samo kot sistem (je trivialen, saj je $V$ spodnje trikotna)
 	- $\det(A)=\det(V)^{2}$
 - Če pa matrika ni definitna ne moremo uporabiti Choleskega
 - Za nedefinitno obstaja $PAP^{T}=LDL^{T}$
