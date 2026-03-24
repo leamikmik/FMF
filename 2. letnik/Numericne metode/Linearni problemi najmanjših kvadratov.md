@@ -26,7 +26,7 @@ $$\min\|Ax-b\|_{2};\ A\in\Bbb R^{m\times n}, b\in\Bbb R^{m},x\in\Bbb R^{n}$$
 ---
 # QR razcep
 - $A\in\Bbb R^{m\times n}, m\ge n$ in $\text{rang}(A)=n$
-- razcep => $A=QR$ kjer $Q\in\Bbb R^{m\times n}$ pravokotna matrika z ortobnomiranimi stolpci in $R\in\Bbb R^{n\times n}$ zgornje trikotna matrika s pozitivnimi diagonalnimi el.
+- razcep => $A=QR$ kjer $Q\in\Bbb R^{m\times n}$ pravokotna matrika z ortonomiranimi stolpci in $R\in\Bbb R^{n\times n}$ zgornje trikotna matrika s pozitivnimi diagonalnimi el.
 	- Enoličen razcep
 - Potem je naš sistem $Rx=Q^{T}b$
 - Lahko uporabimo [[#Algoritem|Gram-Schimotovo]] ortogonalizacijo stolpcev matrike $A$
@@ -45,7 +45,7 @@ $$A=\bar Q\bar R$$
 - **Tudi razširjeni $QR$ razcep bomo ponavadi imenovali kar $QR$ razcep**
 ## Algoritem
 - vhod $A$ izhod $QR$
-- **Gran-Schimitov algoritem**
+- **Gram-Schimitov algoritem**
 ```
 for k=1:n
 	q_k = a_k
@@ -77,7 +77,8 @@ end
 	- S tem sistemom lahko dobimo $QR$ razcep
 - Če uporabimo ta sistem za reševanje $Ax=b$ ne potrebujemo $Q$ iz $QR$ razcepa
 	- Samo v vsakem koraku $b$ pomnožimo z $R_{ik}^{T}$
-	- Na koncu dobimo $\bar Q^{T}b$ in vzamemo prvih $n$ elementov tj. $Rx=\bar Q^{T}x(1:n)$
+	- Na koncu dobimo $\bar Q^{T}b$ in vzamemo prvih $n$ elementov tj. $Rx=\bar Q^{T}b(1:n)$
+		- Zadnji el. $\bar Q^{T}b$ je enak $\min\|Ax-b\|_{2}$
 	- Potrebno $3mn^{2}-n^{3}$ operacij
 ## Algoritem
 - Vhod $A$, izhod $\bar R$ in po želji $\bar Q$ in $\bar Q^{T}b$
@@ -105,7 +106,7 @@ $$P=I- \frac{2ww^{T}}{w^{T}w}$$
 	- $P=P^{T}$ in $P^{2}=I$ (oz. simetrična in ortogonalna)
 - $\forall x\in\Bbb R^{n}$ lahko predstavimo z $x=\alpha w+u;\ u\perp w$
 	- oz. preslikavo $Px=-\alpha w+u$
-- Zrcalimo z $Px=x- \frac{1}{m}(x^{T}w)w$ 
+- Zrcalimo z $Px=x- \frac{1}{m}w(w^{T}x)$ 
 	- $m= \frac{1}{2}w^{T}w$
 	- Dela tudi za matrike
 	- Ne rabimo računati $P$ iščemo samo $w$

@@ -11,7 +11,7 @@ style: nestedOrderedList
 ---
 # Norme
 - Enaka pravila kot normalna [[Vektorji v R#Norma|norma]].
-## Vektorske norme:
+## Vektorske norme
 - $\|x\|_{1}=\sum\limits^{n}_{i=1}|x_{1}|$ -> 1-norma
 - $\|x\|_{2}=\left(\sum\limits^{n}_{i=1}|x_{i}|^{2}\right)^{1/2}$ -> 2-norma oz. *evklidska norma*
 - $\|x\|_{\infty}=\max_{i=1,\dots,n}|x_{i}|$ -> $\infty$-norma
@@ -21,7 +21,7 @@ style: nestedOrderedList
 	- $\|x\|_{2}\le\|x\|_{1}\le\sqrt{n}\|x\|_{2}$
 	- $\|x\|_{\infty}\le\|x\|_{2}\le\sqrt{n}\|x\|_{\infty}$
 	- $\|x\|_{\infty}\le\|x\|_{1}\le n\|x\|_{\infty}$
-## Matrična norma:
+## Matrična norma
 - Ima še lastnost $\|AB\|\le\|A\|*\|B\|$ -> submultiplikativnost
 - Operatorska norma => $\|A\|=\max \frac{\|Ax\|}{\|x\|}$
 - Singularna vrednost => $\sigma_{i}=+\sqrt{\lambda_{i}}$
@@ -87,7 +87,7 @@ $$PA=LU$$
 - Zahtevnost algoritma je $\frac{2}{3}n^{3}+O(n^{2})$
 - Po človeško:
 	1. $i=1$
-	2. Delimo vse elemente $i$-te vrstice pod pivotom z pivotom vrstice in to damo v matriko $L$ 
+	2. Delimo vse elemente $i$-te vrstice pod pivotom z pivotom vrstice in to damo v matriko $L$  
 	3. Vzamemo podmatriko pod $i$-to vrstico in stolpcem
 	4. Vsakemu el. te matrike odštejemo zmnožek elementa trenutne vrstice in trenutnega stolpca
 	5. Ponovimo $n-1$ krat
@@ -106,6 +106,7 @@ end
 - Ko zamenjamo vrstici v $A$ moramo tudi v $P$
 - Enaka zahtevnost
 - Enak kot prejšnji postopek, dodatno pa za vsak stolpec $j$ zamenjamo trenutno vrstico (v matriki $A$ in $P$) z vrstico največje absolutne vrednosti v stolpcu
+- $\det(A)=\det(P)*\det(U)$ (det. $P$ spremeni predznak z vsako zamenjavo)
 ```
 for j=1:n-1
 	max_{j<=p<=n} |a_pj|
@@ -129,6 +130,8 @@ $$PAQ=LU$$
 	4. $x=Qx'$
 ### Prema substitucija
 - $Ly=b'$
+	- $y=\vec 0$
+	- $y_{i}=b_{i}-l_{i}y^{T}$, kjer $l_{i}$ $i$-ta vrstica $L$
 - $l_{i1}y_{1}+\dots+l_{i,i-1}y_{i-1}+y_{i};\ i=1,\dots,n$
 - Število operacij -> $\sum^{n}_{i=1}(1+2(i-1))=n^{2}$
 ```
@@ -197,15 +200,15 @@ end
 	- $a_{jk}=\sum\limits_{i=1}^{k}v_{ji}v_{ki}$
 	- Algoritem razcepa porabi $\frac{1}{3}n^{3}+O(n^{2})$ operacij
 	- Najcenejša metoda za ugotavljenja ali je matrika SPD. Če ni se v spodnjem algoritmu pod kvadratnim korenom pojavi negativna vrednost
-	- ``` matlab
+```
 	for k=1:n
 		v_kk = (a_kk - sum[i=1, k-1](v_ki ^ 2))^0.5
 		for j=k+1:n
 			v_jk = (a_jk - sum[i=1, k-1](v_ji * v_ki)) / v_kk
 		end
 	end
-	```
-	- $\|\delta A\|_{\infty}\le 3n^{2}u\|A\|_{\infty}$ -> obratno stabilna
+```
+- $\|\delta A\|_{\infty}\le 3n^{2}u\|A\|_{\infty}$ -> obratno stabilna
 	- Cenejše in stabilnejše od $LU$ razcepa
 	- Za reševanje $Ax=b$ pri koraku $Vy=b$ ne moremo uporabiti preme substitucije. Namesto rešimo samo kot sistem (je trivialen, saj je $V$ spodnje trikotna)
 	- $\det(A)=\det(V)^{2}$
