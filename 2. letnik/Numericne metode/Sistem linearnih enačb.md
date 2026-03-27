@@ -16,7 +16,7 @@ style: nestedOrderedList
 - $\|x\|_{2}=\left(\sum\limits^{n}_{i=1}|x_{i}|^{2}\right)^{1/2}$ -> 2-norma oz. *evklidska norma*
 - $\|x\|_{\infty}=\max_{i=1,\dots,n}|x_{i}|$ -> $\infty$-norma
 - Vse so oblike Holderjeve $p$-norme => $\|x\|_{p}=(\sum^{n}_{i=1}|x_{i}|^{p})^{1/p}$
-	- Holderjeva neenakost -> $|x^{H}y|\le\|x\|_{p}\|y\|_{q}$ kjer $\frac{1}{p} + \frac{1}{q}=1$\
+	- Holderjeva neenakost -> $|x^{H}y|\le\|x\|_{p}\|y\|_{q}$ kjer $\frac{1}{p} + \frac{1}{q}=1$
 - Ocene:
 	- $\|x\|_{2}\le\|x\|_{1}\le\sqrt{n}\|x\|_{2}$
 	- $\|x\|_{\infty}\le\|x\|_{2}\le\sqrt{n}\|x\|_{\infty}$

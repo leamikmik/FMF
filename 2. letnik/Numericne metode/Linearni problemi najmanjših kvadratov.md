@@ -45,7 +45,7 @@ $$A=\bar Q\bar R$$
 - **Tudi razširjeni $QR$ razcep bomo ponavadi imenovali kar $QR$ razcep**
 ## Algoritem
 - vhod $A$ izhod $QR$
-- **Gram-Schimitov algoritem**
+- **Gram-Schmitov algoritem**
 ```
 for k=1:n
 	q_k = a_k
