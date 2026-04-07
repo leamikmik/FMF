@@ -236,4 +236,9 @@ $$E(X)=\sum\limits_{k=1}^{n}x_{k}p_{k};\ X:\left(\begin{matrix}x_{1} & x_{2} & x
 	- *Lastnosti*:
 		1. $-1\le r(X,Y)\le 1$
 		2. Spremenljivki nekorelirani $\iff r(X,Y)=0$
-	
+---
+# Centralni limitni izrek
+$$Z_{n}= \frac{\sum\limits_{i=1}^{n} X_{i}-n*E(X_{1})}{\sqrt{nD(X_{1})}} \to N(0,1)$$
+- Če so $X_{1},X_{2},...$ enakomerno porazdeljene in neodvisne
+- $P(Z_{n}\le x)= \frac{1}{2}+\Phi(x)$ samo moramo tudi $x$ prilagoditi
+	- Torej $P(\sum\limits X_{i}\le x)=P(Z_{n}\le \frac{x-n*E(X_{1})}{\sqrt{nD(X_{1})}})$
