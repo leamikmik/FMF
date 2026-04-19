@@ -1,0 +1,56 @@
+# Prvi red
+- $\int f(x)dx=F(x)+C$
+- Ločjiva spremenljivka -> $y'= \frac{dy}{dx}$
+	- Damo vse $x$ na eno stran in vse $y$ na drugo
+- Homogena -> $z= \frac{y}{x}$
+	- $y'=f( \frac{y}{x})$
+	- $y'=z'x+z$
+- Linearna dif. enačba:
+	- Če imamo oblike $y' +q(x)y=r(x)$
+	- Ugibamo $y=h(x)$
+	- In če uganemo imamo še ostale rešitve oblike $y=h(x)+z(x)$, ki ga ustavimo v originalno enačbo. Iščemo $z(x)$
+	- Če ne moremo uganiti nastavimo $r(x)=0$ in iščemo $y_{H}$ (homogen del enačbe)
+		- ko dobimo nek $y_{H}=h(x)C$ potem se $C$ nastavimo na neko funkcijo $z$ in vstavimo nazaj v originalno enačbo
+- Ortogonalne trajektorije:
+	- Nastavimo neko diferencialno enačbo ki reši podan $y$
+	- Potem namesto $y'$ damo $- \frac{1}{y'}$
+- Bernoullijeva dif enačba:
+	- Oblike $y'+q(x)y=r(x)y^{\alpha}$
+	- Nastavimo $w=y^{1-\alpha}$ in $w'(1-\alpha)y^{-\alpha}y'$
+	- Delimo enačbo z $y^{\alpha}$ (prej še preverimo če je $y=0$ rešitev)
+- Riccatijeva dif enačba:
+	- $y'=p(x)+q(x)y+r(x)y^{2}$
+	- Če uganemo neko rešitev $y=h(x)$ lahko ostale damo v obliki $y=h(x)+ \frac{1}{w}$
+	- $y'=h'(x)- \frac{w'}{w^{2}}$
+- Eksakta dif enačba:
+	- Oblike $M(x,y)dx+N(x,y)dy=0$
+	- Rečemo da je eksaktna če obstaja $F$ da $\frac{df}{dx}=M$ in $\frac{df}{dy}=N$ (oz. $\frac{dN}{dx}= \frac{dM}{dy}$)
+	- Splošna potem $F=C$
+	- $F(x,y)=\int M(x,y)dx=F_{1}(x,y)+A(y)=\int N(x,y)dy=F_{2}(x,y)+B(x)$
+	- Integracijski multiplikator -> Pomnožimo enačbo z neko funkcijo, da postane eksaktna
+# Lin. višji red
+- Znižanje reda, če manjka odvisna spremenljivka
+	- Nastavimo $z=y^{(r)}$ kjer je $r$ najnižji red ki se pojavi
+- Lin. DE poljubnega reda:
+	- $y^{(n )}+a_{n-1}(x)y^{(n-1)}+\dots+a_{0}(x)y=b(x)$
+	- Uganemo neko rešitev $y=h(x)$ in nastavimo $y=h(x)z$ in to vstavimo v enačbo
+	- Potem iščemo $z$
+- Homogena linearna DE s kontantnimi koeficienti
+	- Če imamo $a_{n}y^{(n)}+\dots+a_{0}y=0$ in so $a_{i}$ konstante
+	- Potem nastavimo $a_{n}\lambda^{n}\dots+a_{0}=0$
+	- Če je rešitev $\lambda_{i}$ realna potem imamo rešitev DE oblike
+		- $y=C_{1}e^{\lambda_{1}x}+\dots+C_{n}e^{\lambda_{n}x}$
+		- Če rešitev večje $n$ stopnje potem $C_{i}$ spremenimo v polinom $n-1$ stopnje (tj. $C_{i}+C_{i+1}x+\dots C_{i+n-1}x^{n-1}$)
+	- Če je kompleksna, spremenimo v trigonometrijo
+		- $C_{1}e^{(\alpha+\beta i)x}$ => $C_{1}e^{\alpha x}\cos(\beta x)$
+- Nastavek za nehomogeno enačbo s kontatnimi koeficienti
+	- Oblike $a_{n}y^{(n)}+\dots+a_{0}y=P(x)e^{\alpha x}$
+	- Nastavimo rešitve $y=y_{H}+y_{P}$ kjer je $y_{H}$ del brez desne strani, $y_{P}=x^{r}\bar P(x)e^{\alpha x}$ 
+		- $r$ je večkratnost rešitve $\alpha$ v $y_{H}$ delu
+		- $\bar P(x)$ pa neznan polinom iste stopnje kot $P(x)$
+		- vstavimo $y_{P}$ v originalno da najdemo $\bar P(x)$
+	- Če imamo trigonometrijo:
+		- $\dots = e^{\alpha x}(P(x)\cos(\beta x)+Q(x)\sin(\beta x))$
+		- $y=y_{H}+y_{P}$, $y_{P}=x^{r}e^{\alpha x}(\bar P(x)\cos(\beta x)+\bar Q(x)\sin(\beta x))$
+		- $\bar P$ in $\bar Q$ sta stopnje enaki maksimalni stopnji od $P$ in $Q$
+		- $r$ je večkratnost rešitve $\alpha\pm \beta i$
