@@ -16,7 +16,7 @@
 	- Potem namesto $y'$ damo $- \frac{1}{y'}$
 - Bernoullijeva dif enačba:
 	- Oblike $y'+q(x)y=r(x)y^{\alpha}$
-	- Nastavimo $w=y^{1-\alpha}$ in $w'(1-\alpha)y^{-\alpha}y'$
+	- Nastavimo $w=y^{1-\alpha}$ in $w'=(1-\alpha)y^{-\alpha}y'$
 	- Delimo enačbo z $y^{\alpha}$ (prej še preverimo če je $y=0$ rešitev)
 - Riccatijeva dif enačba:
 	- $y'=p(x)+q(x)y+r(x)y^{2}$
