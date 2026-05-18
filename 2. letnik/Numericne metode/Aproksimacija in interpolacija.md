@@ -47,6 +47,9 @@ end
 ---
 # Interpolacija
 - Iščemo neko *interpolacijsko funkcijo* $g$ (spet ponavadi polinom), ki se v $n+1$ točkah ujema s funkcijo $f$ ter lahko za približek vrednosti $f$ uzamemo vrednost $g$. Skoraj nikoli ne iščemo enačbe polinoma in zadošča samo izračunati vrednost polinoma v neki točki.
+- **Legrangeev interpolacijski polinom**
+	- $L_{i,n}(x)=\prod\limits^{n}_{k=0;\ k\ne i}\frac{x-x_{k}}{x_{i}-x_{k}}$
+	- $p(x)=\sum\limits^{n}_{k=0}f(x_{k})L_{k,n}(x)$
 ## Nevilleova shema
 - Vhod $n+1$ točk $x_{0},\dots,x_{n}$ in iskan $x$. Izhod je vrednost $f(x)$
 - $I_{i,i+1,\dots,i+k}(x)=\frac{I_{i,i+1,\dots,i+k-1}(x)(x-x_{i+k})-I_{i+1,i+2,\dots,i+k}(x)(x-x_{i})}{x_{i}-x_{i+k}}$ -> Vrednost v $x$ polinoma ki se v točkah $x_{i},\dots,x_{i+k}$ ujema z $f$
@@ -61,6 +64,8 @@ end
 - $f[x_{0},\dots,x_{k}]=\begin{cases} \frac{f^{(k)}(x_{0})}{k!}  & x_{0}=x_{1}=\dots=x_{k} \\ \frac{f[x_{1},\dots,x_{k}]-f[x_{0},\dots,x_{k-1}]}{x_{k}-x_{0}} & \text{sicer} \end{cases}$
 - Lahko spet zapišemo v trikotni shemi
 	- Za polinom lahko vzamemo potem koeficiente po diagonali
+- $f(x)-P_{n}(x)=\frac{f^{(n+1)}(\zeta)}{(n+1)!}(x-x_{0})\dots(x-x_{n})$
+	- $\min(x,x_{0},\dots,x_{n})\le\zeta\le\max(x,x_{0},\dots,x_{n})$
 ## Končne diference
 - Če so točke ekvidistantne, torej $x_{i}=x_{0}+i*h$ (enakomerno razmaknjene med druga drugo) lahko formule poenostavimo
 - $\Delta^{m}_{h}f(x)=\begin{cases}f(x) & m=0 \\ \Delta^{m-1}_{h}f(x+h)-\Delta^{m-1}_{h}f(x) & m>0\end{cases}$

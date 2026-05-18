@@ -87,3 +87,4 @@ $$JF(x^{(r)})\Delta x^{(r)}=-F(x^{(r)});\ x^{(r+1)}=x^{(r)}+\Delta x^{(r)}$$
 - Če iščemo min. nenegativne funkcije imamo zagotovljeno konvergenco ne glede na začetni približek, saj dobimo $\{x^{(r)}\}$ za katere velja $G(x^{(r+1)})<G(x^{(r)})$
 	- Linearen red konvegnece
 - Tako dobimo nek lokalni min., ni pa gotovo, da bomo našli globalni minimum. Ponavadi uporabimo kombinacijo variacijske in Newtnove metode
+- Ali pa odvajamo FVS po vseh spremenljivkah, in iz tega dobimo sistem nelinearnih enačb.
