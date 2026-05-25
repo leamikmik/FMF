@@ -12,7 +12,7 @@ style: nestedOrderedList
 # Norme
 - Enaka pravila kot normalna [[Vektorji v R#Norma|norma]].
 ## Vektorske norme
-- $\|x\|_{1}=\sum\limits^{n}_{i=1}|x_{1}|$ -> 1-norma
+- $\|x\|_{1}=\sum\limits^{n}_{i=1}|x_{i}|$ -> 1-norma
 - $\|x\|_{2}=\left(\sum\limits^{n}_{i=1}|x_{i}|^{2}\right)^{1/2}$ -> 2-norma oz. *evklidska norma*
 - $\|x\|_{\infty}=\max_{i=1,\dots,n}|x_{i}|$ -> $\infty$-norma
 - Vse so oblike Holderjeve $p$-norme => $\|x\|_{p}=(\sum^{n}_{i=1}|x_{i}|^{p})^{1/p}$
@@ -60,6 +60,21 @@ style: nestedOrderedList
 - Lahko zapišemo kot $L_{k}=I-l_{k}e_{k}^{T}$ kjer $l_{k}=\left[\begin{matrix} \vdots \\ 0 \\ \frac{x_{k+1}}{x_{k}} \\ \vdots \\ \frac{x_{n}}{x_{k}} \end{matrix}\right]$, $e_{k}$ pa bazni vektor (vse $0$ razen $k$-tega indeksa, ki je $1$)
 	- $L^{-1}_{k}=I+l_{k}e^{T}_{k}$
 	- Produkt matrik $L^{-1}_{1}L^{-1}_{2}\dots L^{-1}_{n-1}=I+l_{1}e_{1}^{T}+l_{2}e_{2}^{T}+\dots+l_{n-1}e_{n-1}^{T}$
+---
+# Singularni razcep
+$$A=U\Sigma V^{T};\ A\in\Bbb R^{n\times m}$$
+- Računamo lastne vrednosti $A^{T}A$ ali $AA^{T}$
+	- Izberemo tako da dobimo kvadratno matriko manjše stopnje
+	- Če izberemo $AA^T$ zamenjamo enačbi za $U$ in $V$, ter spremenimo $A$ v $A^{T}$
+- $\Sigma=I*\sqrt{\lambda_{i}}$
+	- $\Sigma$ mora biti $n\times m$ velikosti, dodajamo ničlne vrstice/stolpce 
+	- $\Sigma^{-1}=\Sigma^{T}$ kjer so vsi $\ne 0$ elementi inverzirani
+- $U:u_{i}=\frac{1}{\sqrt{\lambda_{i}}}A*v_{i}$
+	- mora biti kvadratna
+- $V:$ lastni vektorji
+	- mora biti kvadratna
+- **Pseudoinverz** -> $A^{+}=V\Sigma^{-1}U^{T}$
+	- $Ax=b\approx x=A^{+}b$
 ---
 # LU razcep
 $$PA=LU$$
