@@ -151,3 +151,23 @@ $$S^{2}_{0}=\frac{1}{n}\sum\limits_{i=1}^{n}(X_{i}-\overline X)^{2};\ S^{2}=\fra
 	- $K_\alpha=[\chi^{2}_{\alpha}(r-1),\infty)$
 ---
 # Linearna regresija
+$$Y=a+bX+U$$
+- $U\approx N(0,\sigma)$ napaka, $\sigma$ tudi neznan
+- $a, b$ neznana parametra
+- $y=a+bx$ regresijska premica
+- Za $x_{1},\dots,x_{n}$ dobimo $Y_{1},\dots,Y_{n}$ kjer $Y_{i}\approx N(a+bx_{k},\sigma)$
+- Radi bi ocenili paremetra $a,b$
+- $\hat b= \frac{S_{XY}- \frac{1}{n}S_{X}S_{Y}}{S_{XX}- \frac{1}{n}S^{2}_{X}}$ in $\hat a = \bar Y-\hat b\bar x$
+	- $S_{X}=\sum\limits_{k=1}^{n}x_{k}$
+	- $S_{Y}=\sum\limits^{n}_{k=1}Y_{k}$
+	- $S_{XX}=\sum\limits_{k=1}^{n}x_{k}^{2}$
+	- $S_{XY}=\sum\limits_{k=1}^{n}x_{k}Y_{k}$
+- Interval zaupanja:
+	- $a=\hat a\pm t_{\frac{a+1}{2}}(n-2)* \frac{S}{\sqrt{n- S_{X}^{2}/S_{XX}}}$
+	- $b=\hat b\pm t_{\frac{a+1}{2}}(n-2)* \frac{S}{\sqrt{S_{XX}- S_{X}^{2}/n}}$
+- $T_{a}= \frac{\hat a-a}{S}\sqrt{n- \frac{S_{X}^{2}}{S_{XX}}}\approx\text{Student}(n-2)$
+- $T_{b}= \frac{\hat b-b}{S}\sqrt{S_{XX}- \frac{S_{X}^{2}}{n}}\approx\text{Student}(n-2)$
+	- Potem lahko delamo hipoteze $H_{0}(a=a_{0})$ in $H_{0}(b=b_{0})$
+		- $|T_{a}|>t_{\alpha/2}$ in $|T_b|>t_{\alpha/2}$
+---
+# Testiranje neodvisnosti
