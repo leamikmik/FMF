@@ -100,3 +100,54 @@ $$S^{2}_{0}=\frac{1}{n}\sum\limits_{i=1}^{n}(X_{i}-\overline X)^{2};\ S^{2}=\fra
 - Za $N(\mu,\sigma)$:
 	- Če ne vemo $\sigma$ vzamemo za $D(X)=S^{2}$ in $c_{\mu}=t_{\frac{1+\beta}{2}}(n-1)$
 	- Če iščemo $\sigma$ vzamemo vzamemo $c_{1,2}=\chi^{2}_{\frac{1\mp\beta}{2}}(n-1)$ in interval potem $S\sqrt{\frac{n-1}{c_{2}}}\le\sigma\le S\sqrt{ \frac{n-1}{c_{1}}}$
+---
+# Hipoteze
+- Vedno preizkušamo hipotezo proti alternativni
+- Stopnja značilnosti $\alpha$ -> verjetnost da zavrnemo pravilno hipotezo
+1. **Test $Z$** -> predpostavljamo $X\approx N(\mu,\sigma)$; $\sigma$ znan, $\mu$ neznan
+	- Hipoteza $H_{0}(\mu=\mu_{0});\ H_{1}(\mu\ne\mu_{0})$
+	- $Z= \frac{\bar X-\mu_{0}}{\sigma}\sqrt{n}\approx N(0,1)$
+	- $H_{0}$ zavrnemo če $Z$ leži v t.i. kritičnem območju $K_{\alpha}=(-\infty,-z_{\alpha/2}]\cup[z_{\alpha/2},\infty)$
+		- $P(Z>z_{\alpha/2})=\frac{\alpha}{2}$ dobimo iz tabele
+2. **Test $T$** -> $X\approx N(\mu,\sigma)$; $\mu,\sigma$ nista znana
+	- Hipoteza $H_{0}(\mu=\mu_{0});\ H_{1}(\mu\ne\mu_{0})$
+	- $T= \frac{\bar X-\mu_{0}}{S}\sqrt{n}\approx \text{Student}(n-1)$
+		- $S^{2}=\frac{1}{n-1}\sum\limits_{i=1}^{n}(X_{i}-\overline X)^{2}$
+	- $K_{\alpha}=(-\infty,-t_{\alpha/2}]\cup[t_{\alpha/2},\infty)$
+		- $P(T>t_{\alpha/2})=\frac{\alpha}{2}$ dobimo iz tabele
+3. **Test $\chi^{2}$** (oz. test variance) -> $X\approx N(\mu,\sigma)$, neznan $\sigma$
+	- $H_{0}(\sigma=\sigma_{0});\ H_{0}(\sigma\ne\sigma_{0})$
+	- $\chi^{2}= \frac{(n-1)S^{2}}{\sigma_{0}^{2}}\approx \chi^{2}(n-1)$
+	- $K_{\alpha}=(-\infty,\chi^{2}_{\alpha/2}(n-1))\cup(\chi^{2}_{1-\alpha/2}(n-1),\infty)$
+4. **Studentov primerjalni test** -> 2 neodvisna vzorca velikosti $m$ in $n$, enak $\sigma$
+	- $(X_{1},\dots,X_{m})$ kjer $X\approx N(\mu_{x},\sigma)$
+	- $(Y_{1},\dots,Y_{N})$ kjer $Y\approx N(\mu_{y},\sigma)$
+	- Skupna disperzija $S^{2}= \frac{\sum\limits_{i=1}^{m}(X_{i}+\bar X)^{2}+\sum\limits_{i=1}^{n}(Y_{i}-\bar Y)^{2}}{m+n-2}$
+	- Testna statistika $T= \frac{\bar X-\bar Y}{S}\sqrt{\frac{mn}{m+n}}\approx \text{Student}(m+n-2)$
+	- Testiramo $H_{0}(\mu_{x}=\mu_{y});\ H_{1}(\mu_{x}\ne \mu_{y})$
+		- Enako kritično območje kot test $T$
+	- Če pa $H_{0}(\mu_{x}=\mu_{y});\ H_{1}(\mu_{x}>\mu_{y})$
+		- $K_{\alpha}=(-\infty,-t_{\alpha}]\cup[t_{\alpha},\infty)$
+5. **Test $H_{0}(\sigma_{x}=\sigma_{y});\ H_{1}(\sigma_{x}\ne\sigma_{y})$** -> 2 neodvisna vzorca velikosti $m$ in $n$
+	- $(X_{1},\dots,X_{m})$ kjer $X\approx N(\mu_{x},\sigma_{x})$
+	- $(Y_{1},\dots,Y_{n})$ kjer $Y\approx N(\mu_{y},\sigma_{y})$
+	- Testna statistika $F= \frac{S^{2}_{X}}{S_{Y}^{2}}\approx F(m-1,n-1)$
+		- Fischerjeva porazdelitev oz. Snedikorjeva 
+		- $F(m,n)$
+			- $p(x)=\frac{m^{\frac{m}{2}}*n^{\frac{n}{2}}*(x^{\frac{m}{2}}-1)}{B(\frac{m}{2},\frac{n}{2})(n+mx)^{\frac{m+n}{2}}}$ če $x\le 0$
+			- podobna $\chi^{2}$
+			- $E(F)=\frac{n}{n-2};\ n\ge 3$
+	- $P(F\le c_{1})= \frac{\alpha}{2}=P(F\ge c_{2})$
+	- Kritično območje $K_{\alpha}=[0,c_{1}]\cup[c_{2},\infty)$
+6. **Test $\chi^{2}$** -> $X$ neznane porazdelitve $F$, velikosti $n$
+	- $H_{0}(F=F_{0});\ H_{1}(F\ne F_{0})$
+	- Zalogo vrednosti razdelimo na $r$ razredov $S_{1},\dots,S_{r}$
+		- različni rezultati odvisno od $r$
+	- $p_{k}=P(X\in S_{k}|H_{0});\ k\in\{1,\dots,r\}$
+		- $\sum\limits p_{k}=1$
+	- $N_{k}$ => št. vrednosti vzorca $S_{k}$
+		- $\sum\limits N_{k}=n$
+	- $\chi^{2}=\sum\limits_{k=1}^{r} \frac{(N_{k}-np_{k})^{2}}{np_{k}}\approx\chi^{2}(r-1)$
+	- $K_\alpha=[\chi^{2}_{\alpha}(r-1),\infty)$
+---
+# Linearna regresija

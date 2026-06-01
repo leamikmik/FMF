@@ -43,6 +43,7 @@
 		- Če rešitev večje $n$ stopnje potem $C_{i}$ spremenimo v polinom $n-1$ stopnje (tj. $C_{i}+C_{i+1}x+\dots C_{i+n-1}x^{n-1}$)
 	- Če je kompleksna, spremenimo v trigonometrijo
 		- $C_{1}e^{(\alpha+\beta i)x}$ => $C_{1}e^{\alpha x}\cos(\beta x)$
+		- $C_{1}e^{(\alpha-\beta i)x}$ => $C_{1}e^{\alpha x}\sin(\beta x)$
 - Nastavek za nehomogeno enačbo s kontatnimi koeficienti
 	- Oblike $a_{n}y^{(n)}+\dots+a_{0}y=P(x)e^{\alpha x}$
 	- Nastavimo rešitve $y=y_{H}+y_{P}$ kjer je $y_{H}$ del brez desne strani, $y_{P}=x^{r}\bar P(x)e^{\alpha x}$ 
@@ -54,3 +55,55 @@
 		- $y=y_{H}+y_{P}$, $y_{P}=x^{r}e^{\alpha x}(\bar P(x)\cos(\beta x)+\bar Q(x)\sin(\beta x))$
 		- $\bar P$ in $\bar Q$ sta stopnje enaki maksimalni stopnji od $P$ in $Q$
 		- $r$ je večkratnost rešitve $\alpha\pm \beta i$
+- Homogena Euler-Cauchyjeva diferencialna enačba
+	- Oblike $a_{n}x^{n}y^{(n)}+\dots+xa_{1}y'+a_{0}y=0$
+	- Poiščemo rešitve $a_{n}\lambda(\lambda-1)\dots(\lambda-n+1)+\dots+a_{1}\lambda+a_{0}=0$
+	- Potem imamo rešitev $y=C_{1}x^{\lambda_{1}}+\dots+C_{n}x^{\lambda_{n}}$
+		- Če je $\lambda$ $r$-kratna rešitev je potem $(C_{1}+C_{2}\ln x+\dots+C_{r}(\ln x)^{r-1})x^{\lambda}$
+		- Moramo paziti če imamo kje take korene, da lahko pride kompleksno število, zamenjamo $x$ z $|x|$
+- Variacija konstant
+	- Oblike $a_{n}(x)y^{(n)}+\dots+a_{0}(x)y=b(x)$
+	- Poiščemo rešitev homogenega dela, iz katere dobimo baze $h_{1},\dots,h_{n}$
+	- Nastavimo $y=h_{1}(x)z_{1}+\dots+h_{n}(x)z_{n}$
+		- Poiščemo $z_{i}$ tako da rešimo sistem enačb:
+			- $h_{1}(x)z'_{1}+\dots+h_{n}(x)z'_{n}=0$
+			- ...
+			- $h_{1}^{(n-2)}(x)z'_{1}+\dots+h_{n}^{(n-2)}(x)z'_{n}=0$
+			- $h_{1}^{(n-1)}(x)z_{1}'+\dots+h_{n}^{(n-1)}(x)z_{n}'= \frac{b(x)}{a_{n}(x)}$
+# Sistemi dif. enačb
+- Linearni sistemi s konstantnimi koeficienti
+	- Oblike $\vec y' = A\vec y$
+	- Poiščemo lastne vrednosti in vektorje mat. $A$
+	- Rešitev potem oblike $\vec y=C_{1}\vec h_{1}(x)+\dots+C_{n}\vec h_{n}(x)$
+		- Baza $\vec h_{i}(x)=e^{\lambda_{i} x}\vec v_{i}$
+		- Če je lastna vrednost kompleksna, izberemo eno iz konjugiranega para in pretvorimo $e^{(\alpha+i\beta) x}\vec v$ v  $e^{\alpha x}(\cos(\beta x)+i\sin(\beta x))\vec v$ in vzamemo realni del in imaginarni del kot dve bazi
+	- Korenski vektorji oz. če je lastna vrednost $r>1$ stopnje
+		- Potem izračunamo $r$ lastnih vektorjev
+			- Vsi razen prvega se imenujejo korenski vektorji
+		- $\vec v_{i}(A-\lambda I)=\vec v_{i-1}; \forall i=\{1,\dots,r\}$
+			- $\vec v_{0}=\vec 0$
+		- Potem baze $\vec h(x)_{i}=e^{\lambda x}\sum\limits_{j=0}^{i}\vec v_{i-j} \frac{x^{j}}{j!}; \forall i=\{1,\dots,r\}$
+- Variacija konstant pri nehomogenih lin. sistemih
+	- Oblike $\vec y' = A(x)\vec y+\vec b(x)$
+	- Poiščemo homogen del $\vec y_{H}'=A(x)\vec y_{H}$
+		- Potem rešitev zapišimo kot $\vec y_{H}=H(x)\vec C$
+		- $H(x)$ => matrika Wronskega
+	- Potem je rešitev $\vec y=H(x)\vec z$
+		- Kjer $\vec z$ reši $H(x)\vec z'=\vec b(x)$
+# Potenčne vrste
+- Frobeniusova metoda
+	- Oblike $p_{m}(x)y^{(m)}+\dots+p_{1}(x)y'+p_{0}(x)y=0$
+	- Delamo v okolici $x_{0}$
+		- $p_{m}(x_{0})\ne 0$
+	- $y=\sum\limits_{n=0}^{\infty}c_{n}(x-x_{0})^{n}$
+	- Vstavimo $y$-e in poskusimo dobit kej iz tega
+		- Če se da na koncu pretvorimo konvergentne vsote v funkcijo (reverse Taylor)
+		-  Ko dobimo rekurzijo vzamemo $c_{0}=1$ in pogledamo če konvergira. Če ne pustimo rezultat v vsoti
+- Pravilna singularna točka
+	- $r_{m}(x)y^{(m)}+ \frac{r_{m-1}(x)}{x}y^{(m-1)}+\dots+ \frac{r_{0}(x)}{x^{m}}y=0$
+	- V okolici $x_{0}$
+	- $y=\sum\limits_{n=0}^{\infty}c_{n}x^{n+\lambda}$
+		- $\lambda$ lahko dobimo z Euler-Cauchyjevo enačbo če pomnožimo vse z $x^{m}$ in vstavimo $x_{0}$ v $r_{i}(x)$
+		- Dobimo $m$ različnih $\lambda$
+	- Za vsako $\lambda$ vstavimo in razrešimo rekurzijo
+	- Splošna rešitev => $y=\sum\limits^{m}_{i=1}c_{i}y_{i}$
