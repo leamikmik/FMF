@@ -82,7 +82,7 @@
 			- Vsi razen prvega se imenujejo korenski vektorji
 		- $\vec v_{i}(A-\lambda I)=\vec v_{i-1}; \forall i=\{1,\dots,r\}$
 			- $\vec v_{0}=\vec 0$
-		- Potem baze $\vec h(x)_{i}=e^{\lambda x}\sum\limits_{j=0}^{i}\vec v_{i-j} \frac{x^{j}}{j!}; \forall i=\{1,\dots,r\}$
+		- Potem baze $\vec h_{i}(x)=e^{\lambda x}\sum\limits_{j=0}^{i}\vec v_{i-j} \frac{x^{j}}{j!}; \forall i=\{1,\dots,r\}$
 - Variacija konstant pri nehomogenih lin. sistemih
 	- Oblike $\vec y' = A(x)\vec y+\vec b(x)$
 	- Poiščemo homogen del $\vec y_{H}'=A(x)\vec y_{H}$

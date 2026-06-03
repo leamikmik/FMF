@@ -148,13 +148,13 @@ $$S^{2}_{0}=\frac{1}{n}\sum\limits_{i=1}^{n}(X_{i}-\overline X)^{2};\ S^{2}=\fra
 	- $N_{k}$ => št. vrednosti vzorca $S_{k}$
 		- $\sum\limits N_{k}=n$
 	- $\chi^{2}=\sum\limits_{k=1}^{r} \frac{(N_{k}-np_{k})^{2}}{np_{k}}\approx\chi^{2}(r-1)$
-	- $K_\alpha=[\chi^{2}_{\alpha}(r-1),\infty)$
+	- $K_\alpha=[\chi^{2}_{1-\alpha}(r-1),\infty)$
 ---
 # Linearna regresija
 $$Y=a+bX+U$$
 - $U\approx N(0,\sigma)$ napaka, $\sigma$ tudi neznan
 - $a, b$ neznana parametra
-- $y=a+bx$ regresijska premica
+- $\tilde Y=a+bX$ regresijska premica
 - Za $x_{1},\dots,x_{n}$ dobimo $Y_{1},\dots,Y_{n}$ kjer $Y_{i}\approx N(a+bx_{k},\sigma)$
 - Radi bi ocenili paremetra $a,b$
 - $\hat b= \frac{S_{XY}- \frac{1}{n}S_{X}S_{Y}}{S_{XX}- \frac{1}{n}S^{2}_{X}}$ in $\hat a = \bar Y-\hat b\bar x$
@@ -163,11 +163,25 @@ $$Y=a+bX+U$$
 	- $S_{XX}=\sum\limits_{k=1}^{n}x_{k}^{2}$
 	- $S_{XY}=\sum\limits_{k=1}^{n}x_{k}Y_{k}$
 - Interval zaupanja:
-	- $a=\hat a\pm t_{\frac{a+1}{2}}(n-2)* \frac{S}{\sqrt{n- S_{X}^{2}/S_{XX}}}$
-	- $b=\hat b\pm t_{\frac{a+1}{2}}(n-2)* \frac{S}{\sqrt{S_{XX}- S_{X}^{2}/n}}$
+	- $\Delta a=\hat a \pm t_{\frac{a+1}{2}}(n-2)* \frac{S}{\sqrt{n- S_{X}^{2}/S_{XX}}}$
+	- $\Delta b=\hat b\pm t_{\frac{a+1}{2}}(n-2)* \frac{S}{\sqrt{S_{XX}- S_{X}^{2}/n}}$
 - $T_{a}= \frac{\hat a-a}{S}\sqrt{n- \frac{S_{X}^{2}}{S_{XX}}}\approx\text{Student}(n-2)$
 - $T_{b}= \frac{\hat b-b}{S}\sqrt{S_{XX}- \frac{S_{X}^{2}}{n}}\approx\text{Student}(n-2)$
 	- Potem lahko delamo hipoteze $H_{0}(a=a_{0})$ in $H_{0}(b=b_{0})$
 		- $|T_{a}|>t_{\alpha/2}$ in $|T_b|>t_{\alpha/2}$
+		- Ali $a_{0}\in\Delta a$ oz. $b_{0}\in\Delta b$
+- $R^{2}= \frac{RVK}{SVK}= 1- \frac{VKR}{SVK}$ -> Koeficient determinacije
+	- $SVK=VKR+RVK$
+	- $SVK=\sum\limits_{i=1}^{n}(Y_{i}-\bar Y)^{2}$
+	- $VKR=\sum\limits_{i=1}^{n}(Y_{i}-\tilde Y_{i})^{2}$
 ---
 # Testiranje neodvisnosti
+- Prilagoditveni test
+	- $H_{0}$ je, da sta spremenljivki $A$ in $B$ neodvisni
+	- ![[Pasted image 20260603123037.png]]
+	- Cenilke
+		- $\hat p _{i}=\frac{1}{n}\sum\limits^{s}_{j=1}X_{ij}$
+		- $\hat q_{i}= \frac{1}{n}\sum\limits^{r}_{i=1}X_{ij}$
+	- Hipotezo zavrnemo če $\chi^{2}>c$
+		- $\chi^{2}=\sum\limits_{i=1}^{r}\sum\limits_{j=1}^{s} \frac{(X_{ij}-n\hat p_{i}\hat q_{j})^{2}}{n\hat p_{i}\hat q_{i}}$
+		- $c= \chi^{2}_{1-\alpha}((r-1)(s-1))$
