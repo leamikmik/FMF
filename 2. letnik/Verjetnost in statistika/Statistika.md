@@ -183,5 +183,39 @@ $$Y=a+bX+U$$
 		- $\hat p _{i}=\frac{1}{n}\sum\limits^{s}_{j=1}X_{ij}$
 		- $\hat q_{i}= \frac{1}{n}\sum\limits^{r}_{i=1}X_{ij}$
 	- Hipotezo zavrnemo če $\chi^{2}>c$
-		- $\chi^{2}=\sum\limits_{i=1}^{r}\sum\limits_{j=1}^{s} \frac{(X_{ij}-n\hat p_{i}\hat q_{j})^{2}}{n\hat p_{i}\hat q_{i}}$
+		- $\chi^{2}=\sum\limits_{i=1}^{r}\sum\limits_{j=1}^{s} \frac{(X_{ij}-n\hat p_{i}\hat q_{j})^{2}}{n\hat p_{i}\hat q_{j}}$
 		- $c= \chi^{2}_{1-\alpha}((r-1)(s-1))$
+---
+# Neparametrični testi
+- Dozdej preiskušal hipoteze na znanih porazdelitvah
+- Sedaj ne moremo privzeti porazdelitve 
+1. **Test z znaki**
+	- Ista populacija za $X$ in $Y$
+		- $X$ porazdeljen z $F_{X}$
+		- $Y$ z $F_{Y}$
+	- $D_{i}=X_{i}-Y_{i}\ne 0$ 
+		-  Če je enako nič, ignoriramo vrednosti (t.j. zmanjšamo $n$ in preskočimo razliko)
+	- $H_{0}(X\approx Y)$
+		- Potem $P(D_{i}>0)=\frac{1}{2}=P(D_{i}<0)$
+		- $S^{+}$ => št. pozitivnih (oz. $X_{i}>Y_{i}$)
+		- $S^{-}$ => št. negativnih (oz. $X_{i}<Y_{i}$)
+		- Kritično območje $K_\alpha=\{k\in\{1,\dots,n\}\le k_{\alpha}\text{ ali } k>n-k_{\alpha}\}$
+			- Če $S^{+}\in K_{\alpha}$ zavrnemo $H_{0}$ 
+			- $P(S^{+}\le k_\alpha)\ge \frac{\alpha}{2}$ oz. $\alpha$ za enostranski test
+	- **Studentov primerjalni**
+		- Ko velik $n$ je $S^{+}\approx N(\frac{n}{2},\frac{\sqrt{n}}{2})$
+		- $Z= \frac{2S^{+}-n}{\sqrt{n}}\approx N(0,1)$
+		- $K_{\alpha}=(-\infty,-z_{\alpha/2}]\cup[z_{\alpha/2},\infty)$
+2. **Inverzijski test**
+	- $X=(X_{1},\dots,X_{m})$ in $Y=(Y_{1},\dots,Y_{n})$
+		- $m\le n$
+	- $H_{0}(F_{X}=F_{Y})$
+	- $R_{i}=\text{rang}(X_{i})=k$ če $X_{i}=X_{k}$
+		- oz. mesta kjer je vrednost iz $X$
+	- $V=\sum\limits R_{i}\approx N( \frac{m(m+n+1)}{2}, \sqrt{ \frac{mn(m+n+1)}{12}})$
+		- $Z= \sqrt{\frac{12}{mn(m+n+1)}}(V- \frac{m(m+n+1)}{2})\approx N(0,1)$
+		- $H_{0}$ zavrnemo če $Z$ leži v $K_{\alpha}=(-\infty,-z_{\alpha/2}]\cup[z_{\alpha/2},\infty)$
+			- $P(Z>z_{\alpha/2})=\frac{\alpha}{2}$ dobimo iz tabel oz. $\alpha$ za enostransko
+---
+# Rodovne funkcije
+- Spremenljivka $X$ vrednosti v $\Bbb N$
