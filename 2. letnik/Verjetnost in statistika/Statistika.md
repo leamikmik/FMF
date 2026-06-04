@@ -197,11 +197,11 @@ $$Y=a+bX+U$$
 		-  Če je enako nič, ignoriramo vrednosti (t.j. zmanjšamo $n$ in preskočimo razliko)
 	- $H_{0}(X\approx Y)$
 		- Potem $P(D_{i}>0)=\frac{1}{2}=P(D_{i}<0)$
-		- $S^{+}$ => št. pozitivnih (oz. $X_{i}>Y_{i}$)
+		- $S^{+}\approx \text{Bin}(n,\frac{1}{2})$ => št. pozitivnih (oz. $X_{i}>Y_{i}$)
 		- $S^{-}$ => št. negativnih (oz. $X_{i}<Y_{i}$)
 		- Kritično območje $K_\alpha=\{k\in\{1,\dots,n\}\le k_{\alpha}\text{ ali } k>n-k_{\alpha}\}$
 			- Če $S^{+}\in K_{\alpha}$ zavrnemo $H_{0}$ 
-			- $P(S^{+}\le k_\alpha)\ge \frac{\alpha}{2}$ oz. $\alpha$ za enostranski test
+			- $P(S^{+}\le k_\alpha)\le \frac{\alpha}{2}$ in $P(S^{+}\le k_{\alpha}+1)> \frac{\alpha}{2}$ (oz. $\alpha$ za enostranski)
 	- **Studentov primerjalni**
 		- Ko velik $n$ je $S^{+}\approx N(\frac{n}{2},\frac{\sqrt{n}}{2})$
 		- $Z= \frac{2S^{+}-n}{\sqrt{n}}\approx N(0,1)$
@@ -218,4 +218,18 @@ $$Y=a+bX+U$$
 			- $P(Z>z_{\alpha/2})=\frac{\alpha}{2}$ dobimo iz tabel oz. $\alpha$ za enostransko
 ---
 # Rodovne funkcije
-- Spremenljivka $X$ vrednosti v $\Bbb N$
+- Spremenljivka $X$ vrednosti v $\Bbb N\cup\{0\}$
+	- $p_{k}=P(X=k)$
+- $G_{X}(s)=\sum\limits_{k=0}^{\infty}p_{k}s^{k}$
+	- definirano za $s\in\Bbb R$, za katere vrsta konvergira absolutno
+	- $G_{X}(0)=p_{0}$ in $G_{X}(1)=1$
+- Izrek o enoličnosti
+	- $G_{X}(s)=G_{Y}(s);\ \forall s\in[-1,1]$ natanko ko $P(X=k)=P(Y=k);\ \forall k$
+- $E(X)=\lim_{s\uparrow1}G'_{X}(s)$
+- $G_{X_{1}+\dots+X_{n}}(s)=G_{X_{1}}(s)*\dots*G_{X_{n}}$
+- Če $N,X_{1},\dots,X_{n}$ neodvisne
+	- $N\to G_{N};\ X_{1},\dots,X_{n}\to G_{X}$
+	- $Y=X_{1}+\dots+X_{N}$ in $G_{Y}(s)=G_{N}(G_{X}(s));\ s\in[-1,1]$
+	- **Waldova enakost** => $E(Y)=E(N)E(X)$
+---
+# Procesi razvejanja
