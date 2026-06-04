@@ -233,3 +233,18 @@ $$Y=a+bX+U$$
 	- **Waldova enakost** => $E(Y)=E(N)E(X)$
 ---
 # Procesi razvejanja
+- ![[Pasted image 20260604111649.png]]
+- Model za rast populacije
+- Število "potomcev" so neodvisne sl. spremenljivke
+	- Št. potomcev v $n$-ti gen. $Z_{n}$
+		- $Z_{0}=1$
+		- $Z_{1}:\left(\begin{matrix}0 & 1 & 2 & \dots \\ p_{0} & p_{1} & p_{2} & \dots\end{matrix}\right)$ 
+	- Privzemimo da $p_{k}<1$
+- $G_{n}(s)=G_{n-1}(G(s))=G(G(\dots G(s)\dots))$
+	- $G(s)=G_{1}(s)=\sum\limits_{k=0}^{\infty}p_{k}s^{k}$
+- $\mu=E(Z_{1})=\sum\limits_{k=1}^{\infty}k p_{k}$
+	- $E(Z_{n})=\mu^{n}$
+- $e=P(\cup_{n}(Z_{n}=0))$ => extinction
+	- $e=\lim_{n\to\infty}P(Z_{n}=0)$
+	- Vrednost je najmanjša nenegativna rešitev $G(x)=x$
+	- $e=1\iff \mu\le1$
