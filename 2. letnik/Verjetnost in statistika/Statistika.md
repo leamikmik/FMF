@@ -168,7 +168,7 @@ $$Y=a+bX+U$$
 - $T_{a}= \frac{\hat a-a}{S}\sqrt{n- \frac{S_{X}^{2}}{S_{XX}}}\approx\text{Student}(n-2)$
 - $T_{b}= \frac{\hat b-b}{S}\sqrt{S_{XX}- \frac{S_{X}^{2}}{n}}\approx\text{Student}(n-2)$
 	- Potem lahko delamo hipoteze $H_{0}(a=a_{0})$ in $H_{0}(b=b_{0})$
-		- $|T_{a}|>t_{\alpha/2}$ in $|T_b|>t_{\alpha/2}$
+		- $|T_{a_{0}}|>t_{\alpha/2}$ in $|T_{b_{0}}|>t_{\alpha/2}$
 		- Ali $a_{0}\in\Delta a$ oz. $b_{0}\in\Delta b$
 - $R^{2}= \frac{RVK}{SVK}= 1- \frac{VKR}{SVK}$ -> Koeficient determinacije
 	- $SVK=VKR+RVK$
@@ -181,7 +181,7 @@ $$Y=a+bX+U$$
 	- ![[Pasted image 20260603123037.png]]
 	- Cenilke
 		- $\hat p _{i}=\frac{1}{n}\sum\limits^{s}_{j=1}X_{ij}$
-		- $\hat q_{i}= \frac{1}{n}\sum\limits^{r}_{i=1}X_{ij}$
+		- $\hat q_{j}= \frac{1}{n}\sum\limits^{r}_{i=1}X_{ij}$
 	- Hipotezo zavrnemo če $\chi^{2}>c$
 		- $\chi^{2}=\sum\limits_{i=1}^{r}\sum\limits_{j=1}^{s} \frac{(X_{ij}-n\hat p_{i}\hat q_{j})^{2}}{n\hat p_{i}\hat q_{j}}$
 		- $c= \chi^{2}_{1-\alpha}((r-1)(s-1))$
@@ -202,7 +202,7 @@ $$Y=a+bX+U$$
 		- Kritično območje $K_\alpha=\{k\in\{1,\dots,n\}\le k_{\alpha}\text{ ali } k>n-k_{\alpha}\}$
 			- Če $S^{+}\in K_{\alpha}$ zavrnemo $H_{0}$ 
 			- $P(S^{+}\le k_\alpha)\le \frac{\alpha}{2}$ in $P(S^{+}\le k_{\alpha}+1)> \frac{\alpha}{2}$ (oz. $\alpha$ za enostranski)
-	- **Studentov primerjalni**
+	- **Test Z**
 		- Ko velik $n$ je $S^{+}\approx N(\frac{n}{2},\frac{\sqrt{n}}{2})$
 		- $Z= \frac{2S^{+}-n}{\sqrt{n}}\approx N(0,1)$
 		- $K_{\alpha}=(-\infty,-z_{\alpha/2}]\cup[z_{\alpha/2},\infty)$
